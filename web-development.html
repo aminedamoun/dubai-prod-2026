@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Development Dubai | High-Performance Websites — Dubai Prod</title>
+<meta name="description" content="Dubai Prod builds high-performance, conversion-optimized websites for UAE brands. Custom web design, e-commerce, and landing pages engineered for results.">
+<link rel="canonical" href="https://www.dubaiprod.com/web-development.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dubai Prod">
+<meta property="og:title" content="Web Development Dubai | High-Performance Websites — Dubai Prod">
+<meta property="og:description" content="Dubai Prod builds high-performance, conversion-optimized websites for UAE brands. Custom web design, e-commerce, and landing pages engineered for results.">
+<meta property="og:url" content="https://www.dubaiprod.com/web-development.html">
+<meta property="og:image" content="https://www.dubaiprod.com/assets/images/dubai_prod_2__1_-1772650048332.webp">
+<meta property="og:locale" content="en_AE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Web Development Dubai | High-Performance Websites — Dubai Prod">
+<meta name="twitter:description" content="Dubai Prod builds high-performance, conversion-optimized websites for UAE brands. Custom web design, e-commerce, and landing pages engineered for results.">
+<meta name="twitter:image" content="https://www.dubaiprod.com/assets/images/dubai_prod_2__1_-1772650048332.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Dubai Prod",
+  "description": "Dubai Prod builds high-performance, conversion-optimized websites for UAE brands. Custom web design, e-commerce, and landing pages engineered for results.",
+  "url": "https://www.dubaiprod.com/web-development.html",
+  "logo": "https://www.dubaiprod.com/assets/images/dubai_prod_2__1_-1772650048332.webp",
+  "telephone": "+971543333587",
+  "email": "info@dubaiprod.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "DAMAC Executive Heights, Office 1301",
+    "addressLocality": "Dubai",
+    "addressRegion": "Dubai",
+    "addressCountry": "AE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "25.0957",
+    "longitude": "55.1728"
+  },
+  "areaServed": ["Dubai", "Abu Dhabi", "UAE", "MENA"],
+  "priceRange": "$$"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/site.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+<style>
+@media (max-width: 768px) {
+  #wd-hero { min-height: 60vh !important; }
+  #wd-hero #hero-title { font-size: clamp(28px, 8vw, 42px) !important; letter-spacing: -1px !important; }
+  #wd-hero p { font-size: 13px !important; }
+  #wd-hero > div { padding: 90px 16px 40px !important; width: 100% !important; }
+}
+</style>
+</head>
+<body>
+
+<div id="preloader" style="position:fixed;inset:0;z-index:99999;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;transition:opacity 0.7s ease;">
+    <img src="assets/images/dubai_prod_2__1_-1772650048332.webp" alt="Dubai Prod" loading="lazy" style="height:80px;width:auto;object-fit:contain;opacity:0;transition:opacity 0.5s ease;" id="preloader-logo">
+    <div style="width:220px;height:2px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;"><div id="preloader-bar" style="height:100%;width:0%;background:linear-gradient(90deg,#FF6A00,#FFB347);border-radius:2px;transition:width 0.3s ease;box-shadow:0 0 12px #FF6A00;"></div></div>
+    <p style="font-family:Inter,sans-serif;font-size:11px;letter-spacing:0.2em;color:rgba(255,255,255,0.3);text-transform:uppercase;">Loading</p>
+</div>
+<script>
+(function(){
+    document.body.classList.add('preloading');
+    var bar=document.getElementById('preloader-bar'),logo=document.getElementById('preloader-logo'),cover=document.getElementById('preloader');
+    setTimeout(function(){if(logo)logo.style.opacity='1';},80);
+    var prog=0,fill=setInterval(function(){prog=Math.min(prog+(Math.random()*6+2),85);if(bar)bar.style.width=prog+'%';},120);
+    function finish(){clearInterval(fill);if(bar)bar.style.width='100%';setTimeout(function(){document.body.classList.remove('preloading');if(cover)cover.classList.add('done');setTimeout(function(){if(cover)cover.style.display='none';},750);},350);}
+    if(document.readyState==='complete'){finish();}else{window.addEventListener('load',finish);setTimeout(finish,5000);}
+})();
+</script>
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="curR"></div>
+
+<nav id="main-nav"></nav>
+<script src="js/nav.js"></script>
+
+<!-- HERO -->
+<style>
+#wd-hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:#000;}
+.wd-hero-grid{display:grid;grid-template-columns:1fr 560px;gap:40px;align-items:center;}
+@media(max-width:1100px){.wd-hero-grid{grid-template-columns:1fr !important;} .code-showcase{display:none !important;}}
+
+/* Code showcase - side by side */
+.code-showcase{display:grid;grid-template-columns:1fr 1fr;gap:8px;perspective:1200px;}
+
+/* Code editor */
+.code-editor{background:#0d1117;border:1px solid rgba(255,255,255,0.08);border-radius:10px;overflow:hidden;font-family:'Fira Code','SF Mono','Consolas',monospace;box-shadow:0 24px 48px rgba(0,0,0,0.4);transform:rotateY(-2deg);transition:transform 0.5s;}
+.code-editor:hover{transform:rotateY(0);}
+.code-titlebar{display:flex;align-items:center;gap:6px;padding:10px 12px;background:#161b22;border-bottom:1px solid rgba(255,255,255,0.06);}
+.code-dot{width:8px;height:8px;border-radius:50%;}
+.code-filename{font-size:9px;color:rgba(255,255,255,0.35);margin-left:6px;flex:1;}
+.code-tabs{display:flex;gap:0;margin-bottom:0;}
+.code-tab{padding:6px 12px;font-size:9px;color:rgba(255,255,255,0.25);border-bottom:1px solid transparent;cursor:default;}
+.code-tab.active{color:#FF6A00;border-bottom-color:#FF6A00;background:rgba(255,106,0,0.05);}
+.code-body{padding:10px 12px;font-size:10.5px;line-height:1.75;height:380px;overflow:hidden;position:relative;}
+.code-line{opacity:0;transform:translateY(4px);white-space:nowrap;}
+.code-line.visible{opacity:1;transform:translateY(0);transition:all 0.25s ease;}
+.code-line.out{opacity:0;transform:translateY(-12px);transition:all 0.2s ease;}
+.code-line .ln{color:rgba(255,255,255,0.12);display:inline-block;width:22px;text-align:right;margin-right:10px;font-size:9px;}
+.code-line .tag{color:#7ee787;}
+.code-line .attr{color:#d2a8ff;}
+.code-line .val{color:#a5d6ff;}
+.code-line .txt{color:#c9d1d9;}
+.code-line .cmt{color:#484f58;font-style:italic;}
+.code-line .prop{color:#79c0ff;}
+.code-line .num{color:#FF6A00;}
+.code-line .kw{color:#ff7b72;}
+.code-line .fn{color:#d2a8ff;}
+.code-line .str{color:#a5d6ff;}
+.code-cursor{display:inline-block;width:1.5px;height:13px;background:#FF6A00;animation:blink 1s step-end infinite;vertical-align:middle;margin-left:1px;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+
+/* Browser preview */
+.browser-preview{background:#0a0a0a;border-radius:10px;overflow:hidden;box-shadow:0 24px 48px rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.08);transform:rotateY(2deg);transition:transform 0.5s;}
+.browser-preview:hover{transform:rotateY(0);}
+.browser-bar{display:flex;align-items:center;gap:6px;padding:8px 10px;background:#161616;border-bottom:1px solid rgba(255,255,255,0.06);}
+.browser-dots{display:flex;gap:4px;}
+.browser-dots span{width:7px;height:7px;border-radius:50%;}
+.browser-url{flex:1;background:rgba(255,255,255,0.06);border-radius:4px;padding:3px 8px;font-size:9px;color:rgba(255,255,255,0.4);font-family:Inter,sans-serif;}
+.browser-body{height:380px;overflow:hidden;position:relative;background:#0a0a0a;}
+
+/* Preview build animation */
+.pv{opacity:0;transform:translateY(8px);}
+.pv.built{opacity:1;transform:translateY(0);transition:all 0.35s ease;}
+</style>
+
+<section id="wd-hero">
+  <!-- Background -->
+  <div style="position:absolute;inset:0;background:#000;"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(255,106,0,0.08) 0%,transparent 60%);"></div>
+
+  <!-- Grid pattern overlay -->
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;"></div>
+
+  <!-- Ambient glows -->
+  <div style="position:absolute;top:-10%;left:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(255,106,0,0.15) 0%,transparent 70%);pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-10%;right:10%;width:500px;height:500px;background:radial-gradient(circle,rgba(255,106,0,0.08) 0%,transparent 70%);pointer-events:none;"></div>
+
+  <!-- Main container -->
+  <div class="wd-hero-grid" style="position:relative;z-index:2;width:100%;max-width:1340px;margin:0 auto;padding:160px clamp(24px,5vw,48px) 100px;">
+
+    <!-- LEFT -->
+    <div>
+      <div id="hero-label" style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,106,0,0.08);border:1px solid rgba(255,106,0,0.3);backdrop-filter:blur(12px);padding:8px 18px;margin-bottom:36px;">
+        <span style="width:5px;height:5px;border-radius:50%;background:#FF6A00;display:inline-block;animation:pulse 2s infinite;"></span>
+        <span style="font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;font-family:Inter,sans-serif;">Web Development — Dubai</span>
+      </div>
+
+      <h1 id="hero-title" style="font-family:Inter,sans-serif;font-size:clamp(48px,6.5vw,88px);font-weight:900;line-height:0.95;letter-spacing:-3px;color:#fff;margin-bottom:32px;">
+        WE BUILD<br>WEBSITES<br>THAT <span style="color:#FF6A00;">CONVERT</span>
+      </h1>
+
+      <p id="hero-sub" style="font-family:Inter,sans-serif;font-size:16px;line-height:1.75;color:rgba(255,255,255,0.5);font-weight:300;max-width:460px;margin-bottom:40px;">
+        Custom-built, blazing-fast websites engineered for conversion — combining stunning design with technical excellence.
+      </p>
+
+      <div id="hero-ctas" style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:52px;">
+        <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#000;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">
+          Start Your Project
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+        <a href="#why-webdev" style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.06);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.6)';this.style.color='#FF6A00'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.15)';this.style.color='rgba(255,255,255,0.85)'">
+          Our Services
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div style="display:flex;gap:48px;flex-wrap:wrap;">
+        <div><div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;color:#fff;letter-spacing:-1px;">150+</div><div style="font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:4px;">Websites Built</div></div>
+        <div><div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;color:#FF6A00;letter-spacing:-1px;">90+</div><div style="font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:4px;">Core Web Vitals</div></div>
+        <div><div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;color:#fff;letter-spacing:-1px;">99%</div><div style="font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:4px;">Uptime SLA</div></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Code + Preview SIDE BY SIDE -->
+    <div class="code-showcase">
+
+      <!-- Code Editor -->
+      <div class="code-editor">
+        <div class="code-titlebar">
+          <div class="code-dot" style="background:#ff5f57;"></div>
+          <div class="code-dot" style="background:#febc2e;"></div>
+          <div class="code-dot" style="background:#28c840;"></div>
+          <div class="code-filename">index.html</div>
+        </div>
+        <div style="display:flex;background:#0d1117;border-bottom:1px solid rgba(255,255,255,0.04);">
+          <div class="code-tab active">index.html</div>
+          <div class="code-tab">style.css</div>
+          <div class="code-tab">app.js</div>
+        </div>
+        <div class="code-body" id="codeBody">
+          <div class="code-line" data-d="0"><span class="ln">1</span><span class="cmt">&lt;!-- Dubai Prod Website --&gt;</span></div>
+          <div class="code-line" data-d="68"><span class="ln">2</span><span class="tag">&lt;nav</span> <span class="attr">class</span>=<span class="val">"main-nav"</span><span class="tag">&gt;</span></div>
+          <div class="code-line" data-d="136"><span class="ln">3</span>&nbsp;&nbsp;<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"logo.svg"</span> /&gt;</div>
+          <div class="code-line" data-d="204"><span class="ln">4</span>&nbsp;&nbsp;<span class="tag">&lt;ul</span> <span class="attr">class</span>=<span class="val">"nav-links"</span><span class="tag">&gt;</span></div>
+          <div class="code-line" data-d="272"><span class="ln">5</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;li&gt;</span><span class="txt">Services</span><span class="tag">&lt;/li&gt;</span></div>
+          <div class="code-line" data-d="340"><span class="ln">6</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;li&gt;</span><span class="txt">Portfolio</span><span class="tag">&lt;/li&gt;</span></div>
+          <div class="code-line" data-d="408"><span class="ln">7</span>&nbsp;&nbsp;<span class="tag">&lt;/ul&gt;</span></div>
+          <div class="code-line" data-d="476"><span class="ln">8</span><span class="tag">&lt;/nav&gt;</span></div>
+          <div class="code-line" data-d="544"><span class="ln">9</span></div>
+          <div class="code-line" data-d="612"><span class="ln">10</span><span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="val">"hero"</span><span class="tag">&gt;</span></div>
+          <div class="code-line" data-d="680"><span class="ln">11</span>&nbsp;&nbsp;<span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="val">"badge"</span><span class="tag">&gt;</span></div>
+          <div class="code-line" data-d="748"><span class="ln">12</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt">Dubai's #1 Agency</span></div>
+          <div class="code-line" data-d="816"><span class="ln">13</span>&nbsp;&nbsp;<span class="tag">&lt;/span&gt;</span></div>
+          <div class="code-line" data-d="884"><span class="ln">14</span>&nbsp;&nbsp;<span class="tag">&lt;h1&gt;</span><span class="txt">We Build </span><span class="num">Digital</span></div>
+          <div class="code-line" data-d="952"><span class="ln">15</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="num">Experiences</span><span class="tag">&lt;/h1&gt;</span></div>
+          <div class="code-line" data-d="1020"><span class="ln">16</span>&nbsp;&nbsp;<span class="tag">&lt;p&gt;</span><span class="txt">Full-service agency</span><span class="tag">&lt;/p&gt;</span></div>
+          <div class="code-line" data-d="1088"><span class="ln">17</span>&nbsp;&nbsp;<span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="val">"cta-btn"</span><span class="tag">&gt;</span></div>
+          <div class="code-line" data-d="1156"><span class="ln">18</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt">Get Started →</span></div>
+          <div class="code-line" data-d="1224"><span class="ln">19</span>&nbsp;&nbsp;<span class="tag">&lt;/a&gt;</span></div>
+          <div class="code-line" data-d="1292"><span class="ln">20</span><span class="tag">&lt;/section&gt;</span></div>
+          <div class="code-line" data-d="1360"><span class="ln">21</span></div>
+          <div class="code-line" data-d="1428"><span class="ln">22</span><span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="val">"services"</span><span class="tag">&gt;</span></div>
+          <div class="code-line" data-d="1496"><span class="ln">23</span>&nbsp;&nbsp;<span class="tag">&lt;h2&gt;</span><span class="txt">Our Services</span><span class="tag">&lt;/h2&gt;</span></div>
+          <div class="code-line" data-d="1564"><span class="ln">24</span>&nbsp;&nbsp;<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="val">"grid"</span><span class="tag">&gt;</span></div>
+          <div class="code-line" data-d="1632"><span class="ln">25</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="val">"card"</span><span class="tag">&gt;</span></div>
+          <div class="code-line" data-d="1700"><span class="ln">26</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h3&gt;</span><span class="num">Web Dev</span><span class="tag">&lt;/h3&gt;</span></div>
+          <div class="code-line" data-d="1768"><span class="ln">27</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/div&gt;</span></div>
+          <div class="code-line" data-d="1836"><span class="ln">28</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="val">"card"</span><span class="tag">&gt;</span></div>
+          <div class="code-line" data-d="1904"><span class="ln">29</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h3&gt;</span><span class="num">Branding</span><span class="tag">&lt;/h3&gt;</span></div>
+          <div class="code-line" data-d="1972"><span class="ln">30</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/div&gt;</span></div>
+          <div class="code-line" data-d="2040"><span class="ln">31</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="val">"card"</span><span class="tag">&gt;</span></div>
+          <div class="code-line" data-d="2108"><span class="ln">32</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h3&gt;</span><span class="num">SEO</span><span class="tag">&lt;/h3&gt;</span></div>
+          <div class="code-line" data-d="2176"><span class="ln">33</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/div&gt;</span></div>
+          <div class="code-line" data-d="2244"><span class="ln">34</span>&nbsp;&nbsp;<span class="tag">&lt;/div&gt;</span></div>
+          <div class="code-line" data-d="2312"><span class="ln">35</span><span class="tag">&lt;/section&gt;</span></div>
+          <div class="code-line" data-d="2380"><span class="ln">36</span></div>
+          <div class="code-line" data-d="2448"><span class="ln">37</span><span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="val">"stats"</span><span class="tag">&gt;</span></div>
+          <div class="code-line" data-d="2516"><span class="ln">38</span>&nbsp;&nbsp;<span class="tag">&lt;div&gt;</span><span class="num">249+</span> <span class="txt">Projects</span><span class="tag">&lt;/div&gt;</span></div>
+          <div class="code-line" data-d="2584"><span class="ln">39</span>&nbsp;&nbsp;<span class="tag">&lt;div&gt;</span><span class="num">7+</span> <span class="txt">Years</span><span class="tag">&lt;/div&gt;</span></div>
+          <div class="code-line" data-d="2652"><span class="ln">40</span><span class="tag">&lt;/section&gt;</span></div>
+          <div class="code-line" data-d="2720"><span class="ln">41</span></div>
+          <div class="code-line" data-d="2788"><span class="ln">42</span><span class="tag">&lt;footer&gt;</span></div>
+          <div class="code-line" data-d="2856"><span class="ln">43</span>&nbsp;&nbsp;<span class="tag">&lt;p&gt;</span><span class="txt">© Dubai Prod</span><span class="tag">&lt;/p&gt;</span></div>
+          <div class="code-line" data-d="2924"><span class="ln">44</span><span class="tag">&lt;/footer&gt;</span><span class="code-cursor"></span></div>
+        </div>
+      </div>
+
+      <!-- Browser Preview -->
+      <div class="browser-preview">
+        <div class="browser-bar">
+          <div class="browser-dots">
+            <span style="background:#ff5f57;"></span>
+            <span style="background:#febc2e;"></span>
+            <span style="background:#28c840;"></span>
+          </div>
+          <div class="browser-url">dubaiprod.com</div>
+        </div>
+        <div class="browser-body" id="previewBuild" style="padding:0;display:flex;flex-direction:column;overflow-y:auto;">
+
+          <!-- Nav -->
+          <div class="pv" data-d="0" style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:#111;border-bottom:1px solid #222;flex-shrink:0;">
+            <div style="width:48px;height:6px;background:#FF6A00;border-radius:2px;"></div>
+            <div style="display:flex;gap:10px;">
+              <div style="width:24px;height:3px;background:#333;border-radius:1px;"></div>
+              <div style="width:24px;height:3px;background:#333;border-radius:1px;"></div>
+              <div style="width:24px;height:3px;background:#333;border-radius:1px;"></div>
+            </div>
+          </div>
+
+          <!-- Hero -->
+          <div class="pv" data-d="200" style="padding:20px 12px 16px;background:#000;flex-shrink:0;">
+            <div class="pv" data-d="400" style="width:50px;height:4px;background:rgba(255,106,0,0.3);border-radius:2px;margin-bottom:8px;"></div>
+            <div class="pv" data-d="600" style="display:flex;flex-direction:column;gap:3px;margin-bottom:6px;">
+              <div style="width:110px;height:10px;background:#fff;border-radius:2px;"></div>
+              <div style="width:90px;height:10px;background:#FF6A00;border-radius:2px;"></div>
+            </div>
+            <div class="pv" data-d="800" style="display:flex;flex-direction:column;gap:3px;margin-bottom:10px;">
+              <div style="width:140px;height:3px;background:rgba(255,255,255,0.12);border-radius:1px;"></div>
+              <div style="width:120px;height:3px;background:rgba(255,255,255,0.08);border-radius:1px;"></div>
+            </div>
+            <div class="pv" data-d="1000" style="width:60px;height:14px;background:#FF6A00;border-radius:3px;"></div>
+          </div>
+
+          <!-- Services section -->
+          <div class="pv" data-d="1200" style="padding:12px;background:#050505;flex-shrink:0;">
+            <div class="pv" data-d="1400" style="width:60px;height:6px;background:#fff;border-radius:2px;margin:0 auto 10px;"></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;">
+              <div class="pv" data-d="1600" style="background:#111;border:1px solid #222;border-radius:4px;padding:10px 6px;text-align:center;">
+                <div style="width:16px;height:16px;background:rgba(255,106,0,0.15);border-radius:3px;margin:0 auto 4px;"></div>
+                <div style="width:30px;height:3px;background:#fff;border-radius:1px;margin:0 auto 2px;"></div>
+                <div style="width:40px;height:2px;background:rgba(255,255,255,0.1);border-radius:1px;margin:0 auto;"></div>
+              </div>
+              <div class="pv" data-d="1800" style="background:#111;border:1px solid #222;border-radius:4px;padding:10px 6px;text-align:center;">
+                <div style="width:16px;height:16px;background:rgba(255,106,0,0.15);border-radius:3px;margin:0 auto 4px;"></div>
+                <div style="width:30px;height:3px;background:#fff;border-radius:1px;margin:0 auto 2px;"></div>
+                <div style="width:40px;height:2px;background:rgba(255,255,255,0.1);border-radius:1px;margin:0 auto;"></div>
+              </div>
+              <div class="pv" data-d="2000" style="background:#111;border:1px solid #222;border-radius:4px;padding:10px 6px;text-align:center;">
+                <div style="width:16px;height:16px;background:rgba(255,106,0,0.15);border-radius:3px;margin:0 auto 4px;"></div>
+                <div style="width:30px;height:3px;background:#fff;border-radius:1px;margin:0 auto 2px;"></div>
+                <div style="width:40px;height:2px;background:rgba(255,255,255,0.1);border-radius:1px;margin:0 auto;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats bar -->
+          <div class="pv" data-d="2200" style="display:flex;justify-content:space-around;padding:10px 12px;background:#000;border-top:1px solid #1a1a1a;flex-shrink:0;">
+            <div style="text-align:center;">
+              <div style="width:24px;height:8px;background:#FF6A00;border-radius:2px;margin:0 auto 3px;"></div>
+              <div style="width:32px;height:2px;background:rgba(255,255,255,0.1);border-radius:1px;margin:0 auto;"></div>
+            </div>
+            <div style="text-align:center;">
+              <div style="width:20px;height:8px;background:#FF6A00;border-radius:2px;margin:0 auto 3px;"></div>
+              <div style="width:28px;height:2px;background:rgba(255,255,255,0.1);border-radius:1px;margin:0 auto;"></div>
+            </div>
+            <div style="text-align:center;">
+              <div style="width:18px;height:8px;background:#FF6A00;border-radius:2px;margin:0 auto 3px;"></div>
+              <div style="width:30px;height:2px;background:rgba(255,255,255,0.1);border-radius:1px;margin:0 auto;"></div>
+            </div>
+          </div>
+
+          <!-- Image section -->
+          <div class="pv" data-d="2600" style="padding:8px 12px;background:#050505;flex-shrink:0;">
+            <div style="height:40px;background:linear-gradient(135deg,#1a1a1a,#111);border-radius:4px;border:1px solid #222;display:flex;align-items:center;justify-content:center;">
+              <div style="width:20px;height:20px;border:2px solid rgba(255,255,255,0.1);border-radius:3px;display:flex;align-items:center;justify-content:center;">
+                <div style="width:6px;height:6px;background:rgba(255,106,0,0.3);border-radius:50%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="pv" data-d="3000" style="padding:8px 12px;background:#000;border-top:1px solid #1a1a1a;flex-shrink:0;display:flex;justify-content:space-between;align-items:center;">
+            <div style="width:36px;height:4px;background:#FF6A00;border-radius:1px;"></div>
+            <div style="display:flex;gap:6px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.08);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.08);"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.08);"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var codeBody=document.getElementById('codeBody');
+  function startCodeAnim(){
+    var lines=document.querySelectorAll('#codeBody .code-line');
+    var previews=document.querySelectorAll('#previewBuild .pv');
+
+    // Show code lines with scroll-up effect
+    lines.forEach(function(line,i){
+      var d=parseInt(line.getAttribute('data-d'))||0;
+      setTimeout(function(){
+        line.classList.add('visible');
+        // Scroll code body to keep latest lines visible
+        if(codeBody) codeBody.scrollTop=codeBody.scrollHeight;
+      },d);
+    });
+
+    // Build preview elements in sync
+    previews.forEach(function(el){
+      var d=parseInt(el.getAttribute('data-d'))||0;
+      setTimeout(function(){el.classList.add('built');},d);
+    });
+
+    // Loop after all done
+    setTimeout(function(){
+      // Fade out
+      lines.forEach(function(l){l.classList.remove('visible');l.classList.add('out');});
+      previews.forEach(function(p){p.classList.remove('built');});
+      setTimeout(function(){
+        lines.forEach(function(l){l.classList.remove('out');});
+        if(codeBody) codeBody.scrollTop=0;
+        setTimeout(startCodeAnim,400);
+      },500);
+    },3500);
+  }
+
+  startCodeAnim();
+})();
+</script>
+<style>@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}</style>
+
+<!-- ════ INLINE STYLES ════ -->
+<style>
+/* ── Web Dev Marquee ── */
+.webdev-marquee-track { display:flex; gap:0; white-space:nowrap; animation:webdevMarquee 30s linear infinite; }
+.webdev-marquee-track:hover { animation-play-state:paused; }
+.webdev-m-item { display:inline-flex; align-items:center; gap:18px; padding:0 36px; font-family:Inter,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:rgba(255,255,255,0.2); }
+.webdev-m-feat { color:rgba(255,106,0,0.55); }
+.webdev-m-dot { width:4px; height:4px; background:#FF6A00; border-radius:50%; flex-shrink:0; }
+@keyframes webdevMarquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+/* ── Web Dev Service sections ── */
+.wd-svc-row .wd-text-block { max-width:560px; }
+@media(max-width:960px){
+  .wd-svc-row > div { grid-template-columns:1fr !important; }
+  #why-webdev > div { grid-template-columns:1fr !important; }
+  #why-webdev > div > div:last-child { position:static !important; }
+}
+</style>
+
+<!-- ════ TECH MARQUEE ════ -->
+<div style="overflow:hidden;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);padding:18px 0;background:#000;">
+  <div class="webdev-marquee-track">
+    <span class="webdev-m-item"><span class="webdev-m-dot"></span>React</span>
+    <span class="webdev-m-item webdev-m-feat"><span class="webdev-m-dot"></span>Next.js</span>
+    <span class="webdev-m-item"><span class="webdev-m-dot"></span>Vue</span>
+    <span class="webdev-m-item"><span class="webdev-m-dot"></span>Tailwind CSS</span>
+    <span class="webdev-m-item webdev-m-feat"><span class="webdev-m-dot"></span>Node.js</span>
+    <span class="webdev-m-item"><span class="webdev-m-dot"></span>WordPress</span>
+    <span class="webdev-m-item webdev-m-feat"><span class="webdev-m-dot"></span>Shopify</span>
+    <span class="webdev-m-item"><span class="webdev-m-dot"></span>Webflow</span>
+    <span class="webdev-m-item"><span class="webdev-m-dot"></span>Figma</span>
+    <span class="webdev-m-item webdev-m-feat"><span class="webdev-m-dot"></span>TypeScript</span>
+    <span class="webdev-m-item"><span class="webdev-m-dot"></span>Python</span>
+    <span class="webdev-m-item"><span class="webdev-m-dot"></span>AWS</span>
+    <!-- duplicate for seamless loop -->
+    <span class="webdev-m-item"><span class="webdev-m-dot"></span>React</span>
+    <span class="webdev-m-item webdev-m-feat"><span class="webdev-m-dot"></span>Next.js</span>
+    <span class="webdev-m-item"><span class="webdev-m-dot"></span>Vue</span>
+    <span class="webdev-m-item"><span class="webdev-m-dot"></span>Tailwind CSS</span>
+    <span class="webdev-m-item webdev-m-feat"><span class="webdev-m-dot"></span>Node.js</span>
+    <span class="webdev-m-item"><span class="webdev-m-dot"></span>WordPress</span>
+    <span class="webdev-m-item webdev-m-feat"><span class="webdev-m-dot"></span>Shopify</span>
+    <span class="webdev-m-item"><span class="webdev-m-dot"></span>Webflow</span>
+    <span class="webdev-m-item"><span class="webdev-m-dot"></span>Figma</span>
+    <span class="webdev-m-item webdev-m-feat"><span class="webdev-m-dot"></span>TypeScript</span>
+    <span class="webdev-m-item"><span class="webdev-m-dot"></span>Python</span>
+    <span class="webdev-m-item"><span class="webdev-m-dot"></span>AWS</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     WHY DUBAI PROD — White section, 2-col with form
+     ════════════════════════════════════════════════════ -->
+<section id="why-webdev" style="background:#fff;padding:100px 0;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:start;">
+
+    <!-- LEFT: Content -->
+    <div>
+      <h2 style="font-family:Inter,sans-serif;font-size:clamp(28px,3.5vw,40px);font-weight:900;line-height:1.15;letter-spacing:-1px;color:#000;margin-bottom:32px;text-transform:uppercase;">
+        Why Dubai Prod Is Dubai's Leading <span style="color:#FF6A00;">Web Development Agency</span>
+      </h2>
+
+      <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:#444;margin-bottom:24px;">
+        At Dubai Prod, we've spent <strong style="color:#000;">7+ years</strong> building high-performance websites for brands across the UAE. From <strong style="color:#000;">custom corporate websites and e-commerce platforms</strong> to <strong style="color:#000;">conversion-focused landing pages and complex web applications</strong> — every project is engineered for speed, SEO, and measurable results.
+      </p>
+
+      <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:#444;margin-bottom:40px;">
+        What sets us apart is our end-to-end approach: strategy, UX design, front-end and back-end development, performance optimization, and ongoing support — all under one roof. We combine modern frameworks with pixel-perfect design to deliver websites that look stunning and perform even better.
+      </p>
+
+      <a href="#wd-services" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#fff;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:14px 28px;border-radius:30px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">
+        Explore Services
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8l4 4-4 4"/><path d="M8 12h8"/></svg>
+      </a>
+
+      <!-- Badges row -->
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:48px;padding-top:32px;border-top:1px solid rgba(0,0,0,0.08);">
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Custom Websites</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">E-Commerce</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Landing Pages</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">CMS</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Web Apps</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">UI/UX Design</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">SEO</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: Quote Form -->
+    <div style="background:#f8f8f8;border-radius:4px;padding:44px 36px;position:sticky;top:120px;">
+      <h3 style="font-family:Inter,sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;letter-spacing:0.5px;color:#000;text-align:center;margin-bottom:32px;line-height:1.3;">
+        Get Your Free <span style="color:#FF6A00;">Web Quote</span>
+      </h3>
+
+      <form data-dp-form style="display:flex;flex-direction:column;gap:14px;">
+        <input type="text" name="name" placeholder="Full Name" required style="width:100%;padding:14px 18px;border:1px solid #ddd;border-radius:4px;font-family:Inter,sans-serif;font-size:14px;color:#000;background:#fff;outline:none;transition:border-color 0.3s;" onfocus="this.style.borderColor='#FF6A00'" onblur="this.style.borderColor='#ddd'">
+        <input type="email" name="email" placeholder="Email Address" required style="width:100%;padding:14px 18px;border:1px solid #ddd;border-radius:4px;font-family:Inter,sans-serif;font-size:14px;color:#000;background:#fff;outline:none;transition:border-color 0.3s;" onfocus="this.style.borderColor='#FF6A00'" onblur="this.style.borderColor='#ddd'">
+        <input type="text" name="company" placeholder="Company Name" style="width:100%;padding:14px 18px;border:1px solid #ddd;border-radius:4px;font-family:Inter,sans-serif;font-size:14px;color:#000;background:#fff;outline:none;transition:border-color 0.3s;" onfocus="this.style.borderColor='#FF6A00'" onblur="this.style.borderColor='#ddd'">
+
+        <select name="service" required style="width:100%;padding:14px 18px;border:1px solid #ddd;border-radius:4px;font-family:Inter,sans-serif;font-size:14px;color:#666;background:#fff;outline:none;transition:border-color 0.3s;appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23999%22 stroke-width=%222%22><polyline points=%226 9 12 15 18 9%22/></svg>');background-repeat:no-repeat;background-position:right 18px center;" onfocus="this.style.borderColor='#FF6A00'" onblur="this.style.borderColor='#ddd'">
+          <option value="" disabled selected>Project Type</option>
+          <option value="corporate">Corporate Website</option>
+          <option value="ecommerce">E-Commerce</option>
+          <option value="landing">Landing Page</option>
+          <option value="webapp">Web App</option>
+          <option value="redesign">Redesign</option>
+        </select>
+
+        <label style="display:flex;align-items:center;gap:8px;font-family:Inter,sans-serif;font-size:12px;color:#666;margin-top:4px;cursor:pointer;">
+          <input type="checkbox" required style="accent-color:#FF6A00;width:16px;height:16px;">
+          I agree with terms of Privacy Policy.
+        </label>
+
+        <button type="submit" style="width:100%;padding:16px;background:#FF6A00;color:#fff;border:none;border-radius:4px;font-family:Inter,sans-serif;font-size:12px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;margin-top:8px;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">
+          Get My Free Web Quote
+        </button>
+      </form>
+
+      <div data-dp-success style="display:none;text-align:center;padding:36px 0;">
+        <div style="font-size:44px;margin-bottom:14px;color:#FF6A00;">&#10003;</div>
+        <p style="color:#FF6A00;font-size:11px;letter-spacing:0.3em;font-weight:700;text-transform:uppercase;margin-bottom:8px;font-family:Inter,sans-serif;">Request Sent!</p>
+        <p style="color:#666;font-size:13px;font-family:Inter,sans-serif;">We'll get back to you within 24 hours.</p>
+      </div>
+
+      <p style="font-family:Inter,sans-serif;font-size:11px;color:#999;text-align:center;margin-top:16px;display:flex;align-items:center;justify-content:center;gap:6px;">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Your information is 100% secure and confidential!
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     SERVICE 1 — CUSTOM WEBSITES (black bg, text left)
+     ════════════════════════════════════════════════════ -->
+<section id="wd-services" class="wd-svc-row" style="background:#000;padding:120px 0;border-top:1px solid rgba(255,255,255,0.04);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+    <!-- LEFT: Text -->
+    <div class="wd-text-block">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;"><span style="width:5px;height:5px;border-radius:50%;background:#FF6A00;"></span><span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">Service 01</span></div>
+      <h2 style="font-family:Inter,sans-serif;font-size:clamp(28px,3.5vw,44px);font-weight:900;letter-spacing:-1.5px;line-height:1.05;color:#fff;margin-bottom:24px;">Custom<br><span style="color:#FF6A00;">Websites</span></h2>
+      <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:rgba(255,255,255,0.55);margin-bottom:28px;">Bespoke, hand-coded websites built from the ground up for your brand. We design and develop fully responsive, SEO-optimized, high-performance sites with custom CMS integrations — no cookie-cutter templates, ever. Every pixel is intentional, every interaction is engineered for conversion.</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">Fully Responsive Design</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">SEO-Optimized Architecture</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">90+ Core Web Vitals Score</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">Custom CMS Integration</span></div>
+      </div>
+      <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#000;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">Get a Quote <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+    </div>
+    <!-- RIGHT: Laptop + Phone Mockup -->
+    <div style="position:relative;display:flex;align-items:flex-end;justify-content:center;min-height:520px;">
+
+      <!-- Laptop -->
+      <div style="position:relative;z-index:1;">
+        <!-- Visit button -->
+        <a href="https://www.dubaideluxe.com" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#FF6A00;color:#000;font-family:Inter,sans-serif;font-size:10px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;padding:8px 18px;text-decoration:none;border-radius:6px 6px 0 0;margin-bottom:-1px;position:relative;z-index:3;transition:background 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">
+          Visit Website <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+        <!-- Laptop Screen -->
+        <div style="width:480px;background:#1a1a1a;border-radius:8px 8px 0 0;border:2px solid #333;border-bottom:none;overflow:hidden;box-shadow:0 -8px 40px rgba(0,0,0,0.5);">
+          <!-- Browser chrome -->
+          <div style="display:flex;align-items:center;gap:5px;padding:6px 10px;background:#222;border-bottom:1px solid #333;">
+            <div style="width:7px;height:7px;border-radius:50%;background:#ff5f57;"></div>
+            <div style="width:7px;height:7px;border-radius:50%;background:#febc2e;"></div>
+            <div style="width:7px;height:7px;border-radius:50%;background:#28c840;"></div>
+            <div style="flex:1;margin-left:8px;background:rgba(255,255,255,0.06);border-radius:3px;padding:3px 8px;font-family:Inter,sans-serif;font-size:8px;color:rgba(255,255,255,0.3);">dubaideluxe.com</div>
+          </div>
+          <!-- Screen content -->
+          <img src="assets/images/website-showcase.webp" alt="Dubai Deluxe Website" loading="lazy" style="width:100%;display:block;">
+        </div>
+        <!-- Laptop base -->
+        <div style="width:540px;height:14px;background:linear-gradient(180deg,#333,#222);border-radius:0 0 8px 8px;margin:0 auto;position:relative;left:-30px;">
+          <div style="width:80px;height:4px;background:#444;border-radius:0 0 4px 4px;margin:0 auto;"></div>
+        </div>
+        <div style="width:580px;height:6px;background:#1a1a1a;border-radius:0 0 12px 12px;margin:0 auto;position:relative;left:-50px;"></div>
+      </div>
+
+      <!-- Phone (vertical) -->
+      <div style="position:absolute;right:-30px;bottom:30px;z-index:2;width:160px;">
+        <div style="background:#000;border-radius:24px;border:3px solid #444;overflow:hidden;box-shadow:0 20px 56px rgba(0,0,0,0.7);padding:4px;">
+          <!-- Phone notch -->
+          <div style="width:55px;height:16px;background:#000;border-radius:0 0 12px 12px;margin:-4px auto 0;position:relative;z-index:2;"></div>
+          <!-- Phone screen -->
+          <div style="border-radius:20px;overflow:hidden;margin-top:-8px;">
+            <img src="assets/images/website-mobile.webp" alt="Dubai Deluxe Mobile" loading="lazy" style="width:100%;display:block;">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     SERVICE 2 — E-COMMERCE (bg:#050505, reversed)
+     ════════════════════════════════════════════════════ -->
+<section class="wd-svc-row" style="background:#050505;padding:120px 0;border-top:1px solid rgba(255,255,255,0.04);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+    <!-- LEFT: Visual -->
+    <div style="display:flex;align-items:center;justify-content:center;">
+      <div style="width:100%;max-width:420px;aspect-ratio:4/3;background:linear-gradient(135deg,rgba(255,106,0,0.08) 0%,#0a0a0a 60%);border:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;border-radius:12px;">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,106,0,0.25)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      </div>
+    </div>
+    <!-- RIGHT: Text -->
+    <div class="wd-text-block">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;"><span style="width:5px;height:5px;border-radius:50%;background:#FF6A00;"></span><span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">Service 02</span></div>
+      <h2 style="font-family:Inter,sans-serif;font-size:clamp(28px,3.5vw,44px);font-weight:900;letter-spacing:-1.5px;line-height:1.05;color:#fff;margin-bottom:24px;">E-Commerce<br><span style="color:#FF6A00;">Development</span></h2>
+      <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:rgba(255,255,255,0.55);margin-bottom:28px;">We build online stores that turn browsers into buyers. Whether it's Shopify, WooCommerce, or a fully custom platform — we handle product catalogs, checkout flows, payment gateway integrations, and inventory management. Every store is optimized for UAE customers and built to scale.</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">Shopify & WooCommerce Stores</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">Custom E-Commerce Platforms</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">Payment Gateway Integration</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">Inventory & Order Management</span></div>
+      </div>
+      <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#000;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">Start Your Store <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     SERVICE 3 — WEB APPS & LANDING PAGES (black bg)
+     ════════════════════════════════════════════════════ -->
+<section class="wd-svc-row" style="background:#000;padding:120px 0;border-top:1px solid rgba(255,255,255,0.04);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+    <!-- LEFT: Text -->
+    <div class="wd-text-block">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;"><span style="width:5px;height:5px;border-radius:50%;background:#FF6A00;"></span><span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">Service 03</span></div>
+      <h2 style="font-family:Inter,sans-serif;font-size:clamp(28px,3.5vw,44px);font-weight:900;letter-spacing:-1.5px;line-height:1.05;color:#fff;margin-bottom:24px;">Web Apps &<br><span style="color:#FF6A00;">Landing Pages</span></h2>
+      <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:rgba(255,255,255,0.55);margin-bottom:28px;">SaaS dashboards, client portals, internal tools, and conversion-focused landing pages — we build web applications that solve real business problems. Every app integrates seamlessly with your existing stack via APIs, and every landing page is A/B tested and optimized for maximum conversions.</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">SaaS Dashboards & Portals</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">Conversion-Focused Landing Pages</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">API Integrations & Webhooks</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">A/B Testing & CRO</span></div>
+      </div>
+      <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#000;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">Discuss Your Project <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+    </div>
+    <!-- RIGHT: Phone + Code -->
+    <div style="display:flex;align-items:center;gap:20px;justify-content:center;">
+
+      <!-- Phone mockup -->
+      <div style="width:200px;flex-shrink:0;">
+        <div style="background:#111;border-radius:28px;border:3px solid #333;overflow:hidden;box-shadow:0 24px 56px rgba(0,0,0,0.5);">
+          <div style="width:60px;height:14px;background:#000;border-radius:0 0 12px 12px;margin:0 auto;position:relative;z-index:2;"></div>
+          <div style="margin:-4px 4px 4px;border-radius:0 0 24px 24px;overflow:hidden;">
+            <img src="assets/images/app-showcase.webp" alt="App Preview" loading="lazy" style="width:100%;display:block;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating code snippet -->
+      <div style="width:220px;background:#0d1117;border:1px solid rgba(255,255,255,0.08);border-radius:10px;overflow:hidden;font-family:'Fira Code','SF Mono',monospace;box-shadow:0 16px 40px rgba(0,0,0,0.4);">
+        <div style="display:flex;align-items:center;gap:4px;padding:8px 10px;background:#161b22;border-bottom:1px solid rgba(255,255,255,0.06);">
+          <div style="width:6px;height:6px;border-radius:50%;background:#ff5f57;"></div>
+          <div style="width:6px;height:6px;border-radius:50%;background:#febc2e;"></div>
+          <div style="width:6px;height:6px;border-radius:50%;background:#28c840;"></div>
+          <span style="font-size:8px;color:rgba(255,255,255,0.3);margin-left:4px;">app.jsx</span>
+        </div>
+        <div style="padding:10px;font-size:9px;line-height:1.8;color:#c9d1d9;">
+          <div><span style="color:rgba(255,255,255,0.12);margin-right:8px;">1</span><span style="color:#ff7b72;">import</span> <span style="color:#d2a8ff;">React</span></div>
+          <div><span style="color:rgba(255,255,255,0.12);margin-right:8px;">2</span><span style="color:#ff7b72;">import</span> <span style="color:#a5d6ff;">'./app.css'</span></div>
+          <div><span style="color:rgba(255,255,255,0.12);margin-right:8px;">3</span></div>
+          <div><span style="color:rgba(255,255,255,0.12);margin-right:8px;">4</span><span style="color:#ff7b72;">const</span> <span style="color:#d2a8ff;">App</span> = () =&gt; {</div>
+          <div><span style="color:rgba(255,255,255,0.12);margin-right:8px;">5</span>&nbsp;&nbsp;<span style="color:#ff7b72;">return</span> (</div>
+          <div><span style="color:rgba(255,255,255,0.12);margin-right:8px;">6</span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7ee787;">&lt;div</span> <span style="color:#d2a8ff;">className</span>=<span style="color:#a5d6ff;">"app"</span><span style="color:#7ee787;">&gt;</span></div>
+          <div><span style="color:rgba(255,255,255,0.12);margin-right:8px;">7</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7ee787;">&lt;Header</span> /&gt;</div>
+          <div><span style="color:rgba(255,255,255,0.12);margin-right:8px;">8</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7ee787;">&lt;Dashboard</span></div>
+          <div><span style="color:rgba(255,255,255,0.12);margin-right:8px;">9</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#d2a8ff;">data</span>={<span style="color:#FF6A00;">metrics</span>}</div>
+          <div><span style="color:rgba(255,255,255,0.12);margin-right:4px;">10</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt;</div>
+          <div><span style="color:rgba(255,255,255,0.12);margin-right:4px;">11</span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7ee787;">&lt;/div&gt;</span></div>
+          <div><span style="color:rgba(255,255,255,0.12);margin-right:4px;">12</span>&nbsp;&nbsp;)</div>
+          <div><span style="color:rgba(255,255,255,0.12);margin-right:4px;">13</span>}<span style="display:inline-block;width:1.5px;height:11px;background:#FF6A00;animation:blink 1s step-end infinite;vertical-align:middle;margin-left:1px;"></span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     OUR PROCESS — 4-step vertical timeline
+     ════════════════════════════════════════════════════ -->
+<section id="wd-timeline" style="background:#050505;padding:120px 0;border-top:1px solid rgba(255,255,255,0.04);">
+  <div style="max-width:1100px;margin:0 auto;padding:0 clamp(24px,5vw,72px);">
+    <div style="text-align:center;margin-bottom:72px;">
+      <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:24px;"><div style="width:5px;height:5px;border-radius:50%;background:#FF6A00;"></div><span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">How We Work</span></div>
+      <h2 style="font-family:Inter,sans-serif;font-size:clamp(32px,4.5vw,56px);font-weight:900;letter-spacing:-2px;line-height:1.05;color:#fff;margin-bottom:20px;">Our <span style="color:#FF6A00;">Process</span></h2>
+      <p style="font-family:Inter,sans-serif;font-size:15px;color:rgba(255,255,255,0.4);font-weight:300;max-width:560px;line-height:1.75;margin:0 auto;">Every web project follows a proven process — from discovery to launch and beyond.</p>
+    </div>
+
+    <!-- Timeline -->
+    <div style="position:relative;">
+      <!-- Vertical line (static grey track) -->
+      <div style="position:absolute;top:0;bottom:0;left:28px;width:2px;background:rgba(255,255,255,0.06);"></div>
+      <!-- Vertical line (animated orange fill) -->
+      <div id="wd-timeline-progress" style="position:absolute;top:0;left:28px;width:2px;height:100%;background:#FF6A00;transform-origin:top center;transform:scaleY(0);"></div>
+
+      <!-- Step 1 -->
+      <div class="wd-tl-step" style="display:flex;gap:40px;margin-bottom:56px;position:relative;">
+        <div class="wd-tl-circle" style="width:58px;height:58px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;transition:border-color 0.5s,box-shadow 0.5s;">
+          <span style="font-family:Inter,sans-serif;font-size:18px;font-weight:900;color:rgba(255,255,255,0.2);transition:color 0.5s;">01</span>
+        </div>
+        <div style="flex:1;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;padding:32px;transition:background 0.3s;" onmouseenter="this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.background='rgba(255,255,255,0.03)'">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.3px;">Discovery & Wireframes</div>
+            <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#FF6A00;background:rgba(255,106,0,0.1);padding:5px 14px;border-radius:20px;">Week 1</span>
+          </div>
+          <div style="font-family:Inter,sans-serif;font-size:14px;color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:16px;">We study your brand, audience, and goals. Through a focused discovery session we define site architecture, user flows, and content hierarchy — then map everything into detailed wireframes.</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Brand Audit</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Sitemap</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Wireframes</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">User Flows</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="wd-tl-step" style="display:flex;gap:40px;margin-bottom:56px;position:relative;">
+        <div class="wd-tl-circle" style="width:58px;height:58px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;transition:border-color 0.5s,box-shadow 0.5s;">
+          <span style="font-family:Inter,sans-serif;font-size:18px;font-weight:900;color:rgba(255,255,255,0.2);transition:color 0.5s;">02</span>
+        </div>
+        <div style="flex:1;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;padding:32px;transition:background 0.3s;" onmouseenter="this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.background='rgba(255,255,255,0.03)'">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.3px;">Design & Prototyping</div>
+            <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#FF6A00;background:rgba(255,106,0,0.1);padding:5px 14px;border-radius:20px;">Week 2</span>
+          </div>
+          <div style="font-family:Inter,sans-serif;font-size:14px;color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:16px;">High-fidelity design mockups in Figma — every page, every state, every interaction designed and presented for your approval before a single line of code is written.</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Figma</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">UI Design</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Prototype</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Design System</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="wd-tl-step" style="display:flex;gap:40px;margin-bottom:56px;position:relative;">
+        <div class="wd-tl-circle" style="width:58px;height:58px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;transition:border-color 0.5s,box-shadow 0.5s;">
+          <span style="font-family:Inter,sans-serif;font-size:18px;font-weight:900;color:rgba(255,255,255,0.2);transition:color 0.5s;">03</span>
+        </div>
+        <div style="flex:1;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;padding:32px;transition:background 0.3s;" onmouseenter="this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.background='rgba(255,255,255,0.03)'">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.3px;">Development & Testing</div>
+            <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#FF6A00;background:rgba(255,106,0,0.1);padding:5px 14px;border-radius:20px;">Week 3–4</span>
+          </div>
+          <div style="font-family:Inter,sans-serif;font-size:14px;color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:16px;">Clean, semantic code development with rigorous cross-browser testing, performance audits, accessibility checks, and QA across all device sizes. We build on modern frameworks and deploy to blazing-fast infrastructure.</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">React / Next.js</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Cross-Browser QA</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">PageSpeed Audit</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Accessibility</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="wd-tl-step" style="display:flex;gap:40px;position:relative;">
+        <div class="wd-tl-circle" style="width:58px;height:58px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;transition:border-color 0.5s,background 0.5s,box-shadow 0.5s;">
+          <span style="font-family:Inter,sans-serif;font-size:18px;font-weight:900;color:rgba(255,255,255,0.2);transition:color 0.5s;">04</span>
+        </div>
+        <div style="flex:1;background:rgba(255,106,0,0.05);border:1px solid rgba(255,106,0,0.15);border-left:3px solid #FF6A00;padding:32px;transition:background 0.3s;" onmouseenter="this.style.background='rgba(255,106,0,0.08)'" onmouseleave="this.style.background='rgba(255,106,0,0.05)'">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.3px;">Launch & Support</div>
+            <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#FF6A00;background:rgba(255,106,0,0.1);padding:5px 14px;border-radius:20px;">Week 5+</span>
+          </div>
+          <div style="font-family:Inter,sans-serif;font-size:14px;color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:16px;">Smooth deployment, DNS configuration, SSL setup, analytics integration, and conversion tracking. Post-launch we provide ongoing maintenance, security updates, performance monitoring, and continuous optimization.</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Deployment</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Analytics</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Security</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Ongoing Support</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-badge"><span>Ready to grow?</span></div>
+  <h2 class="cta-title">LET'S BUILD<br><span class="hollow">SOMETHING</span><br>POWERFUL</h2>
+  <p class="cta-desc">Tell us your goals. We'll build the strategy, execute the vision, and deliver results that matter.</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/971543333587" class="btn-p">WhatsApp Us</a>
+    <a href="mailto:info@dubaiprod.com" class="btn-s">Send Email</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#000;border-top:1px solid rgba(255,255,255,0.06);padding:80px 32px 40px;font-family:'Inter',sans-serif;">
+    <div style="max-width:1280px;margin:0 auto;">
+        <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:64px;margin-bottom:72px;">
+            <div>
+                <img src="assets/images/dubai_prod_2__1_-1772650048332.webp" alt="Dubai Prod" loading="lazy" style="height:64px;width:auto;margin-bottom:24px;display:block;" loading="lazy">
+                <p style="font-size:13px;color:rgba(255,255,255,0.38);line-height:1.8;max-width:280px;margin-bottom:28px;">Dubai's leading PR & digital marketing agency. We create content that moves people and campaigns that move markets.</p>
+                <div style="display:flex;gap:16px;">
+                    <a href="https://www.instagram.com/dubai_prods/" target="_blank" style="width:38px;height:38px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);" onmouseenter="this.style.borderColor='#FF6A00';this.style.color='#FF6A00'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.4)'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+                    <a href="https://www.facebook.com/dubai_prods/" target="_blank" style="width:38px;height:38px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);" onmouseenter="this.style.borderColor='#FF6A00';this.style.color='#FF6A00'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.4)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    <a href="https://www.linkedin.com/company/dubai-prod" target="_blank" style="width:38px;height:38px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);" onmouseenter="this.style.borderColor='#FF6A00';this.style.color='#FF6A00'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.4)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+                    <a href="https://www.youtube.com/@dubaiprod" target="_blank" style="width:38px;height:38px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);" onmouseenter="this.style.borderColor='#FF6A00';this.style.color='#FF6A00'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.4)'"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.94 1.96C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
+                </div>
+            </div>
+            <div>
+                <h4 style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:24px;">Services</h4>
+                <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
+                    <li><a href="social-media.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Social Media</a></li>
+                    <li><a href="video-production-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Video Production</a></li>
+                    <li><a href="pr-media.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">PR & Media</a></li>
+                    <li><a href="seo.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">SEO</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:24px;">Company</h4>
+                <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
+                    <li><a href="about-us-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">About Us</a></li>
+                    <li><a href="portfolio-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Our Work</a></li>
+                    <li><a href="blog-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Blog</a></li>
+                    <li><a href="contact-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:24px;">Contact</h4>
+                <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:16px;">
+                    <li style="display:flex;gap:12px;align-items:flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span style="font-size:12px;color:rgba(255,255,255,0.4);line-height:1.6;">Dubai, United Arab Emirates</span></li>
+                    <li style="display:flex;gap:12px;align-items:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@dubaiprod.com" style="font-size:12px;color:rgba(255,255,255,0.4);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.4)'">info@dubaiprod.com</a></li>
+                    <li style="display:flex;gap:12px;align-items:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.22 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+38640797340" style="font-size:12px;color:rgba(255,255,255,0.4);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.4)'">+386 40 797 340</a></li>
+                    <li style="display:flex;gap:12px;align-items:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.22 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+971543333587" style="font-size:12px;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.4)'">+971 54 333 3587</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="height:1px;background:rgba(255,255,255,0.06);margin-bottom:32px;"></div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;">
+            <p style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin:0;">© 2026 Dubai Prod. All Rights Reserved.</p>
+            <div style="display:flex;gap:24px;"><a href="privacy-policy.html" style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.2);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.2)'">Privacy Policy</a><a href="cookies-policy.html" style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.2);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.2)'">Cookies Policy</a></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;border-radius:50%;background:#FF6A00;display:inline-block;animation:pulse 2s infinite;"></span><span style="font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.2);">Dubai, UAE</span></div>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* Hero */
+  gsap.from('#hero-label', { y:30, opacity:0, duration:1, ease:'power3.out', delay:0.2 });
+  gsap.from('#hero-title', { y:50, opacity:0, duration:1.1, ease:'power3.out', delay:0.38 });
+  gsap.from('#hero-foot', { y:30, opacity:0, duration:0.9, ease:'power3.out', delay:0.58 });
+
+  /* Why Dubai Prod section */
+  gsap.from('#why-webdev', { scrollTrigger:{ trigger:'#why-webdev', start:'top 90%' }, y:40, opacity:0, duration:0.9, ease:'power2.out', immediateRender:false });
+
+  /* Service sections */
+  document.querySelectorAll('.wd-svc-row').forEach(function(sec){
+    gsap.from(sec.querySelector('.wd-text-block') || sec, { scrollTrigger:{ trigger:sec, start:'top 85%' }, y:50, opacity:0, duration:0.9, ease:'power2.out', immediateRender:false });
+  });
+
+  /* Timeline steps */
+  document.querySelectorAll('.wd-tl-step').forEach(function(step, i){
+    gsap.from(step, { scrollTrigger:{ trigger:step, start:'top 90%' }, y:40, opacity:0, duration:0.7, delay:i*0.08, ease:'power2.out', immediateRender:false });
+  });
+
+  /* Timeline progress line */
+  var wdProgress = document.getElementById('wd-timeline-progress');
+  var wdTimeline = document.getElementById('wd-timeline');
+  if(wdProgress && wdTimeline) {
+    gsap.to(wdProgress, {
+      scaleY:1,
+      ease:'none',
+      scrollTrigger:{
+        trigger: wdTimeline,
+        start:'top 60%',
+        end:'bottom 60%',
+        scrub:0.4
+      }
+    });
+  }
+
+  /* Activate timeline circles as line reaches them */
+  document.querySelectorAll('.wd-tl-circle').forEach(function(circle){
+    ScrollTrigger.create({
+      trigger: circle,
+      start:'top 65%',
+      onEnter:function(){
+        circle.style.borderColor='#FF6A00';
+        circle.style.boxShadow='0 0 16px rgba(255,106,0,0.3)';
+        circle.querySelector('span').style.color='#FF6A00';
+      }
+    });
+  });
+
+  /* CTA */
+  gsap.from('.cta-title', { scrollTrigger:{ trigger:'.cta-section', start:'top 92%' }, y:40, opacity:0, duration:0.9, ease:'power3.out', immediateRender:false });
+
+  /* Nav shrink on scroll */
+  ScrollTrigger.create({ start:'top -80', onUpdate:function(self){ var nav=document.getElementById('main-nav'); if(self.progress>0){nav.style.padding='16px 48px';nav.style.borderBottom='1px solid rgba(255,255,255,0.06)';}else{nav.style.padding='';nav.style.borderBottom='';} } });
+
+  window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
+});
+</script>
+</body>
+</html>

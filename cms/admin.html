@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dubai Prod - Page Editor</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Inter',sans-serif; background:#0a0a0a; color:#fff; display:flex; height:100vh; overflow:hidden; }
+
+  /* Sidebar */
+  .sidebar { width:260px; background:#111; border-right:1px solid #222; display:flex; flex-direction:column; flex-shrink:0; }
+  .sidebar-header { padding:20px; border-bottom:1px solid #222; }
+  .sidebar-header h1 { font-size:16px; font-weight:700; }
+  .sidebar-header h1 span { color:#FF6A00; }
+  .sidebar-header p { font-size:11px; color:#666; margin-top:4px; }
+  .page-list { flex:1; overflow-y:auto; padding:8px; }
+  .page-item { padding:10px 12px; border-radius:8px; cursor:pointer; font-size:13px; color:#999; transition:.2s; text-transform:capitalize; display:flex; align-items:center; gap:8px; }
+  .page-item:hover { background:#1a1a1a; color:#fff; }
+  .page-item.active { background:#FF6A00; color:#fff; }
+  .page-item .dot { width:6px; height:6px; border-radius:50%; background:#333; flex-shrink:0; }
+  .page-item.active .dot { background:#fff; }
+
+  /* Main */
+  .main { flex:1; display:flex; flex-direction:column; overflow:hidden; }
+
+  /* Toolbar */
+  .toolbar { padding:12px 24px; background:#111; border-bottom:1px solid #222; display:flex; align-items:center; gap:12px; }
+  .toolbar .page-title { font-size:14px; font-weight:600; flex:1; text-transform:capitalize; }
+  .btn { padding:8px 16px; border-radius:6px; border:none; font-family:inherit; font-size:12px; font-weight:500; cursor:pointer; transition:.2s; display:inline-flex; align-items:center; gap:6px; }
+  .btn-primary { background:#FF6A00; color:#fff; }
+  .btn-primary:hover { background:#e55d00; }
+  .btn-outline { background:transparent; color:#999; border:1px solid #333; }
+  .btn-outline:hover { border-color:#FF6A00; color:#FF6A00; }
+  .btn-danger { background:#dc2626; color:#fff; }
+  .btn-danger:hover { background:#b91c1c; }
+  .btn-sm { padding:5px 10px; font-size:11px; }
+
+  /* Content area */
+  .content { flex:1; display:flex; overflow:hidden; }
+
+  /* Section list */
+  .section-list { width:340px; border-right:1px solid #222; overflow-y:auto; background:#0d0d0d; padding:12px; }
+  .section-card { background:#151515; border:1px solid #222; border-radius:10px; margin-bottom:8px; overflow:hidden; transition:.2s; cursor:pointer; }
+  .section-card:hover { border-color:#444; }
+  .section-card.active { border-color:#FF6A00; }
+  .section-card-header { padding:12px 14px; display:flex; align-items:center; justify-content:space-between; }
+  .section-card-title { font-size:12px; font-weight:600; flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .section-card-actions { display:flex; gap:4px; }
+  .section-card-actions button { width:26px; height:26px; border-radius:4px; border:none; background:#222; color:#999; cursor:pointer; font-size:11px; display:flex; align-items:center; justify-content:center; transition:.2s; }
+  .section-card-actions button:hover { background:#333; color:#fff; }
+  .section-card-actions button.delete:hover { background:#dc2626; color:#fff; }
+  .section-card-badge { font-size:10px; color:#666; padding:0 14px 10px; }
+
+  /* Editor panel */
+  .editor-panel { flex:1; overflow-y:auto; padding:24px; }
+  .editor-panel h2 { font-size:18px; margin-bottom:20px; }
+  .edit-group { margin-bottom:20px; background:#151515; border:1px solid #222; border-radius:10px; padding:16px; }
+  .edit-group-header { display:flex; align-items:center; gap:8px; margin-bottom:12px; }
+  .edit-group-type { font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:1px; padding:3px 8px; border-radius:4px; }
+  .type-heading { background:#FF6A00; color:#fff; }
+  .type-paragraph { background:#2563eb; color:#fff; }
+  .type-image { background:#16a34a; color:#fff; }
+  .type-video { background:#9333ea; color:#fff; }
+  .type-link { background:#ca8a04; color:#fff; }
+  .type-background { background:#0891b2; color:#fff; }
+
+  .edit-field { width:100%; background:#0a0a0a; border:1px solid #333; border-radius:6px; color:#fff; font-family:inherit; font-size:13px; padding:10px 12px; resize:vertical; transition:.2s; }
+  .edit-field:focus { outline:none; border-color:#FF6A00; }
+  .edit-field-label { font-size:11px; color:#888; margin-bottom:6px; display:block; }
+
+  .image-preview { width:100%; max-height:200px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#111; }
+  .video-preview { width:100%; max-height:200px; border-radius:6px; margin-bottom:10px; background:#111; }
+
+  .upload-zone { border:2px dashed #333; border-radius:8px; padding:20px; text-align:center; cursor:pointer; transition:.2s; margin-top:8px; }
+  .upload-zone:hover { border-color:#FF6A00; background:#1a1100; }
+  .upload-zone p { font-size:12px; color:#666; }
+  .upload-zone input { display:none; }
+
+  /* Empty state */
+  .empty-state { display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; color:#444; }
+  .empty-state svg { width:48px; height:48px; margin-bottom:16px; opacity:.3; }
+  .empty-state p { font-size:14px; }
+
+  /* Section templates */
+  .templates-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; padding:12px; }
+  .template-card { background:#151515; border:1px solid #222; border-radius:8px; padding:14px; cursor:pointer; transition:.2s; }
+  .template-card:hover { border-color:#FF6A00; }
+  .template-card h4 { font-size:12px; margin-bottom:4px; }
+  .template-card p { font-size:10px; color:#666; }
+
+  /* Modal */
+  .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,.7); display:none; align-items:center; justify-content:center; z-index:1000; }
+  .modal-overlay.show { display:flex; }
+  .modal { background:#151515; border:1px solid #333; border-radius:12px; padding:24px; width:500px; max-height:80vh; overflow-y:auto; }
+  .modal h3 { margin-bottom:16px; }
+
+  /* Image picker modal */
+  .image-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; max-height:400px; overflow-y:auto; }
+  .image-grid-item { aspect-ratio:1; border-radius:6px; overflow:hidden; cursor:pointer; border:2px solid transparent; transition:.2s; }
+  .image-grid-item:hover { border-color:#FF6A00; }
+  .image-grid-item img { width:100%; height:100%; object-fit:cover; }
+
+  /* Toast */
+  .toast { position:fixed; bottom:24px; right:24px; background:#16a34a; color:#fff; padding:12px 20px; border-radius:8px; font-size:13px; transform:translateY(100px); opacity:0; transition:.3s; z-index:2000; }
+  .toast.show { transform:translateY(0); opacity:1; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width:6px; }
+  ::-webkit-scrollbar-track { background:#111; }
+  ::-webkit-scrollbar-thumb { background:#333; border-radius:3px; }
+  ::-webkit-scrollbar-thumb:hover { background:#555; }
+
+  /* Preview iframe */
+  .preview-frame { flex:1; border:none; background:#fff; }
+
+  /* Tab buttons */
+  .view-tabs { display:flex; gap:2px; background:#222; border-radius:6px; padding:2px; }
+  .view-tab { padding:6px 14px; border:none; background:transparent; color:#666; font-size:11px; font-weight:500; cursor:pointer; border-radius:4px; font-family:inherit; }
+  .view-tab.active { background:#FF6A00; color:#fff; }
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h1><span>Dubai Prod</span> Editor</h1>
+    <p>Visual Page Manager</p>
+  </div>
+  <div class="page-list" id="pageList"></div>
+</div>
+
+<!-- Main -->
+<div class="main">
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="page-title" id="pageTitle">Select a page</div>
+    <div class="view-tabs">
+      <button class="view-tab active" onclick="setView('edit')">Edit</button>
+      <button class="view-tab" onclick="setView('preview')">Preview</button>
+    </div>
+    <button class="btn btn-outline btn-sm" onclick="addSectionModal()">+ Add Section</button>
+    <button class="btn btn-primary btn-sm" id="saveBtn" onclick="saveAll()" style="display:none">Save Changes</button>
+  </div>
+
+  <!-- Content -->
+  <div class="content" id="contentArea">
+    <!-- Edit View -->
+    <div id="editView" style="display:flex;flex:1;overflow:hidden;">
+      <div class="section-list" id="sectionList">
+        <div class="empty-state">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          <p>Select a page to edit</p>
+        </div>
+      </div>
+      <div class="editor-panel" id="editorPanel">
+        <div class="empty-state">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+          <p>Click a section to edit</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Preview View -->
+    <iframe id="previewFrame" class="preview-frame" style="display:none;"></iframe>
+  </div>
+</div>
+
+<!-- Image Picker Modal -->
+<div class="modal-overlay" id="imageModal">
+  <div class="modal">
+    <h3>Choose Image</h3>
+    <div style="margin-bottom:12px;">
+      <label class="upload-zone" id="modalUploadZone">
+        <p>Drop image here or click to upload</p>
+        <input type="file" accept="image/*" onchange="uploadAndPick(this)">
+      </label>
+    </div>
+    <div class="image-grid" id="imageGrid"></div>
+    <div style="margin-top:12px;text-align:right;">
+      <button class="btn btn-outline btn-sm" onclick="closeModal('imageModal')">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- Add Section Modal -->
+<div class="modal-overlay" id="addSectionModal">
+  <div class="modal">
+    <h3>Add New Section</h3>
+    <div class="templates-grid" id="templateGrid"></div>
+    <div style="margin-top:12px;text-align:right;">
+      <button class="btn btn-outline btn-sm" onclick="closeModal('addSectionModal')">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+let currentPage = null;
+let currentSections = [];
+let activeSectionIndex = -1;
+let pendingUpdates = [];
+let imagePickCallback = null;
+
+// Section templates
+const TEMPLATES = [
+  {
+    name: 'Hero Section',
+    desc: 'Full-width hero with title and CTA',
+    html: `<section style="padding:120px 0 80px;background:#000;text-align:center;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
+    <h1 style="font-size:clamp(32px,5vw,64px);font-weight:800;color:#fff;margin-bottom:20px;">Your <span style="color:#FF6A00;">Headline</span> Here</h1>
+    <p style="font-size:18px;color:#999;max-width:600px;margin:0 auto 32px;">Add your description text here. Explain what makes your service unique.</p>
+    <a href="contact-dubai.html" style="display:inline-block;padding:14px 32px;background:#FF6A00;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">GET STARTED</a>
+  </div>
+</section>`
+  },
+  {
+    name: 'Text + Image',
+    desc: 'Two column with text and image',
+    html: `<section style="padding:80px 0;background:#000;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+    <div>
+      <h2 style="font-size:36px;font-weight:700;color:#fff;margin-bottom:16px;">Section <span style="color:#FF6A00;">Title</span></h2>
+      <p style="color:#999;line-height:1.7;margin-bottom:24px;">Add your content here. Describe your services, achievements, or any information you want to share with visitors.</p>
+      <a href="contact-dubai.html" style="display:inline-block;padding:12px 28px;background:#FF6A00;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;font-size:14px;">LEARN MORE</a>
+    </div>
+    <div style="border-radius:12px;overflow:hidden;">
+      <img src="assets/images/placeholder.jpg" alt="" style="width:100%;display:block;">
+    </div>
+  </div>
+</section>`
+  },
+  {
+    name: '3-Column Cards',
+    desc: 'Three feature cards in a row',
+    html: `<section style="padding:80px 0;background:#050505;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;text-align:center;">
+    <h2 style="font-size:36px;font-weight:700;color:#fff;margin-bottom:48px;">Our <span style="color:#FF6A00;">Services</span></h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <div style="background:#111;border:1px solid #222;border-radius:12px;padding:32px;">
+        <h3 style="color:#FF6A00;font-size:20px;margin-bottom:12px;">Service One</h3>
+        <p style="color:#999;font-size:14px;line-height:1.6;">Description of your first service offering.</p>
+      </div>
+      <div style="background:#111;border:1px solid #222;border-radius:12px;padding:32px;">
+        <h3 style="color:#FF6A00;font-size:20px;margin-bottom:12px;">Service Two</h3>
+        <p style="color:#999;font-size:14px;line-height:1.6;">Description of your second service offering.</p>
+      </div>
+      <div style="background:#111;border:1px solid #222;border-radius:12px;padding:32px;">
+        <h3 style="color:#FF6A00;font-size:20px;margin-bottom:12px;">Service Three</h3>
+        <p style="color:#999;font-size:14px;line-height:1.6;">Description of your third service offering.</p>
+      </div>
+    </div>
+  </div>
+</section>`
+  },
+  {
+    name: 'CTA Banner',
+    desc: 'Call-to-action with button',
+    html: `<section style="padding:80px 0;background:linear-gradient(135deg,#FF6A00,#e55d00);text-align:center;">
+  <div style="max-width:800px;margin:0 auto;padding:0 24px;">
+    <h2 style="font-size:36px;font-weight:700;color:#fff;margin-bottom:16px;">Ready to Get Started?</h2>
+    <p style="color:rgba(255,255,255,.8);font-size:18px;margin-bottom:32px;">Let's discuss your project and create something amazing together.</p>
+    <a href="contact-dubai.html" style="display:inline-block;padding:14px 36px;background:#000;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;font-size:14px;">CONTACT US TODAY</a>
+  </div>
+</section>`
+  },
+  {
+    name: 'Stats Row',
+    desc: 'Counters/statistics section',
+    html: `<section style="padding:60px 0;background:#000;border-top:1px solid #222;border-bottom:1px solid #222;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;">
+    <div><div style="font-size:42px;font-weight:800;color:#FF6A00;">250+</div><div style="color:#999;font-size:14px;margin-top:4px;">Projects Done</div></div>
+    <div><div style="font-size:42px;font-weight:800;color:#FF6A00;">50+</div><div style="color:#999;font-size:14px;margin-top:4px;">Happy Clients</div></div>
+    <div><div style="font-size:42px;font-weight:800;color:#FF6A00;">7+</div><div style="color:#999;font-size:14px;margin-top:4px;">Years Experience</div></div>
+    <div><div style="font-size:42px;font-weight:800;color:#FF6A00;">15+</div><div style="color:#999;font-size:14px;margin-top:4px;">Team Members</div></div>
+  </div>
+</section>`
+  },
+  {
+    name: 'Full Width Image',
+    desc: 'Big image/video showcase',
+    html: `<section style="padding:0;">
+  <div style="max-width:1400px;margin:0 auto;padding:40px 24px;">
+    <img src="assets/images/placeholder.jpg" alt="" style="width:100%;border-radius:12px;display:block;">
+  </div>
+</section>`
+  }
+];
+
+// Load pages
+async function loadPages() {
+  const res = await fetch('/api/pages');
+  const pages = await res.json();
+  const list = document.getElementById('pageList');
+  list.innerHTML = pages.map(p => `
+    <div class="page-item" onclick="loadPage('${p.file}')" data-file="${p.file}">
+      <span class="dot"></span>
+      ${p.name}
+    </div>
+  `).join('');
+}
+
+// Load a page's sections
+async function loadPage(file) {
+  currentPage = file;
+  pendingUpdates = [];
+  document.getElementById('saveBtn').style.display = 'none';
+
+  // Update sidebar
+  document.querySelectorAll('.page-item').forEach(el => {
+    el.classList.toggle('active', el.dataset.file === file);
+  });
+  document.getElementById('pageTitle').textContent = file.replace('.html', '').replace(/-/g, ' ');
+
+  const res = await fetch('/api/page/' + file);
+  const data = await res.json();
+  currentSections = data.sections;
+
+  renderSectionList();
+  activeSectionIndex = -1;
+  document.getElementById('editorPanel').innerHTML = '<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg><p>Click a section to edit</p></div>';
+}
+
+// Render section list
+function renderSectionList() {
+  const list = document.getElementById('sectionList');
+  list.innerHTML = currentSections.map((s, i) => `
+    <div class="section-card ${i === activeSectionIndex ? 'active' : ''}" onclick="selectSection(${i})">
+      <div class="section-card-header">
+        <div class="section-card-title">${s.title}</div>
+        <div class="section-card-actions" onclick="event.stopPropagation()">
+          <button onclick="moveSection(${i},'up')" title="Move up">&uarr;</button>
+          <button onclick="moveSection(${i},'down')" title="Move down">&darr;</button>
+          <button class="delete" onclick="deleteSection(${i})" title="Delete">&times;</button>
+        </div>
+      </div>
+      <div class="section-card-badge">${s.editables.length} editable${s.editables.length !== 1 ? 's' : ''} &middot; &lt;${s.tag}&gt;</div>
+    </div>
+  `).join('');
+}
+
+// Select a section to edit
+function selectSection(index) {
+  activeSectionIndex = index;
+  renderSectionList();
+
+  const section = currentSections[index];
+  const panel = document.getElementById('editorPanel');
+
+  let html = `<h2 style="display:flex;align-items:center;gap:12px;">${section.title} <span style="font-size:11px;color:#666;font-weight:400;">#${section.id}</span></h2>`;
+
+  section.editables.forEach((ed, i) => {
+    html += `<div class="edit-group">`;
+    html += `<div class="edit-group-header"><span class="edit-group-type type-${ed.type}">${ed.type}</span></div>`;
+
+    if (ed.type === 'heading' || ed.type === 'paragraph') {
+      html += `<label class="edit-field-label">Content (HTML supported)</label>`;
+      html += `<textarea class="edit-field" rows="${ed.type === 'paragraph' ? 4 : 2}" data-section="${index}" data-editable="${i}" data-selector="${encodeURIComponent(ed.selector)}" data-prop="html" oninput="markDirty()">${escapeHtml(ed.text)}</textarea>`;
+    }
+
+    if (ed.type === 'image') {
+      html += `<img class="image-preview" src="${ed.src}" onerror="this.style.display='none'">`;
+      html += `<label class="edit-field-label">Image Source</label>`;
+      html += `<div style="display:flex;gap:8px;">`;
+      html += `<input class="edit-field" value="${ed.src}" data-section="${index}" data-editable="${i}" data-prop="src" oninput="markDirty()" style="flex:1;">`;
+      html += `<button class="btn btn-outline btn-sm" onclick="pickImage(${index},${i})">Browse</button>`;
+      html += `</div>`;
+      html += `<label class="upload-zone" style="margin-top:8px;"><p>Upload new image</p><input type="file" accept="image/*" onchange="uploadImage(this,${index},${i})"></label>`;
+    }
+
+    if (ed.type === 'video') {
+      html += `<video class="video-preview" src="${ed.src}" muted loop autoplay></video>`;
+      html += `<label class="edit-field-label">Video Source</label>`;
+      html += `<input class="edit-field" value="${ed.src}" data-section="${index}" data-editable="${i}" data-prop="src" oninput="markDirty()">`;
+    }
+
+    if (ed.type === 'link') {
+      html += `<label class="edit-field-label">Link Text</label>`;
+      html += `<input class="edit-field" value="${escapeHtml(ed.text)}" data-section="${index}" data-editable="${i}" data-prop="html" oninput="markDirty()">`;
+      html += `<label class="edit-field-label" style="margin-top:8px;">URL</label>`;
+      html += `<input class="edit-field" value="${ed.href}" data-section="${index}" data-editable="${i}" data-prop="href" oninput="markDirty()">`;
+    }
+
+    if (ed.type === 'background') {
+      html += `<div style="height:120px;background-image:url('${ed.src}');background-size:cover;background-position:center;border-radius:6px;margin-bottom:10px;"></div>`;
+      html += `<label class="edit-field-label">Background Image URL</label>`;
+      html += `<div style="display:flex;gap:8px;">`;
+      html += `<input class="edit-field" value="${ed.src}" data-section="${index}" data-editable="${i}" data-prop="background" oninput="markDirty()" style="flex:1;">`;
+      html += `<button class="btn btn-outline btn-sm" onclick="pickImage(${index},${i},'background')">Browse</button>`;
+      html += `</div>`;
+    }
+
+    html += `</div>`;
+  });
+
+  // Raw HTML editor
+  html += `<div style="margin-top:24px;"><button class="btn btn-outline btn-sm" onclick="toggleRawEditor(${index})">Edit Raw HTML</button></div>`;
+  html += `<div id="rawEditor" style="display:none;margin-top:12px;"><textarea class="edit-field" id="rawHtml" rows="15" style="font-family:monospace;font-size:12px;"></textarea><div style="margin-top:8px;"><button class="btn btn-primary btn-sm" onclick="saveRawHtml(${index})">Apply Raw HTML</button></div></div>`;
+
+  panel.innerHTML = html;
+}
+
+// Mark changes as dirty
+function markDirty() {
+  document.getElementById('saveBtn').style.display = 'inline-flex';
+}
+
+// Save all changes
+async function saveAll() {
+  const fields = document.querySelectorAll('[data-section][data-prop]');
+  const updates = [];
+
+  fields.forEach(field => {
+    const section = currentSections[field.dataset.section];
+    const editable = section.editables[field.dataset.editable];
+    const value = field.tagName === 'TEXTAREA' ? field.value : field.value;
+    const prop = field.dataset.prop;
+
+    if (editable) {
+      updates.push({
+        selector: editable.selector === 'self' ?
+          `#${section.id}` :
+          `#${section.id} ${editable.selector}`,
+        property: prop,
+        value: value
+      });
+    }
+  });
+
+  if (updates.length === 0) {
+    toast('No changes to save');
+    return;
+  }
+
+  const res = await fetch(`/api/page/${currentPage}/update`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ updates })
+  });
+
+  if (res.ok) {
+    toast('Changes saved!');
+    document.getElementById('saveBtn').style.display = 'none';
+    loadPage(currentPage); // Reload
+  } else {
+    toast('Error saving changes');
+  }
+}
+
+// Delete section
+async function deleteSection(index) {
+  if (!confirm('Delete this section? This cannot be undone.')) return;
+
+  const res = await fetch(`/api/page/${currentPage}/delete-section`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ index })
+  });
+
+  if (res.ok) {
+    toast('Section deleted');
+    loadPage(currentPage);
+  }
+}
+
+// Move section
+async function moveSection(index, direction) {
+  const res = await fetch(`/api/page/${currentPage}/move-section`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ index, direction })
+  });
+
+  if (res.ok) {
+    toast('Section moved');
+    loadPage(currentPage);
+  }
+}
+
+// Image picker
+async function pickImage(sectionIdx, editableIdx, prop = 'src') {
+  const res = await fetch('/api/images');
+  const images = await res.json();
+  const grid = document.getElementById('imageGrid');
+
+  grid.innerHTML = images.map(img => `
+    <div class="image-grid-item" onclick="selectImage('${img.path}',${sectionIdx},${editableIdx},'${prop}')">
+      <img src="${img.path}" loading="lazy">
+    </div>
+  `).join('');
+
+  document.getElementById('imageModal').classList.add('show');
+}
+
+function selectImage(path, sectionIdx, editableIdx, prop) {
+  const field = document.querySelector(`[data-section="${sectionIdx}"][data-editable="${editableIdx}"][data-prop="${prop}"]`);
+  if (field) {
+    field.value = path;
+    markDirty();
+  }
+  // Update preview
+  const img = field?.closest('.edit-group')?.querySelector('.image-preview');
+  if (img) img.src = path;
+
+  closeModal('imageModal');
+  toast('Image selected');
+}
+
+// Upload image
+async function uploadImage(input, sectionIdx, editableIdx) {
+  const file = input.files[0];
+  if (!file) return;
+
+  const formData = new FormData();
+  formData.append('image', file);
+
+  const res = await fetch('/api/upload', { method: 'POST', body: formData });
+  const data = await res.json();
+
+  if (data.path) {
+    selectImage(data.path, sectionIdx, editableIdx, 'src');
+  }
+}
+
+async function uploadAndPick(input) {
+  const file = input.files[0];
+  if (!file) return;
+
+  const formData = new FormData();
+  formData.append('image', file);
+
+  const res = await fetch('/api/upload', { method: 'POST', body: formData });
+  const data = await res.json();
+
+  if (data.path) {
+    toast('Image uploaded: ' + data.filename);
+    // Refresh grid
+    const imRes = await fetch('/api/images');
+    const images = await imRes.json();
+    document.getElementById('imageGrid').innerHTML = images.map(img => `
+      <div class="image-grid-item"><img src="${img.path}" loading="lazy"></div>
+    `).join('');
+  }
+}
+
+// Raw HTML editor
+async function toggleRawEditor(index) {
+  const editor = document.getElementById('rawEditor');
+  if (editor.style.display === 'none') {
+    const res = await fetch(`/api/page/${currentPage}/section/${index}`);
+    const data = await res.json();
+    document.getElementById('rawHtml').value = data.html;
+    editor.style.display = 'block';
+  } else {
+    editor.style.display = 'none';
+  }
+}
+
+async function saveRawHtml(index) {
+  const html = document.getElementById('rawHtml').value;
+  const res = await fetch(`/api/page/${currentPage}/replace-section`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ index, newHtml: html })
+  });
+
+  if (res.ok) {
+    toast('Section HTML updated');
+    loadPage(currentPage);
+  }
+}
+
+// Add section modal
+function addSectionModal() {
+  if (!currentPage) { toast('Select a page first'); return; }
+
+  const grid = document.getElementById('templateGrid');
+  grid.innerHTML = TEMPLATES.map((t, i) => `
+    <div class="template-card" onclick="addSection(${i})">
+      <h4>${t.name}</h4>
+      <p>${t.desc}</p>
+    </div>
+  `).join('');
+
+  document.getElementById('addSectionModal').classList.add('show');
+}
+
+async function addSection(templateIdx) {
+  const template = TEMPLATES[templateIdx];
+  const afterIndex = currentSections.length - 1;
+
+  const res = await fetch(`/api/page/${currentPage}/add-section`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ afterIndex, sectionHtml: template.html })
+  });
+
+  if (res.ok) {
+    toast('Section added');
+    closeModal('addSectionModal');
+    loadPage(currentPage);
+  }
+}
+
+// View toggle
+function setView(view) {
+  document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
+  event.target.classList.add('active');
+
+  if (view === 'edit') {
+    document.getElementById('editView').style.display = 'flex';
+    document.getElementById('previewFrame').style.display = 'none';
+  } else {
+    document.getElementById('editView').style.display = 'none';
+    const frame = document.getElementById('previewFrame');
+    frame.style.display = 'block';
+    if (currentPage) frame.src = '/preview/' + currentPage;
+  }
+}
+
+// Helpers
+function closeModal(id) { document.getElementById(id).classList.remove('show'); }
+function escapeHtml(str) { return str?.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;') || ''; }
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// Close modals on overlay click
+document.querySelectorAll('.modal-overlay').forEach(m => {
+  m.addEventListener('click', e => { if (e.target === m) m.classList.remove('show'); });
+});
+
+// Init
+loadPages();
+</script>
+</body>
+</html>

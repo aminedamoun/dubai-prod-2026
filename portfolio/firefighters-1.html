@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firefighters — Dubai Prod Portfolio</title>
+<meta name="description" content="Being a firefighter and helping people is one thing but when I'm not on duty, I can contribute to my voluntary fire brigade with my photography skills.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../js/site.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+<div id="preloader" style="position:fixed;inset:0;z-index:99999;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;transition:opacity 0.7s ease;">
+    <img src="../assets/images/dubai_prod_2__1_-1772650048332.webp" alt="Dubai Prod" style="height:80px;width:auto;object-fit:contain;opacity:0;transition:opacity 0.5s ease;" id="preloader-logo">
+    <div style="width:220px;height:2px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;"><div id="preloader-bar" style="height:100%;width:0%;background:linear-gradient(90deg,#FF6A00,#FFB347);border-radius:2px;transition:width 0.3s ease;"></div></div>
+</div>
+<script>
+(function(){var bar=document.getElementById('preloader-bar'),logo=document.getElementById('preloader-logo'),cover=document.getElementById('preloader');setTimeout(function(){if(logo)logo.style.opacity='1';},80);var prog=0,fill=setInterval(function(){prog=Math.min(prog+(Math.random()*6+2),85);if(bar)bar.style.width=prog+'%';},120);function finish(){clearInterval(fill);if(bar)bar.style.width='100%';setTimeout(function(){document.body.classList.remove('preloading');if(cover)cover.classList.add('done');setTimeout(function(){if(cover)cover.style.display='none';},750);},350);}if(document.readyState==='complete'){finish();}else{window.addEventListener('load',finish);setTimeout(finish,5000);}})();
+</script>
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="curR"></div>
+<nav id="main-nav"></nav>
+<script src="../js/nav.js"></script>
+
+<section style="position:relative;height:70vh;min-height:500px;overflow:hidden;">
+  <img src="../assets/portfolio/1871865d-656e-417d-a9a7-16b6730b51a3_rwc_188x0x3776x2832x3776f684.webp" alt="Firefighters" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,#000 0%,rgba(0,0,0,.5) 50%,rgba(0,0,0,.3) 100%);"></div>
+  <div style="position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;max-width:1200px;margin:0 auto;padding:0 24px 60px;">
+    <a href="../portfolio-dubai.html" style="color:#FF6A00;font-size:12px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;margin-bottom:16px;">&larr; Back to Portfolio</a>
+    <h1 style="font-size:clamp(32px,5vw,56px);font-weight:800;color:#fff;letter-spacing:-1px;margin-bottom:12px;">Firefighters</h1>
+    <span style="background:#FF6A00;color:#fff;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:5px 14px;border-radius:4px;display:inline-block;width:fit-content;">VIDEO</span>
+  </div>
+</section>
+
+<section style="background:#000;padding:60px 24px;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <p style='font-size:18px;color:rgba(255,255,255,.75);line-height:1.8;max-width:800px;margin-bottom:48px;'>Being a firefighter and helping people is one thing but when I'm not on duty, I can contribute to my voluntary fire brigade with my photography skills.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:16px;">
+      <div style="border-radius:8px;overflow:hidden;">
+        <img src="https://cdn.myportfolio.com/73ddbb78-5af4-4b2b-8ae5-0a5c75f16ef8/3fe937da-3d56-44c2-9d5e-7b4e3a1ad1e8_rw_3840.jpg?h=0955cbc85b50632dfe896aa0bf2c813a" alt="Firefighters" style="width:100%;display:block;" loading="lazy">
+      </div>
+      <div style="border-radius:8px;overflow:hidden;">
+        <img src="https://cdn.myportfolio.com/73ddbb78-5af4-4b2b-8ae5-0a5c75f16ef8/95bd177e-58d3-4dab-8c34-9aa8758efaeb_rw_3840.jpg?h=fb180ef996630ac37e9c553ecbbf0981" alt="Firefighters" style="width:100%;display:block;" loading="lazy">
+      </div>
+      <div style="border-radius:8px;overflow:hidden;">
+        <img src="https://cdn.myportfolio.com/73ddbb78-5af4-4b2b-8ae5-0a5c75f16ef8/c0a7169a-44ca-4736-8d56-cc0ad2a24bcd_rw_3840.jpg?h=bddcb47f0c3cbb3f7acc8d3eaa9c3956" alt="Firefighters" style="width:100%;display:block;" loading="lazy">
+      </div>
+      <div style="border-radius:8px;overflow:hidden;">
+        <img src="https://cdn.myportfolio.com/73ddbb78-5af4-4b2b-8ae5-0a5c75f16ef8/445bf7a4-0a45-4bed-8f69-666208bf082d_rw_3840.jpg?h=c69ffecdcd2608197e95bfabb710c242" alt="Firefighters" style="width:100%;display:block;" loading="lazy">
+      </div>
+      <div style="border-radius:8px;overflow:hidden;">
+        <img src="https://cdn.myportfolio.com/73ddbb78-5af4-4b2b-8ae5-0a5c75f16ef8/9d44be3e-620d-4df8-b63e-25ba042dcc12_rw_1920.jpg?h=6ebc6e613f637d07cec7b58255457409" alt="Firefighters" style="width:100%;display:block;" loading="lazy">
+      </div>
+      <div style="border-radius:8px;overflow:hidden;">
+        <img src="https://cdn.myportfolio.com/73ddbb78-5af4-4b2b-8ae5-0a5c75f16ef8/fac17885-9bcf-46cd-9057-eb262365e4a1_rw_3840.jpg?h=4f3b603b1bb007617c419dc2415ec46e" alt="Firefighters" style="width:100%;display:block;" loading="lazy">
+      </div>
+      <div style="border-radius:8px;overflow:hidden;">
+        <img src="https://cdn.myportfolio.com/73ddbb78-5af4-4b2b-8ae5-0a5c75f16ef8/31445405-c514-4166-94bd-f47d8db80033_rw_3840.jpg?h=afe45054e5a99a5db36bbc724afc01ec" alt="Firefighters" style="width:100%;display:block;" loading="lazy">
+      </div>
+      <div style="border-radius:8px;overflow:hidden;">
+        <img src="https://cdn.myportfolio.com/73ddbb78-5af4-4b2b-8ae5-0a5c75f16ef8/6c84cfef-8d11-425d-8690-45f2870b511d_rw_1920.jpg?h=457c9e059b4fd838d863d5970e5394f9" alt="Firefighters" style="width:100%;display:block;" loading="lazy">
+      </div>
+      <div style="border-radius:8px;overflow:hidden;">
+        <img src="https://cdn.myportfolio.com/73ddbb78-5af4-4b2b-8ae5-0a5c75f16ef8/dfa8ce8c-a51b-48df-a7b3-168980b033f4_rw_3840.jpg?h=834dc3892859c4a1614b69400fa595cd" alt="Firefighters" style="width:100%;display:block;" loading="lazy">
+      </div>
+      <div style="border-radius:8px;overflow:hidden;">
+        <img src="https://cdn.myportfolio.com/73ddbb78-5af4-4b2b-8ae5-0a5c75f16ef8/25ba09be-66f3-428b-aa11-28eacca64cf1_rw_3840.jpg?h=39c460d3fdd29a9c2b625a80fafba04e" alt="Firefighters" style="width:100%;display:block;" loading="lazy">
+      </div>
+      <div style="border-radius:8px;overflow:hidden;">
+        <img src="https://cdn.myportfolio.com/73ddbb78-5af4-4b2b-8ae5-0a5c75f16ef8/04686e34-02de-40dd-98da-9782e648332e_rw_3840.jpg?h=af355bf0b27b928e4457b139f0faecd3" alt="Firefighters" style="width:100%;display:block;" loading="lazy">
+      </div>
+      <div style="border-radius:8px;overflow:hidden;">
+        <img src="https://cdn.myportfolio.com/73ddbb78-5af4-4b2b-8ae5-0a5c75f16ef8/fbaeaa31-664b-4c3c-95e8-9f27ee37d996_rw_3840.jpg?h=eeffb26fb8ba5f354c7697d5b28431d0" alt="Firefighters" style="width:100%;display:block;" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#050505;padding:40px 24px;border-top:1px solid #1a1a1a;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+    <a href="warsaw-vlog-3.html" style="color:#999;text-decoration:none;font-size:14px;">&larr; Warsaw - Vlog #3</a>
+    <a href="../portfolio-dubai.html" style="color:#FF6A00;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;">All Projects</a>
+    <a href="bratislava-vlog-2.html" style="color:#999;text-decoration:none;font-size:14px;">Bratislava - Vlog #2 &rarr;</a>
+  </div>
+</section>
+
+<section style="background:#FF6A00;padding:80px 24px;text-align:center;">
+  <h2 style="font-size:clamp(28px,4vw,48px);font-weight:800;color:#fff;margin-bottom:16px;">Let's Create Something Amazing</h2>
+  <p style="color:rgba(255,255,255,.8);font-size:16px;margin-bottom:32px;">Ready to start your next project with Dubai Prod?</p>
+  <a href="../contact-dubai.html" style="display:inline-block;padding:14px 36px;background:#000;color:#fff;border-radius:6px;text-decoration:none;font-weight:700;">START YOUR PROJECT &nearr;</a>
+</section>
+
+<footer style="background:#000;border-top:1px solid rgba(255,255,255,0.06);padding:64px 24px 32px;">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;">
+    <div>
+      <img src="../assets/images/dubai_prod_2__1_-1772650048332.webp" alt="Dubai Prod" style="height:56px;margin-bottom:20px;">
+      <p style="color:rgba(255,255,255,0.4);font-size:13px;line-height:1.7;max-width:300px;">Full-service PR & marketing agency in Dubai.</p>
+    </div>
+    <div><h4 style="font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:20px;">Services</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:10px;"><li><a href="../social-media.html" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;">Social Media</a></li><li><a href="../pr-media.html" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;">PR & Media</a></li><li><a href="../video-production-dubai.html" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;">Video Production</a></li><li><a href="../branding-agency-dubai.html" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;">Branding</a></li></ul></div>
+    <div><h4 style="font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:20px;">Company</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:10px;"><li><a href="../about-us-dubai.html" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;">About Us</a></li><li><a href="../portfolio-dubai.html" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;">Portfolio</a></li><li><a href="../contact-dubai.html" style="color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;">Contact</a></li></ul></div>
+    <div><h4 style="font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:20px;">Contact</h4><p style="color:rgba(255,255,255,0.4);font-size:13px;line-height:1.8;">Dubai, UAE<br>info@dubaiprod.com</p></div>
+  </div>
+  <div style="max-width:1200px;margin:48px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,0.06);text-align:center;">
+    <p style="font-size:11px;color:rgba(255,255,255,0.2);">&copy; 2025 Dubai Prod. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CGI & 3D Production Dubai | Photorealistic Renders & Animations — Dubai Prod</title>
+<meta name="description" content="Dubai Prod creates stunning CGI and 3D animations for UAE brands. Photorealistic product renders, architectural visualization, brand films, and motion graphics.">
+<link rel="canonical" href="https://www.dubaiprod.com/cgi-3d.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dubai Prod">
+<meta property="og:title" content="CGI & 3D Production Dubai | Photorealistic Renders & Animations — Dubai Prod">
+<meta property="og:description" content="Dubai Prod creates stunning CGI and 3D animations for UAE brands. Photorealistic product renders, architectural visualization, brand films, and motion graphics.">
+<meta property="og:url" content="https://www.dubaiprod.com/cgi-3d.html">
+<meta property="og:image" content="https://www.dubaiprod.com/assets/images/dubai_prod_2__1_-1772650048332.webp">
+<meta property="og:locale" content="en_AE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CGI & 3D Production Dubai | Photorealistic Renders & Animations — Dubai Prod">
+<meta name="twitter:description" content="Dubai Prod creates stunning CGI and 3D animations for UAE brands. Photorealistic product renders, architectural visualization, brand films, and motion graphics.">
+<meta name="twitter:image" content="https://www.dubaiprod.com/assets/images/dubai_prod_2__1_-1772650048332.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Dubai Prod",
+  "description": "Dubai Prod creates stunning CGI and 3D animations for UAE brands. Photorealistic product renders, architectural visualization, brand films, and motion graphics.",
+  "url": "https://www.dubaiprod.com/cgi-3d.html",
+  "logo": "https://www.dubaiprod.com/assets/images/dubai_prod_2__1_-1772650048332.webp",
+  "telephone": "+971543333587",
+  "email": "info@dubaiprod.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "DAMAC Executive Heights, Office 1301",
+    "addressLocality": "Dubai",
+    "addressRegion": "Dubai",
+    "addressCountry": "AE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "25.0957",
+    "longitude": "55.1728"
+  },
+  "areaServed": ["Dubai", "Abu Dhabi", "UAE", "MENA"],
+  "priceRange": "$$"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/site.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+<!-- Spline 3D viewer -->
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+
+<style>
+
+/* ── Spotlight hover ── */
+#hero-spotlight {
+  background: radial-gradient(700px circle at 50% 50%, rgba(255,106,0,0.0), transparent 70%);
+  transition: none;
+  mix-blend-mode: screen;
+}
+
+/* ── CGI Marquee ── */
+.cgi-marquee-track { display:flex; gap:0; white-space:nowrap; animation:cgiMarquee 30s linear infinite; }
+.cgi-marquee-track:hover { animation-play-state:paused; }
+.cgi-m-item { display:inline-flex; align-items:center; gap:18px; padding:0 36px; font-family:Inter,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:rgba(255,255,255,0.2); }
+.cgi-m-feat { color:rgba(255,106,0,0.55); }
+.cgi-m-dot { width:4px; height:4px; background:#FF6A00; border-radius:50%; flex-shrink:0; }
+@keyframes cgiMarquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+/* ── Spline viewer override ── */
+spline-viewer { --spline-viewer-loading-bg: #000; }
+
+/* ── Service section layout ── */
+.svc-tag { display:inline-flex; align-items:center; gap:10px; margin-bottom:28px; }
+.svc-tag .dot { width:5px; height:5px; border-radius:50%; background:#FF6A00; flex-shrink:0; }
+.svc-tag span { font-size:9px; font-weight:800; letter-spacing:0.35em; text-transform:uppercase; color:#FF6A00; }
+.svc-h2 { font-family:Inter,sans-serif; font-size:clamp(36px,5vw,64px); font-weight:900; letter-spacing:-2.5px; line-height:1.0; color:#fff; margin-bottom:28px; }
+.svc-h3 { font-family:Inter,sans-serif; font-size:22px; font-weight:800; letter-spacing:-0.5px; color:#fff; margin-bottom:14px; line-height:1.2; }
+.svc-text { font-family:Inter,sans-serif; font-size:15px; color:rgba(255,255,255,0.5); line-height:1.85; font-weight:300; max-width:600px; }
+.svc-text strong { color:rgba(255,255,255,0.85); font-weight:600; }
+
+/* ── Two-column layout ── */
+.svc-grid { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start; }
+.svc-grid.reverse { direction:rtl; }
+.svc-grid.reverse > * { direction:ltr; }
+
+/* ── Media row (horizontal strip under text) ── */
+.svc-media-row { display:flex; gap:3px; margin-top:48px; overflow:hidden; }
+.svc-media-item { position:relative; flex:1; min-width:0; aspect-ratio:16/10; overflow:hidden; background:#0a0a0a; }
+.svc-media-item img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s; }
+.svc-media-item:hover img { transform:scale(1.04); }
+.svc-media-item video { width:100%; height:100%; object-fit:cover; }
+.svc-media-item.featured { flex:1.8; }
+.svc-media-label { position:absolute; bottom:0; left:0; right:0; padding:14px 18px; background:linear-gradient(to top,rgba(0,0,0,0.85),transparent); z-index:2; }
+.svc-media-label span { font-family:Inter,sans-serif; font-size:9px; font-weight:700; color:rgba(255,255,255,0.65); letter-spacing:0.15em; text-transform:uppercase; }
+.svc-media-play { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:2; width:48px; height:48px; border-radius:50%; background:rgba(255,106,0,0.9); display:flex; align-items:center; justify-content:center; transition:transform 0.3s; pointer-events:none; }
+.svc-media-item:hover .svc-media-play { transform:translate(-50%,-50%) scale(1.1); }
+.svc-media-play svg { width:18px; height:18px; fill:#000; margin-left:2px; }
+
+/* ── Feature list items ── */
+.svc-features { display:flex; flex-direction:column; gap:10px; margin-top:24px; }
+.svc-feat { display:flex; align-items:flex-start; gap:12px; padding:14px 16px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-left:3px solid #FF6A00; }
+.svc-feat svg { width:14px; height:14px; stroke:#FF6A00; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; margin-top:2px; }
+.svc-feat-title { font-family:Inter,sans-serif; font-size:13px; font-weight:700; color:#fff; margin-bottom:2px; }
+.svc-feat-desc { font-family:Inter,sans-serif; font-size:11px; color:rgba(255,255,255,0.4); line-height:1.5; font-weight:300; }
+
+/* ── CTA button in sections ── */
+.svc-cta { display:inline-flex; align-items:center; gap:10px; background:#FF6A00; color:#000; font-family:Inter,sans-serif; font-size:11px; font-weight:800; letter-spacing:0.2em; text-transform:uppercase; padding:14px 28px; text-decoration:none; transition:all 0.3s; margin-top:28px; }
+.svc-cta:hover { background:#ff8c2f; }
+.svc-cta svg { width:13px; height:13px; stroke:currentColor; fill:none; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; }
+
+/* ── Section number watermark ── */
+.svc-watermark { position:absolute; top:50%; right:clamp(24px,5vw,72px); transform:translateY(-50%); font-family:Inter,sans-serif; font-size:clamp(140px,18vw,260px); font-weight:900; letter-spacing:-8px; color:rgba(255,255,255,0.02); line-height:1; pointer-events:none; user-select:none; }
+
+/* ── Responsive ── */
+@media(max-width:960px){
+  .svc-grid { grid-template-columns:1fr !important; gap:40px; }
+  .svc-grid.reverse { direction:ltr; }
+  .svc-watermark { display:none; }
+}
+@media(max-width:600px){
+  .svc-block-inner { padding:60px clamp(24px,5vw,72px); }
+}
+
+</style>
+<style>
+@media (max-width: 768px) {
+  #cgi-hero { min-height: 60vh !important; }
+  #cgi-hero h1 { font-size: clamp(28px, 8vw, 42px) !important; letter-spacing: -1px !important; }
+  #cgi-hero p { font-size: 13px !important; }
+  #cgi-hero > div[style*="width:50%"] { width: 100% !important; padding: 90px 16px 40px !important; }
+}
+</style>
+</head>
+<body>
+
+<div id="preloader" style="position:fixed;inset:0;z-index:99999;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;transition:opacity 0.7s ease;">
+    <img src="assets/images/dubai_prod_2__1_-1772650048332.webp" alt="Dubai Prod" style="height:80px;width:auto;object-fit:contain;opacity:0;transition:opacity 0.5s ease;" id="preloader-logo">
+    <div style="width:220px;height:2px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;"><div id="preloader-bar" style="height:100%;width:0%;background:linear-gradient(90deg,#FF6A00,#FFB347);border-radius:2px;transition:width 0.3s ease;box-shadow:0 0 12px #FF6A00;"></div></div>
+    <p style="font-family:Inter,sans-serif;font-size:11px;letter-spacing:0.2em;color:rgba(255,255,255,0.3);text-transform:uppercase;">Loading</p>
+</div>
+<script>
+(function(){
+    document.body.classList.add('preloading');
+    var bar=document.getElementById('preloader-bar'),logo=document.getElementById('preloader-logo'),cover=document.getElementById('preloader');
+    setTimeout(function(){if(logo)logo.style.opacity='1';},80);
+    var prog=0,fill=setInterval(function(){prog=Math.min(prog+(Math.random()*6+2),85);if(bar)bar.style.width=prog+'%';},120);
+    function finish(){clearInterval(fill);if(bar)bar.style.width='100%';setTimeout(function(){document.body.classList.remove('preloading');if(cover)cover.classList.add('done');setTimeout(function(){if(cover)cover.style.display='none';},750);},350);}
+    if(document.readyState==='complete'){finish();}else{window.addEventListener('load',finish);setTimeout(finish,5000);}
+})();
+</script>
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="curR"></div>
+
+<nav id="main-nav"></nav>
+<script src="js/nav.js"></script>
+
+<!-- ════ HERO ════ -->
+<section id="cgi-hero" style="position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:#000;">
+
+  <!-- Spline 3D — right 58% only, model appears on the right side -->
+  <spline-viewer url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" style="position:absolute;top:0;right:0;width:58%;height:100%;z-index:0;"></spline-viewer>
+
+  <!-- Spotlight — above Spline, pointer-events none -->
+  <div id="hero-spotlight" style="position:absolute;inset:0;pointer-events:none;z-index:1;"></div>
+
+  <!-- Bottom fade into next section -->
+  <div style="position:absolute;bottom:0;left:0;right:0;height:160px;background:linear-gradient(to top,#000,transparent);pointer-events:none;z-index:2;"></div>
+
+  <!-- Content — left side, shifted slightly toward center via padding-left -->
+  <div style="position:relative;z-index:3;width:50%;padding:160px 40px 120px clamp(60px,8vw,140px);">
+
+  <!-- Inner left column -->
+  <div style="max-width:520px;">
+
+    <!-- Badge -->
+    <div id="cgi-badge" style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,106,0,0.1);border:1px solid rgba(255,106,0,0.35);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:8px 18px;margin-bottom:40px;">
+      <span style="width:5px;height:5px;border-radius:50%;background:#FF6A00;display:inline-block;animation:pulse 2s infinite;flex-shrink:0;"></span>
+      <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">CGI & 3D Production — Dubai</span>
+    </div>
+
+    <!-- Headline -->
+    <h1 id="cgi-title" style="font-family:Inter,sans-serif;font-size:clamp(56px,7vw,104px);font-weight:900;line-height:0.9;letter-spacing:-4px;color:#fff;margin-bottom:36px;max-width:700px;">
+      WHERE<br>IMAGINATION<br>BECOMES<br><span style="color:#FF6A00;">REALITY</span>
+    </h1>
+
+    <!-- Sub -->
+    <p id="cgi-sub" style="font-family:Inter,sans-serif;font-size:17px;line-height:1.75;color:rgba(255,255,255,0.6);font-weight:300;max-width:520px;margin-bottom:48px;">
+      Photorealistic CGI and 3D animations that make your products, spaces, and brands look extraordinary — before they even exist in the real world.
+    </p>
+
+    <!-- CTAs -->
+    <div id="cgi-ctas" style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:64px;">
+      <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#000;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">
+        Start a 3D Project
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+      <a href="#cgi-showcase" style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.06);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.85);font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.6)';this.style.color='#FF6A00'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.18)';this.style.color='rgba(255,255,255,0.85)'">
+        View Our Work
+      </a>
+    </div>
+
+    <!-- Stats row -->
+    <div id="cgi-stats" style="display:flex;gap:2px;max-width:480px;">
+      <div style="background:rgba(0,0,0,0.45);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);padding:20px 28px;flex:1;text-align:center;">
+        <div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;letter-spacing:-1.5px;color:#fff;line-height:1;">500<span style="color:#FF6A00;">+</span></div>
+        <div style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:6px;">3D Assets</div>
+      </div>
+      <div style="background:rgba(0,0,0,0.45);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);padding:20px 28px;flex:1;text-align:center;">
+        <div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;letter-spacing:-1.5px;color:#fff;line-height:1;">8<span style="color:#FF6A00;">K</span></div>
+        <div style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:6px;">Resolution</div>
+      </div>
+      <div style="background:rgba(0,0,0,0.45);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);padding:20px 28px;flex:1;text-align:center;">
+        <div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;letter-spacing:-1.5px;color:#fff;line-height:1;">48<span style="color:#FF6A00;">hr</span></div>
+        <div style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:6px;">Delivery</div>
+      </div>
+    </div>
+
+  </div><!-- /inner left column -->
+  </div><!-- /content wrapper -->
+
+  <!-- Scroll pip -->
+  <div class="scroll-pip" style="z-index:4;"><span>Scroll</span><div class="scroll-pip-line"></div></div>
+</section>
+
+<!-- ════ TECH MARQUEE ════ -->
+<div style="overflow:hidden;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);padding:18px 0;background:#000;">
+  <div class="cgi-marquee-track">
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>Cinema 4D</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>Blender</span>
+    <span class="cgi-m-item cgi-m-feat"><span class="cgi-m-dot"></span>Houdini</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>3ds Max</span>
+    <span class="cgi-m-item cgi-m-feat"><span class="cgi-m-dot"></span>Unreal Engine 5</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>Octane Render</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>V-Ray</span>
+    <span class="cgi-m-item cgi-m-feat"><span class="cgi-m-dot"></span>KeyShot</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>ZBrush</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>After Effects</span>
+    <span class="cgi-m-item cgi-m-feat"><span class="cgi-m-dot"></span>Redshift</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>Arnold</span>
+    <!-- duplicate -->
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>Cinema 4D</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>Blender</span>
+    <span class="cgi-m-item cgi-m-feat"><span class="cgi-m-dot"></span>Houdini</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>3ds Max</span>
+    <span class="cgi-m-item cgi-m-feat"><span class="cgi-m-dot"></span>Unreal Engine 5</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>Octane Render</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>V-Ray</span>
+    <span class="cgi-m-item cgi-m-feat"><span class="cgi-m-dot"></span>KeyShot</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>ZBrush</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>After Effects</span>
+    <span class="cgi-m-item cgi-m-feat"><span class="cgi-m-dot"></span>Redshift</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>Arnold</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     SECTION 1 — WHY DUBAI PROD (White, 2-col with form)
+     ════════════════════════════════════════════════════ -->
+<section id="why-cgi" class="cgi-section" style="background:#fff;padding:100px 0;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:start;">
+
+    <!-- LEFT: Content -->
+    <div class="cgi-text-block">
+      <h2 style="font-family:Inter,sans-serif;font-size:clamp(28px,3.5vw,40px);font-weight:900;line-height:1.15;letter-spacing:-1px;color:#000;margin-bottom:32px;text-transform:uppercase;">
+        Why Dubai Prod Is Dubai's Leading <span style="color:#FF6A00;">CGI & 3D Agency</span>
+      </h2>
+
+      <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:#444;margin-bottom:24px;">
+        At Dubai Prod, we've built our reputation as the <strong style="color:#000;">leading CGI and 3D production agency in Dubai</strong> through years of delivering photorealistic renders, cinematic 3D animations, and immersive visual experiences for brands across the UAE. Our expertise spans <strong style="color:#000;">product visualization, architectural 3D, CGI brand films, motion graphics,</strong> and <strong style="color:#000;">VFX compositing</strong> — all tailored to meet the demands of Dubai's fast-moving market.
+      </p>
+
+      <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:#444;margin-bottom:40px;">
+        What sets us apart is our end-to-end pipeline: from concept art and 3D modelling to GPU rendering and final delivery. We combine technical precision with creative storytelling, using industry-standard tools and AI-accelerated workflows to produce assets that look indistinguishable from reality — often in under 48 hours.
+      </p>
+
+      <a href="#cgi-services" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#fff;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:14px 28px;border-radius:30px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">
+        Explore Services
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8l4 4-4 4"/><path d="M8 12h8"/></svg>
+      </a>
+
+      <!-- Software badges row -->
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:48px;padding-top:32px;border-top:1px solid rgba(0,0,0,0.08);">
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Cinema 4D</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Blender</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Unreal Engine 5</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Houdini</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Octane Render</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">V-Ray</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">ZBrush</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">After Effects</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: Quote Form -->
+    <div style="background:#f8f8f8;border-radius:4px;padding:44px 36px;position:sticky;top:120px;">
+      <h3 style="font-family:Inter,sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;letter-spacing:0.5px;color:#000;text-align:center;margin-bottom:32px;line-height:1.3;">
+        Get Your Free <span style="color:#FF6A00;">3D Quote</span>
+      </h3>
+
+      <form data-dp-form style="display:flex;flex-direction:column;gap:14px;">
+        <input type="text" name="name" placeholder="Full Name" required style="width:100%;padding:14px 18px;border:1px solid #ddd;border-radius:4px;font-family:Inter,sans-serif;font-size:14px;color:#000;background:#fff;outline:none;transition:border-color 0.3s;" onfocus="this.style.borderColor='#FF6A00'" onblur="this.style.borderColor='#ddd'">
+        <input type="email" name="email" placeholder="Email Address" required style="width:100%;padding:14px 18px;border:1px solid #ddd;border-radius:4px;font-family:Inter,sans-serif;font-size:14px;color:#000;background:#fff;outline:none;transition:border-color 0.3s;" onfocus="this.style.borderColor='#FF6A00'" onblur="this.style.borderColor='#ddd'">
+        <input type="text" name="company" placeholder="Company Name" style="width:100%;padding:14px 18px;border:1px solid #ddd;border-radius:4px;font-family:Inter,sans-serif;font-size:14px;color:#000;background:#fff;outline:none;transition:border-color 0.3s;" onfocus="this.style.borderColor='#FF6A00'" onblur="this.style.borderColor='#ddd'">
+
+        <select name="service" required style="width:100%;padding:14px 18px;border:1px solid #ddd;border-radius:4px;font-family:Inter,sans-serif;font-size:14px;color:#666;background:#fff;outline:none;transition:border-color 0.3s;appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23999%22 stroke-width=%222%22><polyline points=%226 9 12 15 18 9%22/></svg>');background-repeat:no-repeat;background-position:right 18px center;" onfocus="this.style.borderColor='#FF6A00'" onblur="this.style.borderColor='#ddd'">
+          <option value="" disabled selected>Project Type</option>
+          <option value="product-cgi">Product CGI</option>
+          <option value="architectural-viz">Architectural Visualization</option>
+          <option value="3d-animation">3D Animation</option>
+          <option value="brand-film">CGI Brand Film</option>
+        </select>
+
+        <label style="display:flex;align-items:center;gap:8px;font-family:Inter,sans-serif;font-size:12px;color:#666;margin-top:4px;cursor:pointer;">
+          <input type="checkbox" required style="accent-color:#FF6A00;width:16px;height:16px;">
+          I agree with terms of Privacy Policy.
+        </label>
+
+        <button type="submit" style="width:100%;padding:16px;background:#FF6A00;color:#fff;border:none;border-radius:4px;font-family:Inter,sans-serif;font-size:12px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;margin-top:8px;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">
+          Get My Free 3D Quote
+        </button>
+      </form>
+
+      <div data-dp-success style="display:none;text-align:center;padding:36px 0;">
+        <div style="font-size:44px;margin-bottom:14px;color:#FF6A00;">&#10003;</div>
+        <p style="color:#FF6A00;font-size:11px;letter-spacing:0.3em;font-weight:700;text-transform:uppercase;margin-bottom:8px;font-family:Inter,sans-serif;">Request Sent!</p>
+        <p style="color:#666;font-size:13px;font-family:Inter,sans-serif;">We'll get back to you within 24 hours.</p>
+      </div>
+
+      <p style="font-family:Inter,sans-serif;font-size:11px;color:#999;text-align:center;margin-top:16px;display:flex;align-items:center;justify-content:center;gap:6px;">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Your information is 100% secure and confidential!
+      </p>
+    </div>
+
+  </div>
+</section>
+<style>
+@media(max-width:960px){
+  #why-cgi > div{grid-template-columns:1fr !important;}
+  #why-cgi > div > div:last-child{position:static !important;}
+}
+</style>
+
+<!-- ════════════════════════════════════════════════════
+     SECTION 2 — AI-POWERED 3D PRODUCTION (White, 2-col)
+     ════════════════════════════════════════════════════ -->
+<section id="ai-3d-section" class="cgi-section" style="background:#fff;padding:100px 0;overflow:hidden;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+
+    <!-- LEFT: Text content -->
+    <div class="cgi-text-block">
+      <h2 style="font-family:'Inter',sans-serif;font-size:clamp(26px,3.2vw,38px);font-weight:900;line-height:1.15;letter-spacing:-0.5px;color:#FF6A00;text-transform:uppercase;margin-bottom:40px;">
+        AI-Powered 3D Production
+      </h2>
+
+      <h3 style="font-family:Inter,sans-serif;font-size:20px;font-weight:800;color:#000;margin-bottom:16px;">Neural Rendering & AI Upscaling</h3>
+      <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:#555;margin-bottom:36px;">
+        Our 3D pipeline integrates cutting-edge AI at every stage. We use neural rendering engines to achieve photorealism faster, AI upscaling to deliver 8K assets from optimized render passes, and machine-learning denoising to cut render times by up to 80%. The result: studio-quality CGI delivered in days, not weeks.
+      </p>
+
+      <h3 style="font-family:Inter,sans-serif;font-size:20px;font-weight:800;color:#000;margin-bottom:16px;">Procedural Generation & Smart Workflows</h3>
+      <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:#555;margin-bottom:40px;">
+        From AI-assisted texture generation and procedural environment building in Houdini, to automated camera path optimization and intelligent material libraries — our team leverages tools like Stable Diffusion for concept ideation, Runway for quick previsualization, and custom scripts that automate repetitive tasks. This means more creative time, faster turnarounds, and lower costs for our clients.
+      </p>
+
+      <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#fff;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:14px 28px;border-radius:30px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">
+        Get In Touch
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8l4 4-4 4"/><path d="M8 12h8"/></svg>
+      </a>
+    </div>
+
+    <!-- RIGHT: 2 vertical reel videos -->
+    <div style="display:flex;gap:14px;justify-content:center;">
+      <div style="width:220px;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.15);border:1px solid rgba(0,0,0,0.08);"><video autoplay muted loop playsinline style="width:100%;height:400px;object-fit:cover;display:block;"><source src="assets/video/cgi-3.mp4" type="video/mp4"></video></div>
+      <div style="width:220px;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.15);border:1px solid rgba(0,0,0,0.08);margin-top:40px;"><video autoplay muted loop playsinline style="width:100%;height:400px;object-fit:cover;display:block;"><source src="assets/video/cgi-4.mp4" type="video/mp4"></video></div>
+    </div>
+  </div>
+</section>
+<style>
+@keyframes cgiCubeSpin{0%{transform:translate(-50%,-50%) rotateX(-20deg) rotateY(0deg);}100%{transform:translate(-50%,-50%) rotateX(-20deg) rotateY(360deg);}}
+@keyframes cgiOrbit1{0%{transform:translate(-50%,-50%) rotate(0deg);}100%{transform:translate(-50%,-50%) rotate(360deg);}}
+@keyframes cgiOrbit1Counter{0%{transform:translateX(-50%) rotate(0deg);}100%{transform:translateX(-50%) rotate(-360deg);}}
+@keyframes cgiOrbit2{0%{transform:translate(-50%,-50%) rotate(0deg);}100%{transform:translate(-50%,-50%) rotate(-360deg);}}
+@keyframes cgiOrbit2Counter{0%{transform:translateX(-50%) rotate(0deg);}100%{transform:translateX(-50%) rotate(360deg);}}
+@keyframes cgiFloat1{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-15px) scale(1.3);}}
+@keyframes cgiFloat2{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(12px) scale(0.8);}}
+@keyframes cgiFloat3{0%,100%{transform:translate(0,0);}50%{transform:translate(10px,-10px);}}
+@media(max-width:960px){#ai-3d-section > div{grid-template-columns:1fr !important;}}
+</style>
+
+<!-- ════════════════════════════════════════════════════
+     SECTION 3A — REAL ESTATE 3D (2 vertical reels + text)
+     ════════════════════════════════════════════════════ -->
+<section class="cgi-section cgi-svc-row" style="background:#000;padding:120px 0;border-top:1px solid rgba(255,255,255,0.04);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+    <!-- LEFT: Text -->
+    <div class="cgi-text-block">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;"><span style="width:5px;height:5px;border-radius:50%;background:#FF6A00;"></span><span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">Service 01</span></div>
+      <h2 style="font-family:Inter,sans-serif;font-size:clamp(28px,3.5vw,44px);font-weight:900;letter-spacing:-1.5px;line-height:1.05;color:#fff;margin-bottom:24px;">Real Estate<br><span style="color:#FF6A00;">3D Visualization</span></h2>
+      <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:rgba(255,255,255,0.55);margin-bottom:28px;">Photorealistic architectural visualizations for developers, designers, and property marketers across the UAE. We build the vision before a single brick is laid — exterior renders, interior walkthroughs, aerial flyovers, and interactive presentations that sell properties faster.</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">Exterior & Interior Renders</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">3D Walkthrough Videos</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">Aerial Flyover Animations</span></div>
+      </div>
+      <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#000;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">Get a Quote <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+    </div>
+    <!-- RIGHT: 2 vertical reel videos -->
+    <div class="cgi-media-block" style="display:flex;gap:14px;justify-content:center;">
+      <div style="width:220px;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.08);"><video autoplay muted loop playsinline style="width:100%;height:400px;object-fit:cover;display:block;"><source src="assets/video/cgi-realestate-1.mp4" type="video/mp4"></video></div>
+      <div style="width:220px;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.08);margin-top:40px;"><video autoplay muted loop playsinline style="width:100%;height:400px;object-fit:cover;display:block;"><source src="assets/video/cgi-realestate-2.mp4" type="video/mp4"></video></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     SECTION 3B — PRODUCT CGI (reversed, 2 reels + text)
+     ════════════════════════════════════════════════════ -->
+<section class="cgi-section cgi-svc-row" style="background:#050505;padding:120px 0;border-top:1px solid rgba(255,255,255,0.04);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+    <!-- LEFT: 2 vertical reel videos -->
+    <div class="cgi-media-block" style="display:flex;gap:14px;justify-content:center;">
+      <div style="width:220px;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.08);"><video autoplay muted loop playsinline style="width:100%;height:400px;object-fit:cover;display:block;"><source src="assets/video/cgi-1.mp4" type="video/mp4"></video></div>
+      <div style="width:220px;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.08);margin-top:40px;"><video autoplay muted loop playsinline style="width:100%;height:400px;object-fit:cover;display:block;"><source src="assets/video/cgi-2.mp4" type="video/mp4"></video></div>
+    </div>
+    <!-- RIGHT: Text -->
+    <div class="cgi-text-block">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;"><span style="width:5px;height:5px;border-radius:50%;background:#FF6A00;"></span><span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">Service 02</span></div>
+      <h2 style="font-family:Inter,sans-serif;font-size:clamp(28px,3.5vw,44px);font-weight:900;letter-spacing:-1.5px;line-height:1.05;color:#fff;margin-bottom:24px;">Product CGI<br>& <span style="color:#FF6A00;">Publicity</span></h2>
+      <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:rgba(255,255,255,0.55);margin-bottom:28px;">From concept to campaign-ready CGI. We redesign and refine your product in 3D — perfecting every surface, material, and detail — then render photorealistic images and produce CGI product videos. Whether it's a luxury perfume, tech gadget, or food packaging — hero visuals without a single photo shoot.</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">Product Redesign & 3D Modelling</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">Photorealistic Product Renders</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">CGI Product Videos & Ads</span></div>
+      </div>
+      <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#000;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">Start Product CGI <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     SECTION 3C — 3D FILM & ANIMATION (2 reels + text)
+     ════════════════════════════════════════════════════ -->
+<section class="cgi-section cgi-svc-row" style="background:#000;padding:120px 0;border-top:1px solid rgba(255,255,255,0.04);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+    <!-- LEFT: Text -->
+    <div class="cgi-text-block">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;"><span style="width:5px;height:5px;border-radius:50%;background:#FF6A00;"></span><span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">Service 03</span></div>
+      <h2 style="font-family:Inter,sans-serif;font-size:clamp(28px,3.5vw,44px);font-weight:900;letter-spacing:-1.5px;line-height:1.05;color:#fff;margin-bottom:24px;">3D Film &<br><span style="color:#FF6A00;">Animation</span></h2>
+      <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:rgba(255,255,255,0.55);margin-bottom:28px;">Full CGI brand films, 3D explainer videos, and animated content for brands that need to communicate complex ideas visually. From abstract motion graphics to narrative-driven 3D films — cinematic production values throughout. Every project includes concept development, storyboarding, animation, compositing, and final colour grade.</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">CGI Brand Films & Commercials</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">3D Explainer Videos</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;">VFX & Live-Action Hybrid</span></div>
+      </div>
+      <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#000;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">Discuss Your Film <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+    </div>
+    <!-- RIGHT: 2 vertical reel videos -->
+    <div class="cgi-media-block" style="display:flex;gap:14px;justify-content:center;">
+      <div style="width:220px;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.08);"><video autoplay muted loop playsinline style="width:100%;height:400px;object-fit:cover;display:block;"><source src="assets/video/3d-film-1.mp4" type="video/mp4"></video></div>
+      <div style="width:220px;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.08);margin-top:40px;"><video autoplay muted loop playsinline style="width:100%;height:400px;object-fit:cover;display:block;"><source src="assets/video/3d-film-2.mp4" type="video/mp4"></video></div>
+    </div>
+  </div>
+</section>
+<style>
+@media(max-width:960px){.cgi-svc-row > div{grid-template-columns:1fr !important;}.cgi-svc-row .cgi-media-block{justify-content:center !important;}}
+</style>
+
+<!-- ════════════════════════════════════════════════════
+     SECTION 4 — OUR 3D SERVICES (Bento Grid, dark bg)
+     ════════════════════════════════════════════════════ -->
+<section id="cgi-services" class="cgi-section" style="background:#050505;padding:120px 0;border-top:1px solid rgba(255,255,255,0.04);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);">
+    <div style="text-align:center;margin-bottom:0;">
+      <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:24px;"><div style="width:5px;height:5px;border-radius:50%;background:#FF6A00;"></div><span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">Full-Stack 3D</span></div>
+      <h2 style="font-family:Inter,sans-serif;font-size:clamp(32px,4.5vw,56px);font-weight:900;letter-spacing:-2px;line-height:1.05;color:#fff;margin-bottom:20px;">Our 3D <span style="color:#FF6A00;">Services</span></h2>
+      <p style="font-family:Inter,sans-serif;font-size:15px;color:rgba(255,255,255,0.4);font-weight:300;max-width:560px;line-height:1.75;margin:0 auto;">End-to-end CGI and 3D production — from concept to final render, all under one roof.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:60px;" id="cgi-bento">
+      <!-- 1. Product Visualization (featured wide) -->
+      <div style="grid-column:span 2;background:linear-gradient(135deg,rgba(255,106,0,0.06) 0%,#0a0a0a 60%);border:1px solid rgba(255,255,255,0.04);padding:44px 36px;position:relative;overflow:hidden;transition:all 0.4s;" onmouseenter="this.style.background='#111';this.style.borderColor='rgba(255,106,0,0.15)'" onmouseleave="this.style.background='linear-gradient(135deg,rgba(255,106,0,0.06) 0%,#0a0a0a 60%)';this.style.borderColor='rgba(255,255,255,0.04)'">
+        <div style="position:absolute;top:16px;right:16px;font-family:Inter,sans-serif;font-size:56px;font-weight:900;color:rgba(255,255,255,0.02);letter-spacing:-3px;line-height:1;pointer-events:none;">3D</div>
+        <div style="width:44px;height:44px;border:1px solid rgba(255,106,0,0.2);background:rgba(255,106,0,0.06);display:flex;align-items:center;justify-content:center;border-radius:10px;margin-bottom:24px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-0.3px;">Product Visualization</div>
+        <div style="font-family:Inter,sans-serif;font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7;font-weight:300;margin-bottom:20px;">Photorealistic product renders, 360-degree rotations, exploded views, and hero shots that replace traditional photography entirely.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Hero Shots</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">360 Spins</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">8K Renders</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">E-commerce</span>
+        </div>
+      </div>
+
+      <!-- 2. Architectural 3D -->
+      <div style="background:#0a0a0a;border:1px solid rgba(255,255,255,0.04);padding:44px 36px;position:relative;overflow:hidden;transition:all 0.4s;" onmouseenter="this.style.background='#111';this.style.borderColor='rgba(255,106,0,0.15)'" onmouseleave="this.style.background='#0a0a0a';this.style.borderColor='rgba(255,255,255,0.04)'">
+        <div style="position:absolute;top:16px;right:16px;font-family:Inter,sans-serif;font-size:56px;font-weight:900;color:rgba(255,255,255,0.02);letter-spacing:-3px;line-height:1;pointer-events:none;">ARC</div>
+        <div style="width:44px;height:44px;border:1px solid rgba(255,106,0,0.2);background:rgba(255,106,0,0.06);display:flex;align-items:center;justify-content:center;border-radius:10px;margin-bottom:24px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-0.3px;">Architectural 3D</div>
+        <div style="font-family:Inter,sans-serif;font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7;font-weight:300;margin-bottom:20px;">Exteriors, interiors, aerials, and cinematic walkthroughs for off-plan properties and developments.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Exterior</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Interior</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Walkthrough</span>
+        </div>
+      </div>
+
+      <!-- 3. CGI Brand Films -->
+      <div style="background:#0a0a0a;border:1px solid rgba(255,255,255,0.04);padding:44px 36px;position:relative;overflow:hidden;transition:all 0.4s;" onmouseenter="this.style.background='#111';this.style.borderColor='rgba(255,106,0,0.15)'" onmouseleave="this.style.background='#0a0a0a';this.style.borderColor='rgba(255,255,255,0.04)'">
+        <div style="position:absolute;top:16px;right:16px;font-family:Inter,sans-serif;font-size:56px;font-weight:900;color:rgba(255,255,255,0.02);letter-spacing:-3px;line-height:1;pointer-events:none;">CGI</div>
+        <div style="width:44px;height:44px;border:1px solid rgba(255,106,0,0.2);background:rgba(255,106,0,0.06);display:flex;align-items:center;justify-content:center;border-radius:10px;margin-bottom:24px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        </div>
+        <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-0.3px;">CGI Brand Films</div>
+        <div style="font-family:Inter,sans-serif;font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7;font-weight:300;margin-bottom:20px;">Full CG commercials with cinematic storytelling, advanced particle effects, and broadcast-ready finishing.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Commercial</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">VFX</span>
+        </div>
+      </div>
+
+      <!-- 4. 3D Explainer Videos -->
+      <div style="background:#0a0a0a;border:1px solid rgba(255,255,255,0.04);padding:44px 36px;position:relative;overflow:hidden;transition:all 0.4s;" onmouseenter="this.style.background='#111';this.style.borderColor='rgba(255,106,0,0.15)'" onmouseleave="this.style.background='#0a0a0a';this.style.borderColor='rgba(255,255,255,0.04)'">
+        <div style="position:absolute;top:16px;right:16px;font-family:Inter,sans-serif;font-size:56px;font-weight:900;color:rgba(255,255,255,0.02);letter-spacing:-3px;line-height:1;pointer-events:none;">EXP</div>
+        <div style="width:44px;height:44px;border:1px solid rgba(255,106,0,0.2);background:rgba(255,106,0,0.06);display:flex;align-items:center;justify-content:center;border-radius:10px;margin-bottom:24px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        </div>
+        <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-0.3px;">3D Explainer Videos</div>
+        <div style="font-family:Inter,sans-serif;font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7;font-weight:300;margin-bottom:20px;">Transform complex products and processes into clear, engaging 3D visual stories.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Technical</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Medical</span>
+        </div>
+      </div>
+
+      <!-- 5. Motion Graphics (featured wide) -->
+      <div style="grid-column:span 2;background:linear-gradient(135deg,rgba(255,106,0,0.06) 0%,#0a0a0a 60%);border:1px solid rgba(255,255,255,0.04);padding:44px 36px;position:relative;overflow:hidden;transition:all 0.4s;" onmouseenter="this.style.background='#111';this.style.borderColor='rgba(255,106,0,0.15)'" onmouseleave="this.style.background='linear-gradient(135deg,rgba(255,106,0,0.06) 0%,#0a0a0a 60%)';this.style.borderColor='rgba(255,255,255,0.04)'">
+        <div style="position:absolute;top:16px;right:16px;font-family:Inter,sans-serif;font-size:56px;font-weight:900;color:rgba(255,255,255,0.02);letter-spacing:-3px;line-height:1;pointer-events:none;">MFX</div>
+        <div style="width:44px;height:44px;border:1px solid rgba(255,106,0,0.2);background:rgba(255,106,0,0.06);display:flex;align-items:center;justify-content:center;border-radius:10px;margin-bottom:24px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-0.3px;">Motion Graphics</div>
+        <div style="font-family:Inter,sans-serif;font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7;font-weight:300;margin-bottom:20px;">Dynamic 2D/3D motion graphics for broadcast, events, social media, and digital signage. Title sequences, logo reveals, data visualizations, and kinetic typography.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Broadcast</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Social</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Events</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Typography</span>
+        </div>
+      </div>
+
+      <!-- 6. VFX Compositing -->
+      <div style="background:#0a0a0a;border:1px solid rgba(255,255,255,0.04);padding:44px 36px;position:relative;overflow:hidden;transition:all 0.4s;" onmouseenter="this.style.background='#111';this.style.borderColor='rgba(255,106,0,0.15)'" onmouseleave="this.style.background='#0a0a0a';this.style.borderColor='rgba(255,255,255,0.04)'">
+        <div style="position:absolute;top:16px;right:16px;font-family:Inter,sans-serif;font-size:56px;font-weight:900;color:rgba(255,255,255,0.02);letter-spacing:-3px;line-height:1;pointer-events:none;">VFX</div>
+        <div style="width:44px;height:44px;border:1px solid rgba(255,106,0,0.2);background:rgba(255,106,0,0.06);display:flex;align-items:center;justify-content:center;border-radius:10px;margin-bottom:24px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-0.3px;">VFX Compositing</div>
+        <div style="font-family:Inter,sans-serif;font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7;font-weight:300;margin-bottom:20px;">Seamlessly integrate CGI elements into live-action footage with professional compositing and color grading.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Tracking</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Rotoscope</span>
+        </div>
+      </div>
+
+      <!-- 7. AR / Interactive -->
+      <div style="background:#0a0a0a;border:1px solid rgba(255,255,255,0.04);padding:44px 36px;position:relative;overflow:hidden;transition:all 0.4s;" onmouseenter="this.style.background='#111';this.style.borderColor='rgba(255,106,0,0.15)'" onmouseleave="this.style.background='#0a0a0a';this.style.borderColor='rgba(255,255,255,0.04)'">
+        <div style="position:absolute;top:16px;right:16px;font-family:Inter,sans-serif;font-size:56px;font-weight:900;color:rgba(255,255,255,0.02);letter-spacing:-3px;line-height:1;pointer-events:none;">AR</div>
+        <div style="width:44px;height:44px;border:1px solid rgba(255,106,0,0.2);background:rgba(255,106,0,0.06);display:flex;align-items:center;justify-content:center;border-radius:10px;margin-bottom:24px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-0.3px;">AR & Interactive</div>
+        <div style="font-family:Inter,sans-serif;font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7;font-weight:300;margin-bottom:20px;">WebAR experiences, 3D configurators, and interactive product viewers for mobile and web.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">WebAR</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Configurator</span>
+        </div>
+      </div>
+
+      <!-- 8. Packaging 3D -->
+      <div style="background:#0a0a0a;border:1px solid rgba(255,255,255,0.04);padding:44px 36px;position:relative;overflow:hidden;transition:all 0.4s;" onmouseenter="this.style.background='#111';this.style.borderColor='rgba(255,106,0,0.15)'" onmouseleave="this.style.background='#0a0a0a';this.style.borderColor='rgba(255,255,255,0.04)'">
+        <div style="position:absolute;top:16px;right:16px;font-family:Inter,sans-serif;font-size:56px;font-weight:900;color:rgba(255,255,255,0.02);letter-spacing:-3px;line-height:1;pointer-events:none;">PKG</div>
+        <div style="width:44px;height:44px;border:1px solid rgba(255,106,0,0.2);background:rgba(255,106,0,0.06);display:flex;align-items:center;justify-content:center;border-radius:10px;margin-bottom:24px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><line x1="3.27" y1="6.96" x2="12" y2="12.01"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-0.3px;">Packaging 3D</div>
+        <div style="font-family:Inter,sans-serif;font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7;font-weight:300;margin-bottom:20px;">3D packaging mockups and unboxing animations for FMCG, cosmetics, and luxury goods.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Mockup</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Unboxing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+@media(max-width:960px){#cgi-bento{grid-template-columns:1fr !important;}#cgi-bento > div{grid-column:span 1 !important;}}
+</style>
+
+<!-- ════════════════════════════════════════════════════
+     SECTION 5 — RECENT WORK (Dark, 2x2 video grid)
+     ════════════════════════════════════════════════════ -->
+<section id="cgi-showcase" class="cgi-section" style="background:#050505;padding:120px 0;position:relative;overflow:hidden;border-top:1px solid rgba(255,255,255,0.04);">
+  <div style="position:absolute;top:0;right:0;width:500px;height:500px;background:radial-gradient(circle,rgba(255,106,0,0.05) 0%,transparent 70%);pointer-events:none;"></div>
+
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);">
+
+    <!-- Header -->
+    <div style="text-align:center;margin-bottom:64px;">
+      <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:24px;"><div style="width:5px;height:5px;border-radius:50%;background:#FF6A00;"></div><span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">Our Work</span></div>
+      <h2 style="font-family:Inter,sans-serif;font-size:clamp(32px,4.5vw,56px);font-weight:900;letter-spacing:-2px;line-height:1.05;color:#fff;margin-bottom:20px;">Recent <span style="color:#FF6A00;">Work</span></h2>
+      <p style="font-family:Inter,sans-serif;font-size:15px;color:rgba(255,255,255,0.4);font-weight:300;max-width:560px;line-height:1.75;margin:0 auto;">A selection of recent CGI and 3D projects delivered for brands across the UAE.</p>
+    </div>
+
+    <!-- 2x2 Grid: 3 videos + 1 image -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;" id="cgi-work-grid">
+
+      <!-- Card 1: Video -->
+      <div style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:16/10;background:#0a0a0a;border:1px solid rgba(255,255,255,0.06);transition:all 0.4s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.2)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.06)'">
+        <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;"><source src="assets/video/recent-1.mp4" type="video/mp4"></video>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,transparent 50%);pointer-events:none;"></div>
+        <div style="position:absolute;top:16px;left:16px;background:rgba(255,106,0,0.9);padding:5px 14px;border-radius:6px;">
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:#000;">Product CGI</span>
+        </div>
+        <div style="position:absolute;bottom:20px;left:20px;right:20px;">
+          <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:4px;">Product Visualization</div>
+          <div style="font-family:Inter,sans-serif;font-size:11px;color:rgba(255,255,255,0.45);">Photorealistic CGI product reveal</div>
+        </div>
+      </div>
+
+      <!-- Card 2: Video -->
+      <div style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:16/10;background:#0a0a0a;border:1px solid rgba(255,255,255,0.06);transition:all 0.4s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.2)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.06)'">
+        <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;"><source src="assets/video/recent-2.mp4" type="video/mp4"></video>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,transparent 50%);pointer-events:none;"></div>
+        <div style="position:absolute;top:16px;left:16px;background:rgba(255,106,0,0.9);padding:5px 14px;border-radius:6px;">
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:#000;">3D Animation</span>
+        </div>
+        <div style="position:absolute;bottom:20px;left:20px;right:20px;">
+          <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:4px;">3D Brand Animation</div>
+          <div style="font-family:Inter,sans-serif;font-size:11px;color:rgba(255,255,255,0.45);">Cinematic CGI commercial with VFX</div>
+        </div>
+      </div>
+
+      <!-- Card 3: Video -->
+      <div style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:16/10;background:#0a0a0a;border:1px solid rgba(255,255,255,0.06);transition:all 0.4s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.2)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.06)'">
+        <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;"><source src="assets/video/recent-3.mp4" type="video/mp4"></video>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,transparent 50%);pointer-events:none;"></div>
+        <div style="position:absolute;top:16px;left:16px;background:rgba(255,106,0,0.9);padding:5px 14px;border-radius:6px;">
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:#000;">Motion Graphics</span>
+        </div>
+        <div style="position:absolute;bottom:20px;left:20px;right:20px;">
+          <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:4px;">Motion Graphics</div>
+          <div style="font-family:Inter,sans-serif;font-size:11px;color:rgba(255,255,255,0.45);">Dynamic 3D motion design for social and broadcast</div>
+        </div>
+      </div>
+
+      <!-- Card 4: Image -->
+      <div style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:16/10;background:#0a0a0a;border:1px solid rgba(255,255,255,0.06);transition:all 0.4s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.2)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.06)'">
+        <img src="assets/images/recent-cosmetic.webp" alt="Cosmetic Product CGI Render" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;" onmouseenter="this.style.transform='scale(1.03)'" onmouseleave="this.style.transform='scale(1)'" loading="lazy">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,transparent 50%);pointer-events:none;"></div>
+        <div style="position:absolute;top:16px;left:16px;background:rgba(255,106,0,0.9);padding:5px 14px;border-radius:6px;">
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:#000;">Packaging CGI</span>
+        </div>
+        <div style="position:absolute;bottom:20px;left:20px;right:20px;">
+          <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:4px;">Cosmetic Packaging</div>
+          <div style="font-family:Inter,sans-serif;font-size:11px;color:rgba(255,255,255,0.45);">Photorealistic product render for cosmetic brand</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- View all CTA -->
+    <div style="text-align:center;margin-top:56px;">
+      <a href="portfolio-dubai.html" style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.06);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.6)';this.style.color='#FF6A00'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.15)';this.style.color='rgba(255,255,255,0.85)'">
+        View All Projects
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+<style>
+@media(max-width:960px){#cgi-work-grid{grid-template-columns:1fr !important;}}
+</style>
+
+<!-- ════════════════════════════════════════════════════
+     SECTION 6 — OUR PROCESS (4-step horizontal)
+     ════════════════════════════════════════════════════ -->
+<section id="cgi-process" class="cgi-section" style="background:#000;padding:120px 0;border-top:1px solid rgba(255,255,255,0.04);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);">
+    <div style="text-align:center;margin-bottom:0;">
+      <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:24px;"><div style="width:5px;height:5px;border-radius:50%;background:#FF6A00;"></div><span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">Our Process</span></div>
+      <h2 style="font-family:Inter,sans-serif;font-size:clamp(32px,4.5vw,56px);font-weight:900;letter-spacing:-2px;line-height:1.05;color:#fff;margin-bottom:20px;">From <span style="color:#FF6A00;">Brief</span> to <span style="color:#FF6A00;">Delivery</span></h2>
+      <p style="font-family:Inter,sans-serif;font-size:15px;color:rgba(255,255,255,0.4);font-weight:300;max-width:560px;line-height:1.75;margin:0 auto;">Our proven 4-step pipeline ensures every project is delivered on time, on budget, and beyond expectations.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:60px;" id="cgi-process-grid">
+      <!-- Step 1 -->
+      <div style="position:relative;padding:48px 32px;text-align:center;background:#0a0a0a;border:1px solid rgba(255,255,255,0.04);transition:all 0.4s;" onmouseenter="this.style.background='#111';this.style.borderColor='rgba(255,106,0,0.15)'" onmouseleave="this.style.background='#0a0a0a';this.style.borderColor='rgba(255,255,255,0.04)'">
+        <div style="position:absolute;top:50%;right:-12px;width:24px;height:24px;background:#0a0a0a;border-top:1px solid rgba(255,255,255,0.04);border-right:1px solid rgba(255,255,255,0.04);transform:rotate(45deg) translateY(-50%);z-index:2;"></div>
+        <div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;color:rgba(255,106,0,0.12);letter-spacing:-3px;margin-bottom:16px;">01</div>
+        <div style="width:48px;height:48px;margin:0 auto 20px;border:1px solid rgba(255,106,0,0.2);background:rgba(255,106,0,0.06);display:flex;align-items:center;justify-content:center;border-radius:12px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div style="font-family:Inter,sans-serif;font-size:16px;font-weight:800;color:#fff;margin-bottom:10px;letter-spacing:-0.2px;">Brief & Concept</div>
+        <div style="font-family:Inter,sans-serif;font-size:12px;color:rgba(255,255,255,0.4);line-height:1.7;font-weight:300;">We study your brief, references, and goals to develop a clear creative direction and technical approach.</div>
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
+          <div style="font-family:Inter,sans-serif;font-size:22px;font-weight:900;color:#FF6A00;letter-spacing:-0.5px;">24hr</div>
+          <div style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-top:2px;">Turnaround</div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div style="position:relative;padding:48px 32px;text-align:center;background:#0a0a0a;border:1px solid rgba(255,255,255,0.04);transition:all 0.4s;" onmouseenter="this.style.background='#111';this.style.borderColor='rgba(255,106,0,0.15)'" onmouseleave="this.style.background='#0a0a0a';this.style.borderColor='rgba(255,255,255,0.04)'">
+        <div style="position:absolute;top:50%;right:-12px;width:24px;height:24px;background:#0a0a0a;border-top:1px solid rgba(255,255,255,0.04);border-right:1px solid rgba(255,255,255,0.04);transform:rotate(45deg) translateY(-50%);z-index:2;"></div>
+        <div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;color:rgba(255,106,0,0.12);letter-spacing:-3px;margin-bottom:16px;">02</div>
+        <div style="width:48px;height:48px;margin:0 auto 20px;border:1px solid rgba(255,106,0,0.2);background:rgba(255,106,0,0.06);display:flex;align-items:center;justify-content:center;border-radius:12px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <div style="font-family:Inter,sans-serif;font-size:16px;font-weight:800;color:#fff;margin-bottom:10px;letter-spacing:-0.2px;">3D Modelling</div>
+        <div style="font-family:Inter,sans-serif;font-size:12px;color:rgba(255,255,255,0.4);line-height:1.7;font-weight:300;">Our artists build accurate 3D models with proper topology, UV mapping, and materials in Cinema 4D or Blender.</div>
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
+          <div style="font-family:Inter,sans-serif;font-size:22px;font-weight:900;color:#FF6A00;letter-spacing:-0.5px;">100%</div>
+          <div style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-top:2px;">Accuracy</div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div style="position:relative;padding:48px 32px;text-align:center;background:#0a0a0a;border:1px solid rgba(255,255,255,0.04);transition:all 0.4s;" onmouseenter="this.style.background='#111';this.style.borderColor='rgba(255,106,0,0.15)'" onmouseleave="this.style.background='#0a0a0a';this.style.borderColor='rgba(255,255,255,0.04)'">
+        <div style="position:absolute;top:50%;right:-12px;width:24px;height:24px;background:#0a0a0a;border-top:1px solid rgba(255,255,255,0.04);border-right:1px solid rgba(255,255,255,0.04);transform:rotate(45deg) translateY(-50%);z-index:2;"></div>
+        <div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;color:rgba(255,106,0,0.12);letter-spacing:-3px;margin-bottom:16px;">03</div>
+        <div style="width:48px;height:48px;margin:0 auto 20px;border:1px solid rgba(255,106,0,0.2);background:rgba(255,106,0,0.06);display:flex;align-items:center;justify-content:center;border-radius:12px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div style="font-family:Inter,sans-serif;font-size:16px;font-weight:800;color:#fff;margin-bottom:10px;letter-spacing:-0.2px;">Rendering & Animation</div>
+        <div style="font-family:Inter,sans-serif;font-size:12px;color:rgba(255,255,255,0.4);line-height:1.7;font-weight:300;">GPU rendering via Octane/Redshift with AI denoising. Camera animation, lighting design, and particle effects.</div>
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
+          <div style="font-family:Inter,sans-serif;font-size:22px;font-weight:900;color:#FF6A00;letter-spacing:-0.5px;">8K</div>
+          <div style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-top:2px;">Resolution</div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div style="position:relative;padding:48px 32px;text-align:center;background:#0a0a0a;border:1px solid rgba(255,255,255,0.04);transition:all 0.4s;" onmouseenter="this.style.background='#111';this.style.borderColor='rgba(255,106,0,0.15)'" onmouseleave="this.style.background='#0a0a0a';this.style.borderColor='rgba(255,255,255,0.04)'">
+        <div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;color:rgba(255,106,0,0.12);letter-spacing:-3px;margin-bottom:16px;">04</div>
+        <div style="width:48px;height:48px;margin:0 auto 20px;border:1px solid rgba(255,106,0,0.2);background:rgba(255,106,0,0.06);display:flex;align-items:center;justify-content:center;border-radius:12px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div style="font-family:Inter,sans-serif;font-size:16px;font-weight:800;color:#fff;margin-bottom:10px;letter-spacing:-0.2px;">Delivery</div>
+        <div style="font-family:Inter,sans-serif;font-size:12px;color:rgba(255,255,255,0.4);line-height:1.7;font-weight:300;">Final compositing, color grading, and delivery in all required formats — print, web, social, and broadcast.</div>
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
+          <div style="font-family:Inter,sans-serif;font-size:22px;font-weight:900;color:#FF6A00;letter-spacing:-0.5px;">48hr</div>
+          <div style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-top:2px;">Fast Delivery</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+@media(max-width:960px){
+  #cgi-process-grid{grid-template-columns:1fr 1fr !important;}
+  #cgi-process-grid > div:nth-child(2) > div:first-child{display:none;}
+  #cgi-process-grid > div > div[style*="position:absolute"]{display:none;}
+}
+@media(max-width:480px){#cgi-process-grid{grid-template-columns:1fr !important;}}
+</style>
+
+<!-- ════ CTA ════ -->
+<section class="cta-section" style="position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(255,106,0,0.14) 0%,transparent 65%);pointer-events:none;"></div>
+  <div class="cta-badge"><span>Ready to go beyond reality?</span></div>
+  <h2 class="cta-title">YOUR PRODUCT<br>DESERVES A<br><span class="hollow">PERFECT RENDER</span></h2>
+  <p class="cta-desc">Share your brief and get a quote within 24 hours. No photography studio needed — we build it entirely in 3D.</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/971543333587" class="btn-p">Start Your 3D Project</a>
+    <a href="mailto:info@dubaiprod.com" class="btn-s">Send a Brief</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#000;border-top:1px solid rgba(255,255,255,0.06);padding:80px 32px 40px;font-family:'Inter',sans-serif;">
+    <div style="max-width:1280px;margin:0 auto;">
+        <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:64px;margin-bottom:72px;">
+            <div>
+                <img src="assets/images/dubai_prod_2__1_-1772650048332.webp" alt="Dubai Prod" style="height:64px;width:auto;margin-bottom:24px;display:block;" loading="lazy">
+                <p style="font-size:13px;color:rgba(255,255,255,0.38);line-height:1.8;max-width:280px;margin-bottom:28px;">Dubai's leading CGI & 3D production agency. We create photorealistic visuals that move people and campaigns that move markets.</p>
+                <div style="display:flex;gap:16px;">
+                    <a href="https://www.instagram.com/dubai_prods/" target="_blank" style="width:38px;height:38px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);" onmouseenter="this.style.borderColor='#FF6A00';this.style.color='#FF6A00'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.4)'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+                    <a href="https://www.facebook.com/dubai_prods/" target="_blank" style="width:38px;height:38px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);" onmouseenter="this.style.borderColor='#FF6A00';this.style.color='#FF6A00'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.4)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    <a href="https://www.linkedin.com/company/dubai-prod" target="_blank" style="width:38px;height:38px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);" onmouseenter="this.style.borderColor='#FF6A00';this.style.color='#FF6A00'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.4)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+                    <a href="https://www.youtube.com/@dubaiprod" target="_blank" style="width:38px;height:38px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);" onmouseenter="this.style.borderColor='#FF6A00';this.style.color='#FF6A00'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.4)'"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.94 1.96C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
+                </div>
+            </div>
+            <div>
+                <h4 style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:24px;">Services</h4>
+                <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
+                    <li><a href="cgi-3d.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Product Visualization</a></li>
+                    <li><a href="cgi-3d.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">3D Animation</a></li>
+                    <li><a href="cgi-3d.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Architectural Viz</a></li>
+                    <li><a href="cgi-3d.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">CGI Brand Films</a></li>
+                    <li><a href="cgi-3d.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">AR & Interactive</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:24px;">Company</h4>
+                <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
+                    <li><a href="about-us-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">About Us</a></li>
+                    <li><a href="portfolio-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Our Work</a></li>
+                    <li><a href="blog-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Blog</a></li>
+                    <li><a href="contact-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:24px;">Contact</h4>
+                <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:16px;">
+                    <li style="display:flex;gap:12px;align-items:flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span style="font-size:12px;color:rgba(255,255,255,0.4);line-height:1.6;">Dubai, United Arab Emirates</span></li>
+                    <li style="display:flex;gap:12px;align-items:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@dubaiprod.com" style="font-size:12px;color:rgba(255,255,255,0.4);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.4)'">info@dubaiprod.com</a></li>
+                    <li style="display:flex;gap:12px;align-items:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.22 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+38640797340" style="font-size:12px;color:rgba(255,255,255,0.4);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.4)'">+386 40 797 340</a></li>
+                    <li style="display:flex;gap:12px;align-items:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.22 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+971543333587" style="font-size:12px;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.4)'">+971 54 333 3587</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="height:1px;background:rgba(255,255,255,0.06);margin-bottom:32px;"></div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;">
+            <p style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin:0;">© 2026 Dubai Prod. All Rights Reserved.</p>
+            <div style="display:flex;gap:24px;"><a href="privacy-policy.html" style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.2);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.2)'">Privacy Policy</a><a href="cookies-policy.html" style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.2);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.2)'">Cookies Policy</a></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;border-radius:50%;background:#FF6A00;display:inline-block;animation:pulse 2s infinite;"></span><span style="font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.2);">Dubai, UAE</span></div>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Spotlight follow — strong orange glow that tracks the cursor
+  var hero = document.getElementById('cgi-hero');
+  var spotlight = document.getElementById('hero-spotlight');
+  if(hero && spotlight) {
+    hero.addEventListener('mousemove', function(e) {
+      var rect = hero.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var y = e.clientY - rect.top;
+      spotlight.style.background =
+        'radial-gradient(500px circle at '+x+'px '+y+'px, rgba(255,106,0,0.45) 0%, rgba(255,106,0,0.18) 35%, transparent 70%)';
+    });
+    hero.addEventListener('mouseleave', function() {
+      spotlight.style.background = 'none';
+    });
+  }
+
+  // Hero entrance — fast
+  gsap.from('#cgi-badge',  { y:14, opacity:0, duration:0.35, ease:'power3.out', delay:0.05, immediateRender:false });
+  gsap.from('#cgi-title',  { y:36, opacity:0, duration:0.5,  ease:'power3.out', delay:0.14, immediateRender:false });
+  gsap.from('#cgi-sub',    { y:14, opacity:0, duration:0.38, ease:'power2.out', delay:0.26, immediateRender:false });
+  gsap.from('#cgi-ctas',   { y:12, opacity:0, duration:0.32, ease:'power2.out', delay:0.35, immediateRender:false });
+  gsap.from('#cgi-stats',  { y:12, opacity:0, duration:0.32, ease:'power2.out', delay:0.42, immediateRender:false });
+
+  // ── Service sections scroll animations ──
+  gsap.utils.toArray('.cgi-section').forEach(function(section) {
+    var textBlock = section.querySelector('.cgi-text-block');
+    var mediaBlock = section.querySelector('.cgi-media-block');
+    if(textBlock) {
+      gsap.from(textBlock, {
+        scrollTrigger:{ trigger:section, start:'top 85%', toggleActions:'play none none none' },
+        y:60, opacity:0, duration:0.8, ease:'power3.out', immediateRender:false
+      });
+    }
+    if(mediaBlock) {
+      gsap.from(mediaBlock, {
+        scrollTrigger:{ trigger:section, start:'top 80%', toggleActions:'play none none none' },
+        y:80, opacity:0, duration:0.9, ease:'power3.out', delay:0.15, immediateRender:false
+      });
+    }
+    // Animate feature items
+    var feats = section.querySelectorAll('.svc-feat');
+    if(feats.length) {
+      gsap.from(feats, {
+        scrollTrigger:{ trigger:section, start:'top 75%', toggleActions:'play none none none' },
+        x:-20, opacity:0, duration:0.5, stagger:0.08, ease:'power2.out', immediateRender:false
+      });
+    }
+  });
+
+  // ── Why CGI section ──
+  gsap.from('#why-cgi', {
+    scrollTrigger:{ trigger:'#why-cgi', start:'top 85%', toggleActions:'play none none none' },
+    y:40, opacity:0, duration:0.8, ease:'power3.out', immediateRender:false
+  });
+
+  // ── Bento grid cards ──
+  gsap.utils.toArray('#cgi-bento > div').forEach(function(card, i) {
+    gsap.from(card, {
+      scrollTrigger:{ trigger:card, start:'top 90%', toggleActions:'play none none none' },
+      y:40, opacity:0, duration:0.6, delay:i*0.08, ease:'power3.out', immediateRender:false
+    });
+  });
+
+  // ── Recent work grid ──
+  gsap.utils.toArray('#cgi-work-grid > div').forEach(function(card, i) {
+    gsap.from(card, {
+      scrollTrigger:{ trigger:card, start:'top 90%', toggleActions:'play none none none' },
+      y:50, opacity:0, duration:0.7, delay:i*0.1, ease:'power3.out', immediateRender:false
+    });
+  });
+
+  // ── Process steps ──
+  gsap.utils.toArray('#cgi-process-grid > div').forEach(function(step, i) {
+    gsap.from(step, {
+      scrollTrigger:{ trigger:'#cgi-process', start:'top 80%', toggleActions:'play none none none' },
+      y:30, opacity:0, duration:0.5, delay:i*0.12, ease:'power2.out', immediateRender:false
+    });
+  });
+
+  // ── Float cards in "What We Create" ──
+  gsap.utils.toArray('.cgi-float-card').forEach(function(card, i) {
+    gsap.from(card, {
+      scrollTrigger:{ trigger:'.cgi-svc-row', start:'top 80%', toggleActions:'play none none none' },
+      scale:0.8, opacity:0, duration:0.6, delay:i*0.12, ease:'back.out(1.7)', immediateRender:false
+    });
+  });
+
+  // CTA
+  gsap.from('.cta-title', {
+    scrollTrigger:{ trigger:'.cta-section', start:'top 92%' },
+    y:40, opacity:0, duration:0.9, ease:'power3.out', immediateRender:false
+  });
+
+  // Nav shrink
+  ScrollTrigger.create({
+    start:'top -80',
+    onUpdate:function(self){
+      var nav=document.getElementById('main-nav');
+      if(self.progress>0){nav.style.padding='16px 48px';nav.style.borderBottom='1px solid rgba(255,255,255,0.06)';}
+      else{nav.style.padding='';nav.style.borderBottom='';}
+    }
+  });
+
+  window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
+});
+</script>
+</body>
+</html>

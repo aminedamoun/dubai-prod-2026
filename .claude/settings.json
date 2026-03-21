@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -r \"fetch\\\\|axios\\\\|http\\\\|api\\\\|backend\" /Users/aminedamoun/Documents/dubai-prod-new-website --include=*.html --include=*.js)",
+      "Bash(find /Users/aminedamoun/Documents/dubai-prod-new-website -name \"*.html\" -type f -exec wc -c {})",
+      "Read(//Users/aminedamoun/Documents/dubai-prod-new-website/**)",
+      "Bash(mv /Users/aminedamoun/Documents/dubai-prod-new-website/pages/*.html /Users/aminedamoun/Documents/dubai-prod-new-website/)",
+      "Bash(rmdir /Users/aminedamoun/Documents/dubai-prod-new-website/pages)",
+      "Bash(ls /Users/aminedamoun/Documents/dubai-prod-new-website/*.html)",
+      "Bash(find /Users/aminedamoun/Documents/dubai-prod-new-website -name *.mp4 -o -name *.webm -o -name *.mov)",
+      "Read(//Users/aminedamoun/Documents/**)",
+      "Bash(curl -L -o \"/Users/aminedamoun/Documents/dubai-prod-new-website/assets/images/bill-gates.jpg\" \"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Bill_Gates_2017_%28cropped%29.jpg/800px-Bill_Gates_2017_%28cropped%29.jpg\" -H \"User-Agent: Mozilla/5.0\")",
+      "Bash(curl -L -o \"/Users/aminedamoun/Documents/dubai-prod-new-website/assets/images/bill-gates.jpg\" \"https://upload.wikimedia.org/wikipedia/commons/a/a8/Bill_Gates_2017_%28cropped%29.jpg\" -H \"User-Agent: Mozilla/5.0\" --max-time 15)",
+      "Bash(find /Users/aminedamoun/Documents -maxdepth 2 -type d -iname *team* -o -maxdepth 2 -type d -iname *dubai*prod*team*)",
+      "WebFetch(domain:www.dubaiprod.com)"
+    ]
+  }
+}
