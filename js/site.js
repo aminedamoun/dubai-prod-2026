@@ -191,7 +191,7 @@
   <div class="wa-header" style="position:relative;">\
     <div class="wa-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>\
     <div class="wa-header-text"><h4>Dubai Prod</h4><p>Usually replies within minutes</p></div>\
-    <button class="wa-close" id="wa-close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>\
+    <button class="wa-close" id="wa-close" aria-label="Close chat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>\
   </div>\
   <div class="wa-body">\
     <div class="wa-msg">Hi there! 👋 How can we help you today? Tell us about your project and we\'ll get back to you right away.</div>\
@@ -199,7 +199,7 @@
   </div>\
   <div class="wa-input">\
     <input type="text" id="wa-msg-input" placeholder="Type a message...">\
-    <button id="wa-send"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>\
+    <button id="wa-send" aria-label="Send message"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>\
   </div>\
 </div>\
 <button id="wa-btn" aria-label="Chat on WhatsApp">\
