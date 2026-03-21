@@ -75,7 +75,8 @@
       "Bash(sed -i '' 's|font-size:9px;color:#FF8C33;\"\" class=\"\"uppercase mb-4 block\"\">// WHAT WE DO|font-size:9px;color:#FFB366;\"\" class=\"\"uppercase mb-4 block\"\">// WHAT WE DO|' index.html)",
       "Bash(sed -i '' 's|font-size:9px;color:#FF8C33;text-transform:uppercase|font-size:9px;color:#FFB366;text-transform:uppercase|' index.html)",
       "Bash(ls /Users/aminedamoun/Documents/dubai-prod-new-website/assets/video/dubai-prod-team/Nejc* /Users/aminedamoun/Documents/dubai-prod-new-website/assets/video/dubai-prod-team/amine*)",
-      "Bash(ls /Users/aminedamoun/Documents/dubai-prod-new-website/assets/video/SMV/Casino_v2* /Users/aminedamoun/Documents/dubai-prod-new-website/assets/video/SMV/7*)"
+      "Bash(ls /Users/aminedamoun/Documents/dubai-prod-new-website/assets/video/SMV/Casino_v2* /Users/aminedamoun/Documents/dubai-prod-new-website/assets/video/SMV/7*)",
+      "Bash(cd /Users/aminedamoun/Documents/dubai-prod-new-website grep -rn 'font-size:9px;color:#FF6A00' *.html)"
     ],
     "additionalDirectories": [
       "/Users/aminedamoun/.claude",
