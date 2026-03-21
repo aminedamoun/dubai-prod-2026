@@ -57,7 +57,18 @@
       "Bash(curl -s \"https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://google.com&category=PERFORMANCE&strategy=MOBILE&key=AIzaSyBDWA-RI-P3TILwQL2m9MAF7XTHJVaLZDY\")",
       "Bash(sed -n '410,886p' /Users/aminedamoun/Documents/dubai-prod-new-website/seo.html)",
       "Bash(node --check /tmp/psi_check.js)",
-      "Bash(grep -rn \"favicon-32.png\" /Users/aminedamoun/Documents/dubai-prod-new-website/*.html)"
+      "Bash(grep -rn \"favicon-32.png\" /Users/aminedamoun/Documents/dubai-prod-new-website/*.html)",
+      "Bash(sed -i '' 's|<h4 style=\"\"font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba\\(255,255,255,0.25\\);margin-bottom:24px;\"\">Services</h4>|<p role=\"\"heading\"\" aria-level=\"\"3\"\" style=\"\"font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba\\(255,255,255,0.25\\);margin-bottom:24px;\"\">Services</p>|g' index.html)",
+      "Bash(sed -i '' 's|<h4 style=\"\"font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba\\(255,255,255,0.25\\);margin-bottom:24px;\"\">Company</h4>|<p role=\"\"heading\"\" aria-level=\"\"3\"\" style=\"\"font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba\\(255,255,255,0.25\\);margin-bottom:24px;\"\">Company</p>|g' index.html)",
+      "Bash(sed -i '' 's|<h4 style=\"\"font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba\\(255,255,255,0.25\\);margin-bottom:24px;\"\">Contact</h4>|<p role=\"\"heading\"\" aria-level=\"\"3\"\" style=\"\"font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba\\(255,255,255,0.25\\);margin-bottom:24px;\"\">Contact</p>|g' index.html)",
+      "Bash(/tmp/tw_inline.css:*)",
+      "Bash(sed -i '' 's|font-size:9px;color:#FF6A00;\"\" class=\"\"uppercase mb-4 block\"\">// WHAT WE DO|font-size:9px;color:#FF8C33;\"\" class=\"\"uppercase mb-4 block\"\">// WHAT WE DO|' index.html)",
+      "Bash(sed -i '' 's|font-size:9px;color:#FF6A00;text-transform:uppercase;display:block;margin-bottom:16px;\"\">// OUR CLIENTS|font-size:9px;color:#FF8C33;text-transform:uppercase;display:block;margin-bottom:16px;\"\">// OUR CLIENTS|' index.html)",
+      "Bash(sed -i '' 's|<link rel=\"\"stylesheet\"\" href=\"\"css/site.css\"\">|<link rel=\"\"stylesheet\"\" href=\"\"css/site.css\"\" media=\"\"print\"\" onload=\"\"this.media='\"''\"'all'\"''\"'\"\">|' index.html)",
+      "Bash(sed -i '' 's|<link rel=\"\"stylesheet\"\" href=\"\"css/main.css\"\">|<link rel=\"\"stylesheet\"\" href=\"\"css/main.css\"\" media=\"\"print\"\" onload=\"\"this.media='\"''\"'all'\"''\"'\"\">|' index.html)",
+      "Bash(do sips:*)",
+      "Bash(fi done:*)",
+      "Bash(sips -Z 300 dubai_prod_2__1_-1772650048332.webp)"
     ],
     "additionalDirectories": [
       "/Users/aminedamoun/.claude",

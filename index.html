@@ -128,14 +128,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- ═══ FONTS: Inter only (trim unused families & weights) ═══ -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- ═══ STYLES ═══ -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/main.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/site.css" media="print" onload="this.media='all'">
 
     <!-- ═══ TAILWIND (CDN — kept for utility classes) ═══ -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <style>.flex{display:flex}.grid{display:grid}.block{display:block}.hidden{display:none}.relative{position:relative}.absolute{position:absolute}.fixed{position:fixed} .items-center{align-items:center}.items-start{align-items:flex-start}.justify-center{justify-content:center} .text-center{text-align:center}.text-white{color:#fff}.text-neutral-400{color:#a3a3a3}.text-neutral-500{color:#737373}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-base{font-size:1rem;line-height:1.5rem} .font-bold{font-weight:700}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625} .bg-black{background-color:#000}.bg-orange-500{background-color:#f97316}.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))} .w-full{width:100%}.w-1{width:0.25rem}.w-10{width:2.5rem}.h-full{height:100%}.h-10{height:2.5rem} .p-6{padding:1.5rem}.p-8{padding:2rem}.px-8{padding-left:2rem;padding-right:2rem} .mx-auto{margin-left:auto;margin-right:auto}.mt-4{margin-top:1rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-12{margin-bottom:3rem} .gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-16{gap:4rem}.space-y-6>:not([hidden])~:not([hidden]){margin-top:1.5rem} .max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.max-w-4xl{max-width:56rem}.max-w-7xl{max-width:80rem} .rounded{border-radius:0.25rem}.overflow-hidden{overflow:hidden} .opacity-70{opacity:0.7}.opacity-80{opacity:0.8}.z-10{z-index:10} .transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms} .object-contain{object-fit:contain}.object-cover{object-fit:cover} </style>
 
     <!-- ═══ SCRIPTS: defer so they don't block first paint ═══ -->
     <script src="js/site.js" defer></script>
@@ -536,32 +536,32 @@
             <div class="logo-carousel-track-wrapper" style="overflow:hidden;width:100%;mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);-webkit-mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);">
                 <div class="logo-carousel-track" id="logoTrack">
                     <!-- Set 1 — Partner Logos -->
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner1.webp" alt="Partner" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner2.webp" alt="Partner 2" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner3.webp" alt="Partner 3" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner4.webp" alt="Partner 4" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner5.webp" alt="Partner 5" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner6.webp" alt="Partner 6" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner7.webp" alt="Partner 7" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner8.webp" alt="Partner 8" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner9.webp" alt="Partner 9" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner10.webp" alt="Partner 10" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner11.webp" alt="Partner 11" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/sumsung.webp" alt="Samsung" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner1.webp" alt="Partner" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner2.webp" alt="Partner 2" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner3.webp" alt="Partner 3" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner4.webp" alt="Partner 4" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner5.webp" alt="Partner 5" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner6.webp" alt="Partner 6" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner7.webp" alt="Partner 7" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner8.webp" alt="Partner 8" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner9.webp" alt="Partner 9" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner10.webp" alt="Partner 10" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner11.webp" alt="Partner 11" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/sumsung.webp" alt="Samsung" width="80" height="80" loading="lazy"></div>
 
                     <!-- Set 2 — duplicate for seamless loop -->
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner1.webp" alt="Partner 1" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner2.webp" alt="Partner 2" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner3.webp" alt="Partner 3" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner4.webp" alt="Partner 4" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner5.webp" alt="Partner 5" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner6.webp" alt="Partner 6" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner7.webp" alt="Partner 7" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner8.webp" alt="Partner 8" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner9.webp" alt="Partner 9" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner10.webp" alt="Partner 10" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner11.webp" alt="Partner 11" loading="lazy"></div>
-                    <div class="logo-slot partner-slot"><img src="assets/images/partners/sumsung.webp" alt="Samsung" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner1.webp" alt="Partner 1" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner2.webp" alt="Partner 2" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner3.webp" alt="Partner 3" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner4.webp" alt="Partner 4" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner5.webp" alt="Partner 5" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner6.webp" alt="Partner 6" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner7.webp" alt="Partner 7" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner8.webp" alt="Partner 8" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner9.webp" alt="Partner 9" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner10.webp" alt="Partner 10" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/partner11.webp" alt="Partner 11" width="80" height="80" loading="lazy"></div>
+                    <div class="logo-slot partner-slot"><img src="assets/images/partners/sumsung.webp" alt="Samsung" width="80" height="80" loading="lazy"></div>
                 </div>
             </div>
         </div>
@@ -666,7 +666,7 @@
     <section id="services" style="background:#000;position:relative;">
         <!-- Section header - scrolls naturally -->
         <div style="padding:60px 0 32px;text-align:center;">
-            <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:9px;color:#FF6A00;" class="uppercase mb-4 block">// WHAT WE DO</span>
+            <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:9px;color:#FF8C33;" class="uppercase mb-4 block">// WHAT WE DO</span>
             <h2 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:clamp(2.4rem,5vw,4.2rem);letter-spacing:0.1em;line-height:0.95;" class="uppercase text-white">OUR <span style="background:linear-gradient(90deg,#FF6A00,#FF9A3C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">SERVICES</span></h2>
         </div>
 
@@ -681,7 +681,7 @@
                     <div style="position:absolute;top:0;left:0;right:0;height:50px;background:linear-gradient(180deg,rgba(255,255,255,0.06) 0%,transparent 100%);pointer-events:none;border-radius:8px 8px 0 0;"></div>
                     <!-- Image left -->
                     <div style="width:42%;flex-shrink:0;position:relative;overflow:hidden;height:480px;">
-                        <img src="assets/images/pr-media.webp" alt="PR & Media Relations" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75) saturate(0.8);" decoding="async">
+                        <img src="assets/images/pr-media.webp" alt="PR & Media Relations" width="700" height="480" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75) saturate(0.8);" decoding="async">
                         <div style="position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,rgba(0,0,0,0.7) 100%);"></div>
                         <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,106,0,0.12) 0%,transparent 60%);"></div>
                     </div>
@@ -703,7 +703,7 @@
                     <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),rgba(255,154,60,0.4),transparent);pointer-events:none;"></div>
                     <div style="position:absolute;top:0;left:0;right:0;height:50px;background:linear-gradient(180deg,rgba(255,255,255,0.06) 0%,transparent 100%);pointer-events:none;border-radius:8px 8px 0 0;"></div>
                     <div style="width:42%;flex-shrink:0;position:relative;overflow:hidden;height:480px;">
-                        <img src="assets/images/ssm.webp" alt="Social Media Management" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75) saturate(0.8);" decoding="async">
+                        <img src="assets/images/ssm.webp" alt="Social Media Management" width="700" height="480" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75) saturate(0.8);" decoding="async">
                         <div style="position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,rgba(0,0,0,0.7) 100%);"></div>
                         <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,106,0,0.12) 0%,transparent 60%);"></div>
                     </div>
@@ -725,7 +725,7 @@
                     <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),rgba(255,154,60,0.4),transparent);pointer-events:none;"></div>
                     <div style="position:absolute;top:0;left:0;right:0;height:50px;background:linear-gradient(180deg,rgba(255,255,255,0.06) 0%,transparent 100%);pointer-events:none;border-radius:8px 8px 0 0;"></div>
                     <div style="width:42%;flex-shrink:0;position:relative;overflow:hidden;height:480px;">
-                        <img src="assets/images/seo.webp" alt="SEO & Digital Growth" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75) saturate(0.8);" decoding="async">
+                        <img src="assets/images/seo.webp" alt="SEO & Digital Growth" width="700" height="480" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75) saturate(0.8);" decoding="async">
                         <div style="position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,rgba(0,0,0,0.7) 100%);"></div>
                         <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,106,0,0.12) 0%,transparent 60%);"></div>
                     </div>
@@ -747,7 +747,7 @@
                     <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),rgba(255,154,60,0.4),transparent);pointer-events:none;"></div>
                     <div style="position:absolute;top:0;left:0;right:0;height:50px;background:linear-gradient(180deg,rgba(255,255,255,0.06) 0%,transparent 100%);pointer-events:none;border-radius:8px 8px 0 0;"></div>
                     <div style="width:42%;flex-shrink:0;position:relative;overflow:hidden;height:480px;">
-                        <img src="assets/images/web-development.webp" alt="Web Development" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75) saturate(0.8);" decoding="async">
+                        <img src="assets/images/web-development.webp" alt="Web Development" width="700" height="480" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75) saturate(0.8);" decoding="async">
                         <div style="position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,rgba(0,0,0,0.7) 100%);"></div>
                         <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,106,0,0.12) 0%,transparent 60%);"></div>
                     </div>
@@ -791,7 +791,7 @@
                     <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),rgba(255,154,60,0.4),transparent);pointer-events:none;"></div>
                     <div style="position:absolute;top:0;left:0;right:0;height:50px;background:linear-gradient(180deg,rgba(255,255,255,0.06) 0%,transparent 100%);pointer-events:none;border-radius:8px 8px 0 0;"></div>
                     <div style="width:42%;flex-shrink:0;position:relative;overflow:hidden;height:480px;">
-                        <img src="assets/images/ai-services.webp" alt="Ads Management" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75) saturate(0.8);" decoding="async">
+                        <img src="assets/images/ai-services.webp" alt="Ads Management" width="700" height="480" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75) saturate(0.8);" decoding="async">
                         <div style="position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,rgba(0,0,0,0.7) 100%);"></div>
                         <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,106,0,0.12) 0%,transparent 60%);"></div>
                     </div>
@@ -813,7 +813,7 @@
                     <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),rgba(255,154,60,0.4),transparent);pointer-events:none;"></div>
                     <div style="position:absolute;top:0;left:0;right:0;height:50px;background:linear-gradient(180deg,rgba(255,255,255,0.06) 0%,transparent 100%);pointer-events:none;border-radius:8px 8px 0 0;"></div>
                     <div style="width:42%;flex-shrink:0;position:relative;overflow:hidden;height:480px;">
-                        <img src="assets/images/branding.webp" alt="Content & Brand Strategy" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75) saturate(0.8);" decoding="async">
+                        <img src="assets/images/branding.webp" alt="Content & Brand Strategy" width="700" height="480" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75) saturate(0.8);" decoding="async">
                         <div style="position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,rgba(0,0,0,0.7) 100%);"></div>
                         <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,106,0,0.12) 0%,transparent 60%);"></div>
                     </div>
@@ -878,7 +878,7 @@
     <div style="max-width:1400px;margin:0 auto;padding:0 40px;">
         <!-- Section Header -->
         <div style="text-align:center;margin-bottom:56px;">
-            <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:9px;color:#FF6A00;text-transform:uppercase;display:block;margin-bottom:16px;">// OUR CLIENTS</span>
+            <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:9px;color:#FF8C33;text-transform:uppercase;display:block;margin-bottom:16px;">// OUR CLIENTS</span>
             <h2 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:clamp(2.4rem,5vw,4.2rem);letter-spacing:0.1em;line-height:0.95;text-transform:uppercase;color:#fff;margin:0;">OUR <span style="background:linear-gradient(90deg,#FF6A00,#FF9A3C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">PORTFOLIO</span></h2>
         </div>
 
@@ -2139,7 +2139,7 @@
 
                 <!-- Services -->
                 <div>
-                    <h4 style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:24px;">Services</h4>
+                    <p role="heading" aria-level="3" style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:24px;">Services</p>
                     <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
                         <li><a href="branding-agency-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Branding</a></li>
                         <li><a href="social-media.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Social Media</a></li>
@@ -2152,7 +2152,7 @@
 
                 <!-- Company -->
                 <div>
-                    <h4 style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:24px;">Company</h4>
+                    <p role="heading" aria-level="3" style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:24px;">Company</p>
                     <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
                         <li><a href="about-us-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">About Us</a></li>
                         <li><a href="portfolio-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Our Work</a></li>
@@ -2164,7 +2164,7 @@
 
                 <!-- Contact info -->
                 <div>
-                    <h4 style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:24px;">Contact</h4>
+                    <p role="heading" aria-level="3" style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:24px;">Contact</p>
                     <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:16px;">
                         <li style="display:flex;gap:12px;align-items:flex-start;">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
