@@ -306,7 +306,7 @@
     <div id="connect-backdrop" style="display:none;position:fixed;inset:0;z-index:199;background:rgba(0,0,0,0.3);"></div>
 
     <!-- Hero Section -->
-    <header id="hero-section" style="background:#000;padding-top:0;padding-bottom:0;position:relative;min-height:100vh;overflow:hidden;display:flex;flex-direction:column;">
+    <header id="hero-section" style="background:#000;padding-top:0;padding-bottom:0;position:relative;min-height:100vh;height:100vh;overflow:hidden;display:flex;flex-direction:column;contain:layout style;">
 
     <!-- CPU Architecture CSS -->
     <style>
@@ -338,16 +338,16 @@
         <!-- Base ambient glow -->
         <div style="position:absolute;top:15%;left:50%;transform:translateX(-50%);width:900px;height:500px;background:radial-gradient(ellipse,rgba(255,106,0,0.1) 0%,transparent 65%);pointer-events:none;z-index:0;"></div>
         <!-- Interactive spotlight (follows cursor) -->
-        <div id="hero-spotlight" style="position:absolute;inset:0;pointer-events:none;z-index:1;mix-blend-mode:screen;background:radial-gradient(600px circle at 50% 40%,rgba(255,106,0,0.0),transparent 70%);transition:none;"></div>
+        <div id="hero-spotlight" style="position:absolute;inset:0;pointer-events:none;z-index:1;mix-blend-mode:screen;background:radial-gradient(600px circle at 50% 40%,rgba(255,106,0,0.0),transparent 70%);transition:none;contain:strict;will-change:background;"></div>
 
         <!-- Hero text -->
-        <div style="text-align:center;padding:150px 24px 8px;position:relative;z-index:2;">
-            <h1 style="font-family:Inter,sans-serif;font-weight:900;font-size:clamp(2rem,5.5vw,5rem);color:#fff;text-transform:uppercase;letter-spacing:-0.02em;line-height:0.92;margin-bottom:14px;">Leading PR Agency<br>For Your <span style="color:#FF6A00;">Business</span></h1>
+        <div style="text-align:center;padding:150px 24px 8px;position:relative;z-index:2;min-height:180px;">
+            <h1 style="font-family:Inter,sans-serif;font-weight:900;font-size:clamp(2rem,5.5vw,5rem);color:#fff;text-transform:uppercase;letter-spacing:-0.02em;line-height:0.92;margin-bottom:14px;min-height:1.84em;">Leading PR Agency<br>For Your <span style="color:#FF6A00;">Business</span></h1>
         </div>
 
         <!-- CPU Architecture SVG -->
         <div style="flex:1;display:flex;align-items:center;justify-content:center;position:relative;z-index:2;padding:4px 16px 20px;">
-        <svg viewBox="0 0 900 500" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:1200px;max-height:65vh;display:block;">
+        <svg viewBox="0 0 900 500" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:1200px;max-height:65vh;display:block;aspect-ratio:900/500;" width="900" height="500">
 
           <defs>
             <!-- Orb masks — thin strip so only the bright core shows through -->
@@ -770,7 +770,7 @@
                     <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.65),rgba(255,154,60,0.4),transparent);pointer-events:none;"></div>
                     <div style="position:absolute;top:0;left:0;right:0;height:50px;background:linear-gradient(180deg,rgba(255,255,255,0.06) 0%,transparent 100%);pointer-events:none;border-radius:8px 8px 0 0;"></div>
                     <div style="width:42%;flex-shrink:0;position:relative;overflow:hidden;height:480px;">
-                        <img src="assets/images/3d.webp" alt="CGI & 3D Creative" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75) saturate(0.8);" decoding="async">
+                        <img src="assets/images/3d.webp" alt="CGI & 3D Creative" width="700" height="480" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.75) saturate(0.8);" decoding="async">
                         <div style="position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,rgba(0,0,0,0.7) 100%);"></div>
                         <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,106,0,0.12) 0%,transparent 60%);"></div>
                     </div>
@@ -837,34 +837,43 @@
         (function(){
             var cards = document.querySelectorAll('.stack-card');
             var totalCards = cards.length;
+            var ticking = false;
+
+            // Cache sticky top values (they don't change)
+            var stickyTops = [];
+            var cardDivs = [];
+            cards.forEach(function(card) {
+                stickyTops.push(parseInt(card.style.top) || 120);
+                cardDivs.push(card.querySelector('div'));
+            });
 
             function onScroll(){
-                cards.forEach(function(card, i){
-                    var rect = card.getBoundingClientRect();
-                    var stickyTop = parseInt(card.style.top) || 120;
-                    // How far past its sticky point is this card?
-                    var distFromSticky = rect.top - stickyTop;
-                    // Cards that are stuck (at or near their sticky top)
-                    if(distFromSticky <= 2){
-                        // How many cards are stacked on top of this one?
-                        var cardsAbove = 0;
-                        for(var j = i+1; j < totalCards; j++){
-                            var rj = cards[j].getBoundingClientRect();
-                            var sj = parseInt(cards[j].style.top) || 120;
-                            if(rj.top - sj <= 2) cardsAbove++;
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(function() {
+                    // Batch all reads first
+                    var rects = [];
+                    for (var i = 0; i < totalCards; i++) rects.push(cards[i].getBoundingClientRect());
+                    // Then batch all writes
+                    for (var i = 0; i < totalCards; i++) {
+                        var distFromSticky = rects[i].top - stickyTops[i];
+                        if(distFromSticky <= 2){
+                            var cardsAbove = 0;
+                            for(var j = i+1; j < totalCards; j++){
+                                if(rects[j].top - stickyTops[j] <= 2) cardsAbove++;
+                            }
+                            var scale = Math.max(1 - (cardsAbove * 0.035), 0.82);
+                            var brightness = Math.max(1 - (cardsAbove * 0.12), 0.45);
+                            cardDivs[i].style.transform = 'scale(' + scale + ')';
+                            cardDivs[i].style.filter = 'brightness(' + brightness + ')';
+                            cardDivs[i].style.transition = 'transform 0.4s cubic-bezier(.22,.68,0,1.1), filter 0.4s ease';
+                        } else {
+                            cardDivs[i].style.transform = 'scale(1)';
+                            cardDivs[i].style.filter = 'brightness(1)';
+                            cardDivs[i].style.transition = 'transform 0.4s cubic-bezier(.22,.68,0,1.1), filter 0.4s ease';
                         }
-                        var scale = 1 - (cardsAbove * 0.035);
-                        var brightness = 1 - (cardsAbove * 0.12);
-                        scale = Math.max(scale, 0.82);
-                        brightness = Math.max(brightness, 0.45);
-                        card.querySelector('div').style.transform = 'scale(' + scale + ')';
-                        card.querySelector('div').style.filter = 'brightness(' + brightness + ')';
-                        card.querySelector('div').style.transition = 'transform 0.4s cubic-bezier(.22,.68,0,1.1), filter 0.4s ease';
-                    } else {
-                        card.querySelector('div').style.transform = 'scale(1)';
-                        card.querySelector('div').style.filter = 'brightness(1)';
-                        card.querySelector('div').style.transition = 'transform 0.4s cubic-bezier(.22,.68,0,1.1), filter 0.4s ease';
                     }
+                    ticking = false;
                 });
             }
 
@@ -1644,7 +1653,9 @@
 
                 var allCards = Array.from(track.querySelectorAll('.tcard'));
 
-                function cardW() { return allCards[0].offsetWidth + 24; }
+                var cachedCardW = 0;
+                function cardW() { if (!cachedCardW) cachedCardW = allCards[0].offsetWidth + 24; return cachedCardW; }
+                window.addEventListener('resize', function() { cachedCardW = 0; });
 
                 function setPos(animated) {
                     track.style.transition = animated ? 'transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94)' : 'none';
