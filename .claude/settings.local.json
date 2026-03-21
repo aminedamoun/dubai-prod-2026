@@ -68,7 +68,14 @@
       "Bash(sed -i '' 's|<link rel=\"\"stylesheet\"\" href=\"\"css/main.css\"\">|<link rel=\"\"stylesheet\"\" href=\"\"css/main.css\"\" media=\"\"print\"\" onload=\"\"this.media='\"''\"'all'\"''\"'\"\">|' index.html)",
       "Bash(do sips:*)",
       "Bash(fi done:*)",
-      "Bash(sips -Z 300 dubai_prod_2__1_-1772650048332.webp)"
+      "Bash(sips -Z 300 dubai_prod_2__1_-1772650048332.webp)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/aminedamoun/Documents/dubai-prod-new-website/assets/images/partners/partner1.webp)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/aminedamoun/Documents/dubai-prod-new-website/assets/images/branding.webp)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/aminedamoun/Documents/dubai-prod-new-website/assets/images/dubai_prod_2__1_-1772650048332.webp)",
+      "Bash(sed -i '' 's|font-size:9px;color:#FF8C33;\"\" class=\"\"uppercase mb-4 block\"\">// WHAT WE DO|font-size:9px;color:#FFB366;\"\" class=\"\"uppercase mb-4 block\"\">// WHAT WE DO|' index.html)",
+      "Bash(sed -i '' 's|font-size:9px;color:#FF8C33;text-transform:uppercase|font-size:9px;color:#FFB366;text-transform:uppercase|' index.html)",
+      "Bash(ls /Users/aminedamoun/Documents/dubai-prod-new-website/assets/video/dubai-prod-team/Nejc* /Users/aminedamoun/Documents/dubai-prod-new-website/assets/video/dubai-prod-team/amine*)",
+      "Bash(ls /Users/aminedamoun/Documents/dubai-prod-new-website/assets/video/SMV/Casino_v2* /Users/aminedamoun/Documents/dubai-prod-new-website/assets/video/SMV/7*)"
     ],
     "additionalDirectories": [
       "/Users/aminedamoun/.claude",
