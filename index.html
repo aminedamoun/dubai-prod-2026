@@ -184,7 +184,14 @@
     gap: 32px !important;
   }
 
-  /* ── CPU SVG section ── */
+  /* ── Hide hero SVG on mobile — shrink hero to just text ── */
+  #hero-svg-wrap {
+    display: none !important;
+  }
+  #hero-section {
+    min-height: auto !important;
+    padding-bottom: 60px !important;
+  }
   .cpu-svc-chip text {
     font-size: 9px !important;
   }
@@ -346,7 +353,7 @@
         </div>
 
         <!-- CPU Architecture SVG -->
-        <div style="flex:1;display:flex;align-items:center;justify-content:center;position:relative;z-index:2;padding:0;">
+        <div id="hero-svg-wrap" style="flex:1;display:flex;align-items:center;justify-content:center;position:relative;z-index:2;padding:0;">
         <svg viewBox="0 0 900 500" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="width:68vw;height:auto;display:block;margin:0 auto;" width="900" height="500">
 
           <defs>
