@@ -52,7 +52,8 @@
   /* ── Detect logo path (handle nested dirs) ── */
   var depth = window.location.pathname.split('/').length - 2;
   var prefix = depth > 1 ? '../'.repeat(depth - 1) : '';
-  var logoSrc = prefix + 'assets/images/dubai_prod_2__1_-1772650048332.webp';
+  var logoSrc = prefix + 'assets/images/logo-nav-sm.webp';
+  var logoSrcFull = prefix + 'assets/images/dubai_prod_2__1_-1772650048332.webp';
 
   /* ── Build services columns HTML ── */
   function buildColumns() {
@@ -80,7 +81,7 @@
   /* ── Full nav HTML ── */
   var NAV_HTML =
     '<a href="' + prefix + 'index.html" class="mm-logo">' +
-      '<img src="' + logoSrc + '" alt="Dubai Prod" width="200" height="133" style="height:110px;width:auto;object-fit:contain;">' +
+      '<img src="' + logoSrc + '" srcset="' + logoSrc + ' 180w, ' + logoSrcFull + ' 200w" sizes="(max-width:768px) 60px, 110px" alt="Dubai Prod" width="180" height="120" style="height:110px;width:auto;object-fit:contain;">' +
     '</a>' +
 
     /* Centre links */
