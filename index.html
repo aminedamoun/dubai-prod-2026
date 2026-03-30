@@ -2014,6 +2014,9 @@
 
     /* ===== CONTACT SECTION: ICON RAIN GAME ===== */
 (function() {
+    // Skip entire game on mobile — canvas is hidden, saves 68ms forced reflow
+    if (window.innerWidth <= 768) return;
+
     var svg     = document.getElementById('contact-vlines-svg');
     var canvas  = document.getElementById('contact-game-canvas');
     var scoreEl      = document.getElementById('contact-score');
@@ -2106,15 +2109,7 @@
             hitCooldown.push(0);
         }
     }
-    // On mobile, lazy-init grid lines only when section is visible (saves 96ms reflow)
-    if (window.innerWidth <= 768) {
-        var gridObs = new IntersectionObserver(function(entries) {
-            if (entries[0].isIntersecting) { buildLines(); gridObs.disconnect(); }
-        }, { rootMargin: '200px' });
-        gridObs.observe(section);
-    } else {
-        buildLines();
-    }
+    buildLines();
     var resizeTimer;
     window.addEventListener('resize', function(){ clearTimeout(resizeTimer); resizeTimer = setTimeout(buildLines,200); });
 
