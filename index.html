@@ -192,6 +192,12 @@
     min-height: auto !important;
     padding-bottom: 60px !important;
   }
+
+  /* ── Disable reveal animations on mobile to prevent CLS 0.442 ── */
+  .section-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
   .cpu-svc-chip text {
     font-size: 9px !important;
   }
@@ -568,7 +574,7 @@
                 <div class="col-span-12 lg:col-span-6 section-reveal">
                     <div class="relative aspect-square">
                         <div class="glass-card p-8 h-full flex items-center justify-center relative overflow-hidden">
-                            <img src="assets/images/brain-sm.webp" srcset="assets/images/brain-sm.webp 260w, assets/images/brain.webp 500w" sizes="(max-width:768px) 260px, 500px" alt="Consumer behavior loop brain visualization" width="500" height="500" class="w-full h-full object-contain opacity-70" decoding="async" loading="lazy">
+                            <img src="assets/images/brain-sm.webp" srcset="assets/images/brain-sm.webp 260w, assets/images/brain.webp 500w" sizes="(max-width:768px) 260px, 500px" alt="Consumer behavior loop brain visualization" width="500" height="500" class="w-full h-full object-contain opacity-70" decoding="async" fetchpriority="high">
                             <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-orange-900/10"></div>
 
                             <!-- Animated Data Pathways -->
@@ -1953,15 +1959,17 @@
             ease: "power3.out", clearProps: "all"
         });
 
-        // Section-reveal cards
-        gsap.utils.toArray('.section-reveal').forEach(el => {
-            el.style.willChange = 'transform, opacity';
-            gsap.to(el, {
-                scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play none none none" },
-                y: 0, opacity: 1, duration: 0.75, ease: "power2.out",
-                onComplete: function() { el.style.willChange = 'auto'; }
+        // Section-reveal cards — desktop only (mobile uses CSS to prevent CLS)
+        if (!isMobile) {
+            gsap.utils.toArray('.section-reveal').forEach(el => {
+                el.style.willChange = 'transform, opacity';
+                gsap.to(el, {
+                    scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play none none none" },
+                    y: 0, opacity: 1, duration: 0.75, ease: "power2.out",
+                    onComplete: function() { el.style.willChange = 'auto'; }
+                });
             });
-        });
+        }
 
         // Section slide-in removed — was causing CLS 0.442 on mobile
 
