@@ -140,9 +140,16 @@
 
     <!-- ═══ SCRIPTS: defer so they don't block first paint ═══ -->
     <script src="js/site.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
+    <script>
+    // Load GSAP/ScrollTrigger/Lenis only on desktop — mobile doesn't use scroll animations
+    if (!matchMedia('(max-width:768px)').matches) {
+        ['https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js',
+         'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js',
+         'https://unpkg.com/lenis@1.1.18/dist/lenis.min.js'].forEach(function(s){
+            var el=document.createElement('script');el.src=s;el.defer=true;document.head.appendChild(el);
+        });
+    }
+    </script>
 
   <style>
 @media (max-width: 768px) {
@@ -1931,27 +1938,24 @@
     </footer>
 
     <script>
-    // Wait for deferred scripts (GSAP, Lenis, ScrollTrigger) before running
+    // GSAP/ScrollTrigger/Lenis — desktop only (not loaded on mobile)
     document.addEventListener('DOMContentLoaded', function() {
+        if (typeof gsap === 'undefined') return; // mobile — scripts not loaded
 
-        // GSAP — register first so ticker is ready
         gsap.registerPlugin(ScrollTrigger);
         ScrollTrigger.config({ limitCallbacks: true });
 
-        // Smooth Scroll — desktop only (Lenis causes 84ms forced reflow on mobile)
-        var isMobile = matchMedia('(max-width:768px)').matches;
-        if (!isMobile) {
-            const lenis = new Lenis({
-                duration: 1.1,
-                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-                smoothWheel: true,
-                wheelMultiplier: 1,
-                touchMultiplier: 2,
-            });
-            gsap.ticker.add(function(time) { lenis.raf(time * 1000); });
-            gsap.ticker.lagSmoothing(0);
-            lenis.on('scroll', ScrollTrigger.update);
-        }
+        // Smooth Scroll
+        const lenis = new Lenis({
+            duration: 1.1,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true,
+            wheelMultiplier: 1,
+            touchMultiplier: 2,
+        });
+        gsap.ticker.add(function(time) { lenis.raf(time * 1000); });
+        gsap.ticker.lagSmoothing(0);
+        lenis.on('scroll', ScrollTrigger.update);
 
         // Hero entrance
         gsap.from(".hero-reveal", {
@@ -1959,19 +1963,15 @@
             ease: "power3.out", clearProps: "all"
         });
 
-        // Section-reveal cards — desktop only (mobile uses CSS to prevent CLS)
-        if (!isMobile) {
-            gsap.utils.toArray('.section-reveal').forEach(el => {
-                el.style.willChange = 'transform, opacity';
-                gsap.to(el, {
-                    scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play none none none" },
-                    y: 0, opacity: 1, duration: 0.75, ease: "power2.out",
-                    onComplete: function() { el.style.willChange = 'auto'; }
-                });
+        // Section-reveal cards
+        gsap.utils.toArray('.section-reveal').forEach(el => {
+            el.style.willChange = 'transform, opacity';
+            gsap.to(el, {
+                scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play none none none" },
+                y: 0, opacity: 1, duration: 0.75, ease: "power2.out",
+                onComplete: function() { el.style.willChange = 'auto'; }
             });
-        }
-
-        // Section slide-in removed — was causing CLS 0.442 on mobile
+        });
 
         window.addEventListener('load', () => ScrollTrigger.refresh());
 
