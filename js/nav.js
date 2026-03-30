@@ -80,7 +80,7 @@
   /* ── Full nav HTML ── */
   var NAV_HTML =
     '<a href="' + prefix + 'index.html" class="mm-logo">' +
-      '<img src="' + logoSrc + '" alt="Dubai Prod" style="height:110px;width:auto;object-fit:contain;">' +
+      '<img src="' + logoSrc + '" alt="Dubai Prod" width="200" height="133" style="height:110px;width:auto;object-fit:contain;">' +
     '</a>' +
 
     /* Centre links */
