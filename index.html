@@ -125,11 +125,11 @@
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="//unpkg.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://grainy-gradients.vercel.app" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- ═══ FONTS: Inter only (trim unused families & weights) ═══ -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- ═══ FONTS: Inter — preload key weight, use display=optional to prevent CLS ═══ -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- ═══ STYLES ═══ -->
     <link rel="stylesheet" href="css/main.css" media="print" onload="this.media='all'">
@@ -279,15 +279,15 @@
             setTimeout(function(){
                 document.body.classList.remove('preloading');
                 if(cover) cover.classList.add('done');
-                setTimeout(function(){ if(cover) cover.style.display='none'; }, 750);
-            }, 350);
+                setTimeout(function(){ if(cover) cover.style.display='none'; }, 400);
+            }, 150);
         }
-        if(document.readyState === 'complete'){
+        if(document.readyState === 'complete' || document.readyState === 'interactive'){
             finish();
         } else {
-            window.addEventListener('load', finish);
-            // Safety fallback — never block user more than 5s
-            setTimeout(finish, 5000);
+            document.addEventListener('DOMContentLoaded', finish);
+            // Safety fallback — never block user more than 2s
+            setTimeout(finish, 2000);
         }
     })();
     </script>
@@ -1989,22 +1989,7 @@
             });
         });
 
-        // Section slide-in
-        document.body.style.overflowX = 'hidden';
-        gsap.utils.toArray('section, footer').forEach(function(panel, i) {
-            panel.style.willChange = 'transform, opacity';
-            const fromRight = i % 2 === 0;
-            gsap.fromTo(panel,
-                { xPercent: fromRight ? 45 : -45, opacity: 0.3 },
-                {
-                    xPercent: 0, opacity: 1, ease: 'power2.out',
-                    scrollTrigger: {
-                        trigger: panel, start: 'top 95%', end: 'top 20%', scrub: 0.5,
-                        onLeave: function() { panel.style.willChange = 'auto'; }
-                    }
-                }
-            );
-        });
+        // Section slide-in removed — was causing CLS 0.442 on mobile
 
         window.addEventListener('load', () => ScrollTrigger.refresh());
 
