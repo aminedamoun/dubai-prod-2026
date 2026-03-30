@@ -128,7 +128,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- ═══ FONTS: Inter — preload key weight, use display=optional to prevent CLS ═══ -->
-    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_fjbvMwCp50SjIa2JL7W0Q5n-wU.woff2" as="font" type="font/woff2" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- ═══ STYLES ═══ -->
@@ -219,9 +219,25 @@
     padding-right: 16px !important;
   }
 
-  /* ── Our Work video cards ── */
+  /* ── Our Work: reel-style horizontal scroll on mobile ── */
+  .our-work-grid {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px !important;
+    padding-bottom: 8px !important;
+  }
+  .our-work-grid::after { content: ''; flex-shrink: 0; width: 1px; }
   .work-video-card {
-    min-height: 320px !important;
+    flex: 0 0 75vw !important;
+    scroll-snap-align: center;
+    min-height: auto !important;
+    aspect-ratio: 9/16 !important;
+  }
+  /* Hide cards 4-8 on mobile (keep first 3) */
+  .work-video-card:nth-child(n+4) {
+    display: none !important;
   }
 
   /* ── Testimonials ── */
@@ -313,7 +329,6 @@
     </script>
 
     <div class="grid-bg"></div>
-    <div class="noise-overlay"></div>
     <div class="scanline"></div>
 
     <!-- Navigation -->
@@ -602,7 +617,7 @@
 
                 <!-- Right: Technical Specs -->
                 <div class="col-span-12 lg:col-span-6 section-reveal">
-                    <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:9px;color:#FFB366;" class="uppercase mb-4 block">// HOW IT WORKS</span>
+                    <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:12px;color:#FFB366;" class="uppercase mb-4 block">// HOW IT WORKS</span>
                     <h2 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:clamp(2.4rem,4.5vw,3.8rem);letter-spacing:0.08em;line-height:0.95;" class="uppercase text-white">CONSUMER <br>BEHAVIOR <span style="background:linear-gradient(90deg,#FF6A00,#FF9A3C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">LOOP</span></h2>
                     <p class="text-neutral-400 text-base max-w-xl mb-12 leading-relaxed">We decode how audiences think, feel, and decide — then engineer every PR touchpoint to trigger trust, desire, and loyalty. Our methodology fuses behavioral science with strategic storytelling to build brands that people don't just follow, they believe in.</p>
                     
@@ -652,7 +667,7 @@
     <section id="services" style="background:#000;position:relative;">
         <!-- Section header - scrolls naturally -->
         <div style="padding:60px 0 32px;text-align:center;">
-            <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:9px;color:#FFB366;" class="uppercase mb-4 block">// WHAT WE DO</span>
+            <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:12px;color:#FFB366;" class="uppercase mb-4 block">// WHAT WE DO</span>
             <h2 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:clamp(2.4rem,5vw,4.2rem);letter-spacing:0.1em;line-height:0.95;" class="uppercase text-white">OUR <span style="background:linear-gradient(90deg,#FF6A00,#FF9A3C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">SERVICES</span></h2>
         </div>
 
@@ -673,7 +688,7 @@
                     </div>
                     <!-- Content right -->
                     <div style="flex:1;padding:2.8rem 2.8rem 2.8rem 2.4rem;display:flex;flex-direction:column;justify-content:center;">
-                        <span style="display:inline-block;background:rgba(255,106,0,0.15);border:1px solid rgba(255,106,0,0.35);color:#FF9A3C;font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.25em;padding:4px 10px;border-radius:3px;margin-bottom:14px;text-transform:uppercase;">MEDIA & PR</span>
+                        <span style="display:inline-block;background:rgba(255,106,0,0.15);border:1px solid rgba(255,106,0,0.35);color:#FF9A3C;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.25em;padding:4px 10px;border-radius:3px;margin-bottom:14px;text-transform:uppercase;">MEDIA & PR</span>
                         <h3 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:1.55rem;letter-spacing:0.06em;color:#fff;text-shadow:0 0 24px rgba(255,255,255,0.12);margin-bottom:16px;" class="uppercase">PR & MEDIA RELATIONS</h3>
                         <p style="color:rgba(200,200,210,0.75);font-size:0.95rem;line-height:1.8;max-width:420px;">Strategic press coverage and media placements that position your brand as the undeniable authority. We craft narratives that earn headlines, build credibility, and shape public perception at scale.</p>
                         <a href="pr-media.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:10px 22px;background:rgba(255,255,255,0.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,106,0,0.55);border-radius:5px;color:#fff;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.12em;text-decoration:none;text-transform:uppercase;box-shadow:0 0 14px rgba(255,106,0,0.18),inset 0 1px 0 rgba(255,255,255,0.1);transition:box-shadow 0.25s ease,background 0.25s ease;" onmouseover="this.style.boxShadow='0 0 28px rgba(255,106,0,0.55),inset 0 1px 0 rgba(255,255,255,0.15)';this.style.background='rgba(255,106,0,0.12)'" onmouseout="this.style.boxShadow='0 0 14px rgba(255,106,0,0.18),inset 0 1px 0 rgba(255,255,255,0.1)';this.style.background='rgba(255,255,255,0.06)'">Learn More <span style="font-size:1rem;">→</span></a>
@@ -695,7 +710,7 @@
                     </div>
                     <!-- Content right -->
                     <div style="flex:1;padding:2.8rem 2.8rem 2.8rem 2.4rem;display:flex;flex-direction:column;justify-content:center;">
-                        <span style="display:inline-block;background:rgba(255,106,0,0.15);border:1px solid rgba(255,106,0,0.35);color:#FF9A3C;font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.25em;padding:4px 10px;border-radius:3px;margin-bottom:14px;text-transform:uppercase;">SOCIAL</span>
+                        <span style="display:inline-block;background:rgba(255,106,0,0.15);border:1px solid rgba(255,106,0,0.35);color:#FF9A3C;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.25em;padding:4px 10px;border-radius:3px;margin-bottom:14px;text-transform:uppercase;">SOCIAL</span>
                         <h3 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:1.55rem;letter-spacing:0.06em;color:#fff;text-shadow:0 0 24px rgba(255,255,255,0.12);margin-bottom:16px;" class="uppercase">SOCIAL MEDIA MANAGEMENT</h3>
                         <p style="color:rgba(200,200,210,0.75);font-size:0.95rem;line-height:1.8;max-width:420px;">Data-driven content strategies across all platforms that grow engaged communities. We convert passive followers into loyal advocates through psychology-backed storytelling and precision scheduling.</p>
                         <a href="social-media.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:10px 22px;background:rgba(255,255,255,0.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,106,0,0.55);border-radius:5px;color:#fff;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.12em;text-decoration:none;text-transform:uppercase;box-shadow:0 0 14px rgba(255,106,0,0.18),inset 0 1px 0 rgba(255,255,255,0.1);transition:box-shadow 0.25s ease,background 0.25s ease;" onmouseover="this.style.boxShadow='0 0 28px rgba(255,106,0,0.55),inset 0 1px 0 rgba(255,255,255,0.15)';this.style.background='rgba(255,106,0,0.12)'" onmouseout="this.style.boxShadow='0 0 14px rgba(255,106,0,0.18),inset 0 1px 0 rgba(255,255,255,0.1)';this.style.background='rgba(255,255,255,0.06)'">Learn More <span style="font-size:1rem;">→</span></a>
@@ -717,7 +732,7 @@
                     </div>
                     <!-- Content right -->
                     <div style="flex:1;padding:2.8rem 2.8rem 2.8rem 2.4rem;display:flex;flex-direction:column;justify-content:center;">
-                        <span style="display:inline-block;background:rgba(255,106,0,0.15);border:1px solid rgba(255,106,0,0.35);color:#FF9A3C;font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.25em;padding:4px 10px;border-radius:3px;margin-bottom:14px;text-transform:uppercase;">SEO</span>
+                        <span style="display:inline-block;background:rgba(255,106,0,0.15);border:1px solid rgba(255,106,0,0.35);color:#FF9A3C;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.25em;padding:4px 10px;border-radius:3px;margin-bottom:14px;text-transform:uppercase;">SEO</span>
                         <h3 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:1.55rem;letter-spacing:0.06em;color:#fff;text-shadow:0 0 24px rgba(255,255,255,0.12);margin-bottom:16px;" class="uppercase">SEO & DIGITAL GROWTH</h3>
                         <p style="color:rgba(200,200,210,0.75);font-size:0.95rem;line-height:1.8;max-width:420px;">Search dominance through technical SEO, content authority, and algorithmic precision. We drive compounding organic visibility that builds a sustainable pipeline of high-intent traffic.</p>
                         <a href="seo.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:10px 22px;background:rgba(255,255,255,0.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,106,0,0.55);border-radius:5px;color:#fff;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.12em;text-decoration:none;text-transform:uppercase;box-shadow:0 0 14px rgba(255,106,0,0.18),inset 0 1px 0 rgba(255,255,255,0.1);transition:box-shadow 0.25s ease,background 0.25s ease;" onmouseover="this.style.boxShadow='0 0 28px rgba(255,106,0,0.55),inset 0 1px 0 rgba(255,255,255,0.15)';this.style.background='rgba(255,106,0,0.12)'" onmouseout="this.style.boxShadow='0 0 14px rgba(255,106,0,0.18),inset 0 1px 0 rgba(255,255,255,0.1)';this.style.background='rgba(255,255,255,0.06)'">Learn More <span style="font-size:1rem;">→</span></a>
@@ -739,7 +754,7 @@
                     </div>
                     <!-- Content right -->
                     <div style="flex:1;padding:2.8rem 2.8rem 2.8rem 2.4rem;display:flex;flex-direction:column;justify-content:center;">
-                        <span style="display:inline-block;background:rgba(255,106,0,0.15);border:1px solid rgba(255,106,0,0.35);color:#FF9A3C;font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.25em;padding:4px 10px;border-radius:3px;margin-bottom:14px;text-transform:uppercase;">WEB</span>
+                        <span style="display:inline-block;background:rgba(255,106,0,0.15);border:1px solid rgba(255,106,0,0.35);color:#FF9A3C;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.25em;padding:4px 10px;border-radius:3px;margin-bottom:14px;text-transform:uppercase;">WEB</span>
                         <h3 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:1.55rem;letter-spacing:0.06em;color:#fff;text-shadow:0 0 24px rgba(255,255,255,0.12);margin-bottom:16px;" class="uppercase">WEB DEVELOPMENT</h3>
                         <p style="color:rgba(200,200,210,0.75);font-size:0.95rem;line-height:1.8;max-width:420px;">High-performance websites and digital experiences engineered for conversion. From precision landing pages to full-scale brand platforms — built fast, built to rank, built to convert.</p>
                         <a href="web-development.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:10px 22px;background:rgba(255,255,255,0.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,106,0,0.55);border-radius:5px;color:#fff;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.12em;text-decoration:none;text-transform:uppercase;box-shadow:0 0 14px rgba(255,106,0,0.18),inset 0 1px 0 rgba(255,255,255,0.1);transition:box-shadow 0.25s ease,background 0.25s ease;" onmouseover="this.style.boxShadow='0 0 28px rgba(255,106,0,0.55),inset 0 1px 0 rgba(255,255,255,0.15)';this.style.background='rgba(255,106,0,0.12)'" onmouseout="this.style.boxShadow='0 0 14px rgba(255,106,0,0.18),inset 0 1px 0 rgba(255,255,255,0.1)';this.style.background='rgba(255,255,255,0.06)'">Learn More <span style="font-size:1rem;">→</span></a>
@@ -761,7 +776,7 @@
                     </div>
                     <!-- Content right -->
                     <div style="flex:1;padding:2.8rem 2.8rem 2.8rem 2.4rem;display:flex;flex-direction:column;justify-content:center;">
-                        <span style="display:inline-block;background:rgba(255,106,0,0.15);border:1px solid rgba(255,106,0,0.35);color:#FF9A3C;font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.25em;padding:4px 10px;border-radius:3px;margin-bottom:14px;text-transform:uppercase;">CGI · 3D</span>
+                        <span style="display:inline-block;background:rgba(255,106,0,0.15);border:1px solid rgba(255,106,0,0.35);color:#FF9A3C;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.25em;padding:4px 10px;border-radius:3px;margin-bottom:14px;text-transform:uppercase;">CGI · 3D</span>
                         <h3 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:1.55rem;letter-spacing:0.06em;color:#fff;text-shadow:0 0 24px rgba(255,255,255,0.12);margin-bottom:16px;" class="uppercase">CGI & 3D CREATIVE</h3>
                         <p style="color:rgba(200,200,210,0.75);font-size:0.95rem;line-height:1.8;max-width:420px;">Hyper-realistic CGI visuals and 3D brand experiences that stop the scroll. We make your product impossible to ignore — from viral social renders to full campaign visual identities.</p>
                         <a href="cgi-3d.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:10px 22px;background:rgba(255,255,255,0.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,106,0,0.55);border-radius:5px;color:#fff;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.12em;text-decoration:none;text-transform:uppercase;box-shadow:0 0 14px rgba(255,106,0,0.18),inset 0 1px 0 rgba(255,255,255,0.1);transition:box-shadow 0.25s ease,background 0.25s ease;" onmouseover="this.style.boxShadow='0 0 28px rgba(255,106,0,0.55),inset 0 1px 0 rgba(255,255,255,0.15)';this.style.background='rgba(255,106,0,0.12)'" onmouseout="this.style.boxShadow='0 0 14px rgba(255,106,0,0.18),inset 0 1px 0 rgba(255,255,255,0.1)';this.style.background='rgba(255,255,255,0.06)'">Learn More <span style="font-size:1rem;">→</span></a>
@@ -783,7 +798,7 @@
                     </div>
                     <!-- Content right -->
                     <div style="flex:1;padding:2.8rem 2.8rem 2.8rem 2.4rem;display:flex;flex-direction:column;justify-content:center;">
-                        <span style="display:inline-block;background:rgba(255,106,0,0.15);border:1px solid rgba(255,106,0,0.35);color:#FF9A3C;font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.25em;padding:4px 10px;border-radius:3px;margin-bottom:14px;text-transform:uppercase;">PAID ADS</span>
+                        <span style="display:inline-block;background:rgba(255,106,0,0.15);border:1px solid rgba(255,106,0,0.35);color:#FF9A3C;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.25em;padding:4px 10px;border-radius:3px;margin-bottom:14px;text-transform:uppercase;">PAID ADS</span>
                         <h3 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:1.55rem;letter-spacing:0.06em;color:#fff;text-shadow:0 0 24px rgba(255,255,255,0.12);margin-bottom:16px;" class="uppercase">ADS MANAGEMENT</h3>
                         <p style="color:rgba(200,200,210,0.75);font-size:0.95rem;line-height:1.8;max-width:420px;">Performance-first paid media across Meta, Google, and TikTok. Precision targeting that maximizes ROAS, scales revenue, and turns ad spend into a predictable growth engine.</p>
                         <a href="ads.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:10px 22px;background:rgba(255,255,255,0.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,106,0,0.55);border-radius:5px;color:#fff;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.12em;text-decoration:none;text-transform:uppercase;box-shadow:0 0 14px rgba(255,106,0,0.18),inset 0 1px 0 rgba(255,255,255,0.1);transition:box-shadow 0.25s ease,background 0.25s ease;" onmouseover="this.style.boxShadow='0 0 28px rgba(255,106,0,0.55),inset 0 1px 0 rgba(255,255,255,0.15)';this.style.background='rgba(255,106,0,0.12)'" onmouseout="this.style.boxShadow='0 0 14px rgba(255,106,0,0.18),inset 0 1px 0 rgba(255,255,255,0.1)';this.style.background='rgba(255,255,255,0.06)'">Learn More <span style="font-size:1rem;">→</span></a>
@@ -805,7 +820,7 @@
                     </div>
                     <!-- Content right -->
                     <div style="flex:1;padding:2.8rem 2.8rem 2.8rem 2.4rem;display:flex;flex-direction:column;justify-content:center;">
-                        <span style="display:inline-block;background:rgba(255,106,0,0.15);border:1px solid rgba(255,106,0,0.35);color:#FF9A3C;font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.25em;padding:4px 10px;border-radius:3px;margin-bottom:14px;text-transform:uppercase;">CONTENT</span>
+                        <span style="display:inline-block;background:rgba(255,106,0,0.15);border:1px solid rgba(255,106,0,0.35);color:#FF9A3C;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.25em;padding:4px 10px;border-radius:3px;margin-bottom:14px;text-transform:uppercase;">CONTENT</span>
                         <h3 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:1.55rem;letter-spacing:0.06em;color:#fff;text-shadow:0 0 24px rgba(255,255,255,0.12);margin-bottom:16px;" class="uppercase">CONTENT & BRAND STRATEGY</h3>
                         <p style="color:rgba(200,200,210,0.75);font-size:0.95rem;line-height:1.8;max-width:420px;">Cohesive brand narratives and content ecosystems that build lasting identity. We define your voice, visual language, and messaging architecture to make your brand unmistakable across every touchpoint.</p>
                         <a href="branding-agency-dubai.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:10px 22px;background:rgba(255,255,255,0.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,106,0,0.55);border-radius:5px;color:#fff;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.12em;text-decoration:none;text-transform:uppercase;box-shadow:0 0 14px rgba(255,106,0,0.18),inset 0 1px 0 rgba(255,255,255,0.1);transition:box-shadow 0.25s ease,background 0.25s ease;" onmouseover="this.style.boxShadow='0 0 28px rgba(255,106,0,0.55),inset 0 1px 0 rgba(255,255,255,0.15)';this.style.background='rgba(255,106,0,0.12)'" onmouseout="this.style.boxShadow='0 0 14px rgba(255,106,0,0.18),inset 0 1px 0 rgba(255,255,255,0.1)';this.style.background='rgba(255,255,255,0.06)'">Learn More <span style="font-size:1rem;">→</span></a>
@@ -874,7 +889,7 @@
     <div style="max-width:1400px;margin:0 auto;padding:0 40px;">
         <!-- Section Header -->
         <div style="text-align:center;margin-bottom:56px;">
-            <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:9px;color:#FFB366;text-transform:uppercase;display:block;margin-bottom:16px;">// OUR CLIENTS</span>
+            <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:12px;color:#FFB366;text-transform:uppercase;display:block;margin-bottom:16px;">// OUR CLIENTS</span>
             <h2 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:clamp(2.4rem,5vw,4.2rem);letter-spacing:0.1em;line-height:0.95;text-transform:uppercase;color:#fff;margin:0;">OUR <span style="background:linear-gradient(90deg,#FF6A00,#FF9A3C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">PORTFOLIO</span></h2>
         </div>
 
@@ -966,7 +981,7 @@
         <div style="max-width:1300px;margin:0 auto;padding:0 24px;">
             <!-- Section Header -->
             <div style="text-align:center;margin-bottom:56px;">
-                <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:9px;color:#FFB366;" class="uppercase mb-4 block">// OUR PORTFOLIO</span>
+                <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:12px;color:#FFB366;" class="uppercase mb-4 block">// OUR PORTFOLIO</span>
                 <h2 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:clamp(2.4rem,5vw,4.2rem);letter-spacing:0.1em;line-height:0.95;text-transform:uppercase;color:#fff;margin:0 0 20px;">OUR <span style="background:linear-gradient(90deg,#FF6A00,#FF9500);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">WORK</span></h2>
                 <p style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:15px;color:rgba(255,255,255,0.45);letter-spacing:0.04em;max-width:520px;margin:0 auto;line-height:1.7;">We don't just run campaigns. We engineer outcomes using cutting-edge AI.</p>
             </div>
@@ -1106,6 +1121,11 @@
                 btn.style.borderColor  = isMuted ? 'rgba(255,106,0,0.35)' : 'rgba(255,106,0,0.7)';
             }
 
+            // On mobile: set preload=none to save bandwidth (71MB of video)
+            if (matchMedia('(max-width:768px)').matches) {
+                document.querySelectorAll('.work-vid').forEach(function(v){ v.preload = 'none'; });
+            }
+
             // Auto-play all videos when the section scrolls into view, pause when it leaves
             (function() {
                 var section = document.getElementById('our-work');
@@ -1140,7 +1160,7 @@
 
             <!-- Section Header -->
             <div style="text-align:center;margin-bottom:72px;">
-                <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:9px;color:#FFB366;" class="uppercase mb-4 block">// AI-Powered Services</span>
+                <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:12px;color:#FFB366;" class="uppercase mb-4 block">// AI-Powered Services</span>
                 <h2 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:clamp(2.4rem,5vw,4.2rem);letter-spacing:0.08em;line-height:0.95;text-transform:uppercase;color:#fff;margin:0 0 20px;">INTELLIGENCE <br><span style="background:linear-gradient(90deg,#FF6A00,#FF9500);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">THAT WORKS</span></h2>
                 <p style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:15px;color:rgba(255,255,255,0.45);letter-spacing:0.04em;max-width:520px;margin:0 auto;line-height:1.7;">We embed AI at every layer of your marketing — from content creation to campaign optimization and real-time analytics.</p>
             </div>
@@ -1245,7 +1265,7 @@
     <div style="max-width:1300px;margin:0 auto;padding:0 24px;position:relative;z-index:1;">
         <!-- Header -->
         <div style="text-align:center;margin-bottom:64px;">
-            <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:9px;color:#FFB366;text-transform:uppercase;display:block;margin-bottom:16px;">// CLIENT STORIES</span>
+            <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:12px;color:#FFB366;text-transform:uppercase;display:block;margin-bottom:16px;">// CLIENT STORIES</span>
             <h2 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:clamp(2.4rem,5vw,4.2rem);letter-spacing:0.1em;line-height:0.95;text-transform:uppercase;color:#fff;margin:0 0 20px;">WHAT OUR <span style="background:linear-gradient(90deg,#FF6A00,#FF9A3C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">CLIENTS SAY</span></h2>
             <p style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:15px;color:rgba(255,255,255,0.45);letter-spacing:0.04em;max-width:520px;margin:0 auto;line-height:1.7;">Real results from brands that trusted us to shape their story.</p>
         </div>
@@ -1422,7 +1442,7 @@
             <div style="display:flex;flex-direction:column;gap:0;">
 
                 <!-- Section label -->
-                <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:9px;color:#FFB366;display:block;margin-bottom:22px;text-transform:uppercase;">// THE VISION BEHIND PR</span>
+                <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:12px;color:#FFB366;display:block;margin-bottom:22px;text-transform:uppercase;">// THE VISION BEHIND PR</span>
 
                 <!-- Opening quote mark -->
                 <span style="font-family:'Georgia',serif;font-size:4.5rem;line-height:0.7;color:#FF6A00;display:block;margin-bottom:10px;opacity:0.85;">&ldquo;</span>
@@ -1473,7 +1493,7 @@
     <section id="blogs" class="section-padding bg-black relative overflow-hidden">
         <div class="px-8 max-w-7xl mx-auto relative z-10">
             <div style="text-align:center;margin-bottom:72px;">
-                <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:9px;color:#FFB366;" class="uppercase mb-4 block">// Insights</span>
+                <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:12px;color:#FFB366;" class="uppercase mb-4 block">// Insights</span>
                 <h2 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:clamp(2.5rem,5vw,3.75rem);letter-spacing:0.08em;line-height:0.95;text-transform:uppercase;color:#fff;margin:0 0 20px;">OUR <span style="background:linear-gradient(90deg,#FF6A00,#FF9500);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">BLOGS</span></h2>
                 <div style="width:48px;height:2px;background:linear-gradient(90deg,#FF6A00,#FF9500);margin:0 auto 20px;"></div>
                 <p style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;" class="text-neutral-500 text-sm max-w-md mx-auto opacity-70">Expert insights on PR, digital marketing, and brand strategy from our team.</p>
@@ -1487,7 +1507,7 @@
                         <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80" alt="Social Media Strategy Dubai Prod" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;" loading="lazy" decoding="async" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'">
                     </div>
                     <div style="padding:24px;">
-                        <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#FF6A00;display:inline-block;margin-bottom:12px;">Social Media</span>
+                        <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#FF6A00;display:inline-block;margin-bottom:12px;">Social Media</span>
                         <h3 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:18px;color:#fff;margin:0 0 12px;line-height:1.4;">How to Build a Viral Social Media Campaign in 2025</h3>
                         <p style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;margin:0 0 20px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">Discover the proven frameworks top brands use to create content that spreads organically and drives real engagement across every major platform.</p>
                         <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.06);padding-top:16px;">
@@ -1505,7 +1525,7 @@
                         <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=80" alt="PR Strategy Dubai Prod" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;" loading="lazy" decoding="async" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'">
                     </div>
                     <div style="padding:24px;">
-                        <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#FF6A00;display:inline-block;margin-bottom:12px;">PR</span>
+                        <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#FF6A00;display:inline-block;margin-bottom:12px;">PR</span>
                         <h3 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:18px;color:#fff;margin:0 0 12px;line-height:1.4;">Crisis PR: Protecting Your Brand When It Matters Most</h3>
                         <p style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;margin:0 0 20px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">A step-by-step guide to managing media crises, controlling the narrative, and emerging stronger from any PR challenge your brand may face.</p>
                         <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.06);padding-top:16px;">
@@ -1523,7 +1543,7 @@
                         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Digital Marketing Agency Dubai" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;" loading="lazy" decoding="async" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'">
                     </div>
                     <div style="padding:24px;">
-                        <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#FF6A00;display:inline-block;margin-bottom:12px;">Digital Marketing</span>
+                        <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#FF6A00;display:inline-block;margin-bottom:12px;">Digital Marketing</span>
                         <h3 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:18px;color:#fff;margin:0 0 12px;line-height:1.4;">The ROI of AI-Driven Marketing Automation in 2025</h3>
                         <p style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;margin:0 0 20px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">How leading brands are leveraging artificial intelligence to automate campaigns, personalize at scale, and dramatically cut customer acquisition costs.</p>
                         <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.06);padding-top:16px;">
@@ -1541,7 +1561,7 @@
                         <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80" alt="Brand Strategy UAE" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;" loading="lazy" decoding="async" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'">
                     </div>
                     <div style="padding:24px;">
-                        <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#FF6A00;display:inline-block;margin-bottom:12px;">Brand Strategy</span>
+                        <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#FF6A00;display:inline-block;margin-bottom:12px;">Brand Strategy</span>
                         <h3 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:18px;color:#fff;margin:0 0 12px;line-height:1.4;">Building a Luxury Brand Identity That Commands Premium Pricing</h3>
                         <p style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;margin:0 0 20px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">Uncover the psychology behind premium brand perception and the strategic moves that allow companies to charge more and win fiercely loyal customers.</p>
                         <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.06);padding-top:16px;">
@@ -1559,7 +1579,7 @@
                         <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80" alt="Content Strategy Dubai" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;" loading="lazy" decoding="async" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'">
                     </div>
                     <div style="padding:24px;">
-                        <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#FF6A00;display:inline-block;margin-bottom:12px;">Content Strategy</span>
+                        <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#FF6A00;display:inline-block;margin-bottom:12px;">Content Strategy</span>
                         <h3 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:18px;color:#fff;margin:0 0 12px;line-height:1.4;">Content That Converts: Storytelling Frameworks for B2B Brands</h3>
                         <p style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;margin:0 0 20px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">Master the art of B2B storytelling with proven content frameworks that move prospects through the funnel and turn readers into paying customers.</p>
                         <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.06);padding-top:16px;">
@@ -1577,7 +1597,7 @@
                         <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80" alt="SEO Agency Dubai" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;" loading="lazy" decoding="async" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'">
                     </div>
                     <div style="padding:24px;">
-                        <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#FF6A00;display:inline-block;margin-bottom:12px;">SEO</span>
+                        <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#FF6A00;display:inline-block;margin-bottom:12px;">SEO</span>
                         <h3 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:18px;color:#fff;margin:0 0 12px;line-height:1.4;">SEO in the Age of AI: What Still Works and What Doesn't</h3>
                         <p style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;margin:0 0 20px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">With AI reshaping search results, learn which SEO tactics are still driving organic traffic and which outdated strategies are quietly killing your rankings.</p>
                         <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.06);padding-top:16px;">
@@ -1597,7 +1617,7 @@
     <section id="faq" class="section-padding bg-black relative overflow-hidden">
         <div class="px-8 max-w-4xl mx-auto relative z-10">
             <div style="text-align:center;margin-bottom:72px;">
-                <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:9px;color:#FFB366;" class="uppercase mb-4 block">// Support</span>
+                <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.3em;font-size:12px;color:#FFB366;" class="uppercase mb-4 block">// Support</span>
                 <h2 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:clamp(2.5rem,5vw,3.75rem);letter-spacing:0.08em;line-height:0.95;text-transform:uppercase;color:#fff;margin:0 0 20px;">FREQUENTLY <span style="background:linear-gradient(90deg,#FF6A00,#FF9500);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">ASKED QUESTIONS</span></h2>
                 <div style="width:48px;height:2px;background:linear-gradient(90deg,#FF6A00,#FF9500);margin:0 auto 20px;"></div>
                 <p style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;" class="text-neutral-500 text-sm max-w-md mx-auto opacity-70">Everything you need to know about working with us.</p>
@@ -1770,10 +1790,10 @@
                     style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,215,0,0.35);padding:8px 16px;color:#fff;font-family:'Inter',sans-serif;font-size:13px;outline:none;width:160px;"
                     onfocus="this.style.borderColor='#FFD700'" onblur="this.style.borderColor='rgba(255,215,0,0.35)'">
                 <button id="hiscore-save-btn"
-                    style="background:linear-gradient(90deg,#FFD700,#FF9500);color:#000;padding:8px 20px;font-family:'Inter',sans-serif;font-size:9px;font-weight:800;letter-spacing:0.25em;text-transform:uppercase;border:none;cursor:pointer;">SAVE</button>
+                    style="background:linear-gradient(90deg,#FFD700,#FF9500);color:#000;padding:8px 20px;font-family:'Inter',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.25em;text-transform:uppercase;border:none;cursor:pointer;">SAVE</button>
             </div>
             <!-- Eyebrow -->
-            <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.35em;font-size:9px;color:#FFB366;text-transform:uppercase;display:block;margin-bottom:28px;">// Let's Work Together</span>
+            <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:0.35em;font-size:12px;color:#FFB366;text-transform:uppercase;display:block;margin-bottom:28px;">// Let's Work Together</span>
 
             <!-- Heading -->
             <h2 style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:900;font-size:clamp(2.8rem,8vw,6rem);letter-spacing:-0.01em;line-height:0.95;text-transform:uppercase;color:#fff;margin:0 0 32px;">
@@ -1790,17 +1810,17 @@
             <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:48px;margin-bottom:56px;">
                 <div>
                     <div style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:900;font-size:2.4rem;letter-spacing:-0.02em;background:linear-gradient(90deg,#FF6A00,#FF9500);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">249+</div>
-                    <div style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:6px;">Brands Served</div>
+                    <div style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:6px;">Brands Served</div>
                 </div>
                 <div style="width:1px;background:rgba(255,255,255,0.07);align-self:stretch;"></div>
                 <div>
                     <div style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:900;font-size:2.4rem;letter-spacing:-0.02em;background:linear-gradient(90deg,#FF6A00,#FF9500);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">50M+</div>
-                    <div style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:6px;">Views Generated</div>
+                    <div style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:6px;">Views Generated</div>
                 </div>
                 <div style="width:1px;background:rgba(255,255,255,0.07);align-self:stretch;"></div>
                 <div>
                     <div style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:900;font-size:2.4rem;letter-spacing:-0.02em;background:linear-gradient(90deg,#FF6A00,#FF9500);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">6+</div>
-                    <div style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:6px;">Years in Dubai</div>
+                    <div style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:6px;">Years in Dubai</div>
                 </div>
             </div>
 
@@ -1810,22 +1830,22 @@
                     <input type="email" placeholder="your@email.com"
                         style="flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-right:none;padding:18px 24px;color:#fff;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:14px;outline:none;transition:border-color 0.3s;"
                         onfocus="this.style.borderColor='#FF6A00'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
-                    <button style="background:linear-gradient(90deg,#FF6A00,#FF9500);color:#000;padding:18px 36px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;transition:opacity 0.2s;"
+                    <button style="background:linear-gradient(90deg,#FF6A00,#FF9500);color:#000;padding:18px 36px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;transition:opacity 0.2s;"
                         onmouseenter="this.style.opacity='0.85'" onmouseleave="this.style.opacity='1'">
                         Get a Free Audit
                     </button>
                 </div>
                 <!-- Trust badges -->
                 <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-top:8px;">
-                    <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:6px;">
+                    <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:6px;">
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                         No Commitment
                     </span>
-                    <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:6px;">
+                    <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:6px;">
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                         Reply within 24h
                     </span>
-                    <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:6px;">
+                    <span style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:6px;">
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                         Custom Strategy
                     </span>
@@ -1845,7 +1865,7 @@
 
                 <!-- Brand column -->
                 <div>
-                    <img src="assets/images/dubai_prod_2__1_-1772650048332.webp" alt="Dubai Prod Logo" style="height:64px;width:auto;object-fit:contain;margin-bottom:24px;display:block;" loading="lazy">
+                    <img src="assets/images/dubai_prod_2__1_-1772650048332.webp" alt="Dubai Prod Logo" width="96" height="64" style="height:64px;width:auto;object-fit:contain;margin-bottom:24px;display:block;" loading="lazy">
                     <p style="font-size:13px;color:rgba(255,255,255,0.38);line-height:1.8;max-width:280px;margin-bottom:28px;">
                         Dubai's leading PR & digital marketing agency. We create content that moves people and campaigns that move markets.
                     </p>
@@ -1871,7 +1891,7 @@
 
                 <!-- Services -->
                 <div>
-                    <p role="heading" aria-level="3" style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:24px;">Services</p>
+                    <p role="heading" aria-level="3" style="font-size:12px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:24px;">Services</p>
                     <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
                         <li><a href="branding-agency-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.75)'">Branding</a></li>
                         <li><a href="social-media.html" style="font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.75)'">Social Media</a></li>
@@ -1884,7 +1904,7 @@
 
                 <!-- Company -->
                 <div>
-                    <p role="heading" aria-level="3" style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:24px;">Company</p>
+                    <p role="heading" aria-level="3" style="font-size:12px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:24px;">Company</p>
                     <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
                         <li><a href="about-us-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.75)'">About Us</a></li>
                         <li><a href="portfolio-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.75)'">Our Work</a></li>
@@ -1896,7 +1916,7 @@
 
                 <!-- Contact info -->
                 <div>
-                    <p role="heading" aria-level="3" style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:24px;">Contact</p>
+                    <p role="heading" aria-level="3" style="font-size:12px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:24px;">Contact</p>
                     <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:16px;">
                         <li style="display:flex;gap:12px;align-items:flex-start;">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -1923,14 +1943,14 @@
 
             <!-- Bottom row -->
             <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;">
-                <p style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin:0;">© 2026 Dubai Prod. All Rights Reserved.</p>
+                <p style="font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin:0;">© 2026 Dubai Prod. All Rights Reserved.</p>
                 <div style="display:flex;gap:24px;">
-                    <a href="privacy-policy.html" style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.2);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.65)'">Privacy Policy</a>
-                    <a href="cookies-policy.html" style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.2);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.65)'">Cookies Policy</a>
+                    <a href="privacy-policy.html" style="font-size:12px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.2s;padding:8px 0;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.65)'">Privacy Policy</a>
+                    <a href="cookies-policy.html" style="font-size:12px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.2s;padding:8px 0;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.65)'">Cookies Policy</a>
                 </div>
                 <div style="display:flex;align-items:center;gap:8px;">
                     <span style="width:6px;height:6px;border-radius:50%;background:#FF6A00;display:inline-block;animation:pulse 2s infinite;"></span>
-                    <span style="font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.2);">Dubai, UAE</span>
+                    <span style="font-size:12px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Dubai, UAE</span>
                 </div>
             </div>
 
