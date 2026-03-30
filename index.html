@@ -819,14 +819,15 @@
                 cardDivs.push(card.querySelector('div'));
             });
 
+            // Skip stacking card scroll effect on mobile (saves 144ms forced reflow)
+            if (window.innerWidth <= 768) return;
+
             function onScroll(){
                 if (ticking) return;
                 ticking = true;
                 requestAnimationFrame(function() {
-                    // Batch all reads first
                     var rects = [];
                     for (var i = 0; i < totalCards; i++) rects.push(cards[i].getBoundingClientRect());
-                    // Then batch all writes
                     for (var i = 0; i < totalCards; i++) {
                         var distFromSticky = rects[i].top - stickyTops[i];
                         if(distFromSticky <= 2){
@@ -1931,19 +1932,20 @@
         gsap.registerPlugin(ScrollTrigger);
         ScrollTrigger.config({ limitCallbacks: true });
 
-        // Smooth Scroll — use GSAP ticker (correct Lenis integration, avoids separate RAF loop)
-        const lenis = new Lenis({
-            duration: 1.1,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-            smoothWheel: true,
-            wheelMultiplier: 1,
-            touchMultiplier: 2,
-        });
-        gsap.ticker.add(function(time) { lenis.raf(time * 1000); });
-        gsap.ticker.lagSmoothing(0);
-
-        // Bridge Lenis → ScrollTrigger (keeps scroll positions in sync)
-        lenis.on('scroll', ScrollTrigger.update);
+        // Smooth Scroll — desktop only (Lenis causes 84ms forced reflow on mobile)
+        var isMobile = window.innerWidth <= 768;
+        if (!isMobile) {
+            const lenis = new Lenis({
+                duration: 1.1,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                smoothWheel: true,
+                wheelMultiplier: 1,
+                touchMultiplier: 2,
+            });
+            gsap.ticker.add(function(time) { lenis.raf(time * 1000); });
+            gsap.ticker.lagSmoothing(0);
+            lenis.on('scroll', ScrollTrigger.update);
+        }
 
         // Hero entrance
         gsap.from(".hero-reveal", {
@@ -2104,7 +2106,15 @@
             hitCooldown.push(0);
         }
     }
-    buildLines();
+    // On mobile, lazy-init grid lines only when section is visible (saves 96ms reflow)
+    if (window.innerWidth <= 768) {
+        var gridObs = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting) { buildLines(); gridObs.disconnect(); }
+        }, { rootMargin: '200px' });
+        gridObs.observe(section);
+    } else {
+        buildLines();
+    }
     var resizeTimer;
     window.addEventListener('resize', function(){ clearTimeout(resizeTimer); resizeTimer = setTimeout(buildLines,200); });
 
