@@ -285,7 +285,7 @@
           if(i <= query.length){
             userText.innerHTML = query.substring(0, i) + (i < query.length ? cursor : '');
             i++;
-            setTimeout(typeQuery, 40 + Math.random() * 30);
+            setTimeout(typeQuery, 22 + Math.random() * 18);
           } else {
             userText.textContent = query;
             // Step 2: Show thinking dots
@@ -301,7 +301,7 @@
                   if(j <= introText.length){
                     aiIntro.textContent = introText.substring(0, j);
                     j++;
-                    setTimeout(typeIntro, 12);
+                    setTimeout(typeIntro, 6);
                   } else {
                     // Show list items one by one
                     var k = 0;
@@ -322,7 +322,7 @@
                         aiList.appendChild(div);
                         setTimeout(function(){ div.style.opacity = '1'; div.style.transform = 'translateY(0)'; }, 30);
                         k++;
-                        setTimeout(showItem, 180);
+                        setTimeout(showItem, 100);
                       } else {
                         setTimeout(function(){ aiSource.style.opacity = '1'; }, 400);
                       }
@@ -331,8 +331,8 @@
                   }
                 }
                 typeIntro();
-              }, 1800);
-            }, 600);
+              }, 900);
+            }, 300);
           }
         }
         typeQuery();
