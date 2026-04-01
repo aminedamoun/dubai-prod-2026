@@ -69,6 +69,24 @@
   div[style*="padding:48px"] {
     padding: 24px !important;
   }
+  /* WhatsApp/Email card phone number — prevent overflow */
+  a[href*="wa.me"] p[style*="font-size:18px"],
+  a[href*="wa.me"] p[style*="font-size:16px"] {
+    font-size: 15px !important;
+    word-break: break-all;
+  }
+  /* Contact info cards — tighter padding on mobile */
+  a[href*="wa.me"], a[href*="mailto:"] {
+    padding: 20px !important;
+  }
+  a[href*="wa.me"] > div, a[href*="mailto:"] > div {
+    gap: 12px !important;
+  }
+  /* Footer grid — stack on mobile */
+  footer > div > div[style*="grid-template-columns:2fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
 }
 </style>
 </head>
@@ -176,6 +194,7 @@
                 <option style="background:#111;">CGI / 3D</option>
                 <option style="background:#111;">Influencer Marketing</option>
                 <option style="background:#111;">AI &amp; Automation</option>
+                <option style="background:#111;">GEO &amp; AI Search Optimization</option>
                 <option style="background:#111;">Full-Service Package</option>
               </select>
             </div>

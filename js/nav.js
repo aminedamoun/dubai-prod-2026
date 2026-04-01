@@ -43,6 +43,7 @@
       title: 'Digital',
       items: [
         { label: 'SEO',               desc: 'Organic growth & search dominance',    icon: 'search',  href: 'seo.html' },
+        { label: 'GEO & AI Search',   desc: 'Get found by ChatGPT & AI',           icon: 'star',    href: 'geo-optimization-dubai.html' },
         { label: 'Web Development',   desc: 'Fast, beautiful digital experiences',  icon: 'globe',   href: 'web-development.html' },
         { label: 'AI Automation',     desc: 'Marketing on autopilot',               icon: 'zap',     href: 'ai-marketing-automation-dubai.html' }
       ]
