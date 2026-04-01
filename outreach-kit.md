@@ -127,6 +127,45 @@ Website: https://www.dubaiprod.com
 
 ---
 
+### Press Release 4: Dubai Prod Launches GEO & AI Search Optimization Service for UAE Brands
+
+**FOR IMMEDIATE RELEASE**
+
+**Dubai Prod Launches Generative Engine Optimization (GEO) Service to Help UAE Brands Get Recommended by ChatGPT, Perplexity, and AI Search Engines**
+
+*New service ensures businesses appear in AI-generated answers as over 40% of online searches shift to AI-powered tools*
+
+**DUBAI, UAE -- [DATE]** -- Dubai Prod, a leading PR and digital marketing agency based in Dubai, today announced the launch of its Generative Engine Optimization (GEO) service, a specialized offering designed to help UAE businesses get found, cited, and recommended by AI search platforms including ChatGPT, Perplexity, Google Gemini, and Claude.
+
+The launch responds to a fundamental shift in how consumers and businesses discover information online. Industry data indicates that over 40% of online searches now involve AI-powered tools, with users increasingly asking ChatGPT and similar platforms for direct recommendations rather than browsing traditional search engine results. Unlike Google, which returns a list of links, AI search engines provide a single synthesized answer -- meaning brands that are not optimized for AI visibility risk being excluded entirely from these conversations.
+
+"The rules of search have changed overnight," said the leadership team at Dubai Prod. "When someone in Dubai asks ChatGPT 'What is the best marketing agency for my startup?' or 'Which restaurant should I visit in JBR?', the AI gives one answer. If your brand is not part of that answer, you do not exist to a rapidly growing segment of consumers. Traditional SEO alone is no longer sufficient. Businesses need a dedicated strategy for AI search visibility, and that is exactly what our GEO service delivers."
+
+Dubai Prod's GEO service encompasses a comprehensive technical and content optimization framework. Key components include creation and optimization of llms.txt files, a new web standard that helps AI crawlers understand a website's content and services; configuration of robots.txt to explicitly permit AI crawlers including GPTBot, ChatGPT-User, PerplexityBot, ClaudeBot, and Google-Extended; Bing Webmaster Tools optimization, which is critical given that ChatGPT Search is powered by Microsoft Bing's index; enhanced schema markup and structured data implementation to improve AI content extraction; AI-ready content restructuring using question-answer formats, entity-based architecture, and authoritative data-rich copy that AI models prefer to cite; and authority building through strategic directory listings, citations, and guest placements that increase the likelihood of AI recommendation.
+
+The service also includes ongoing monitoring and optimization, with regular testing across ChatGPT, Perplexity, and Gemini to track how and when a brand is being recommended.
+
+The UAE market is particularly well-positioned for early GEO adoption. The country's national AI strategy, combined with one of the highest smartphone penetration rates in the world and social media usage exceeding 98%, has created a population that rapidly adopts new technology. AI-powered search usage in the UAE is growing faster than in most Western markets, making early optimization a significant competitive advantage.
+
+"We have already implemented GEO strategies for our own digital presence and seen measurable results," added the Dubai Prod team. "Our website now appears in AI-generated recommendations for key queries related to marketing agencies in Dubai. We are applying the same methodology to help our clients achieve the same visibility. The businesses that move first on GEO will dominate AI search results in their verticals for years to come."
+
+Dubai Prod's GEO service is available immediately as a standalone engagement or as an addition to existing SEO and digital marketing retainers. The agency offers tiered packages including a GEO Audit, Full GEO Implementation, AI Content Strategy, and Technical GEO Setup.
+
+For more information on Generative Engine Optimization and a comprehensive guide to getting found by AI search engines, visit Dubai Prod's dedicated resource: https://www.dubaiprod.com/blog-geo-optimization.html
+
+**About Dubai Prod**
+Dubai Prod is a full-service PR and digital marketing agency headquartered in Dubai, UAE. Founded in 2023, the agency has partnered with over 249 brands across the UAE and MENA region, delivering integrated marketing solutions spanning PR, social media, SEO, video production, web development, branding, advertising, AI automation, CGI/3D production, and Generative Engine Optimization (GEO). Dubai Prod operates from DAMAC Executive Heights, Smart Creation, 19th Floor, Dubai.
+
+**Media Contact:**
+Dubai Prod Communications
+Email: info@dubaiprod.com
+Phone: +971 54 333 3587
+Website: https://www.dubaiprod.com
+
+###
+
+---
+
 ## 2. DIRECTORY LISTING COPY
 
 ---
