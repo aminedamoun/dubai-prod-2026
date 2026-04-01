@@ -1985,9 +1985,20 @@
     </footer>
 
     <script>
+    // Fallback: reveal all section-reveal elements if GSAP hasn't loaded after 3s
+    setTimeout(function() {
+        document.querySelectorAll('.section-reveal').forEach(function(el) {
+            if (getComputedStyle(el).opacity === '0') {
+                el.style.transition = 'opacity 0.5s, transform 0.5s';
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            }
+        });
+    }, 3000);
+
     // GSAP/ScrollTrigger/Lenis — desktop only (not loaded on mobile)
-    document.addEventListener('DOMContentLoaded', function() {
-        if (typeof gsap === 'undefined') return; // mobile — scripts not loaded
+    function initGSAP() {
+        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return false;
 
         gsap.registerPlugin(ScrollTrigger);
         ScrollTrigger.config({ limitCallbacks: true });
@@ -2065,7 +2076,12 @@
             }, { threshold: 0.1 }).observe(prSection || prEl);
         }
 
-    }); // end DOMContentLoaded
+    } // end initGSAP
+
+    // Try immediately, then retry after scripts load
+    if (!initGSAP()) {
+        window.addEventListener('load', initGSAP);
+    }
 
     /* ===== CONTACT SECTION: ICON RAIN GAME ===== */
 (function() {
