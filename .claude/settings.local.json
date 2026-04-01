@@ -76,7 +76,11 @@
       "Bash(sed -i '' 's|font-size:9px;color:#FF8C33;text-transform:uppercase|font-size:9px;color:#FFB366;text-transform:uppercase|' index.html)",
       "Bash(ls /Users/aminedamoun/Documents/dubai-prod-new-website/assets/video/dubai-prod-team/Nejc* /Users/aminedamoun/Documents/dubai-prod-new-website/assets/video/dubai-prod-team/amine*)",
       "Bash(ls /Users/aminedamoun/Documents/dubai-prod-new-website/assets/video/SMV/Casino_v2* /Users/aminedamoun/Documents/dubai-prod-new-website/assets/video/SMV/7*)",
-      "Bash(cd /Users/aminedamoun/Documents/dubai-prod-new-website grep -rn 'font-size:9px;color:#FF6A00' *.html)"
+      "Bash(cd /Users/aminedamoun/Documents/dubai-prod-new-website grep -rn 'font-size:9px;color:#FF6A00' *.html)",
+      "Bash(cd /Users/aminedamoun/Documents/dubai-prod-new-website grep -n -B2 -A2 'Casino_v2.webm\\\\|SMV/7.webm' index.html)",
+      "Bash(git log:*)",
+      "Bash(ls -la assets/images/seo* assets/images/brain*)",
+      "Bash(cwebp -q 80 -resize 700 480 /Users/aminedamoun/Documents/dubai-prod-new-website/assets/images/ads-services.png -o /Users/aminedamoun/Documents/dubai-prod-new-website/assets/images/ads-services.webp)"
     ],
     "additionalDirectories": [
       "/Users/aminedamoun/.claude",

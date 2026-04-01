@@ -21,6 +21,13 @@
     close:     '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
   };
 
+  /* ── Language switcher ── */
+  var langSwitch = (function() {
+    var slHref = document.documentElement.getAttribute('data-sl-href') || '/sl/';
+    return '<span style="font-size:11px;font-weight:700;letter-spacing:0.1em;color:#FF6A00;padding:6px 10px;border:1px solid rgba(255,106,0,0.5);border-radius:4px;margin-right:12px;">EN</span>' +
+           '<a href="' + slHref + '" style="font-size:11px;font-weight:700;letter-spacing:0.1em;color:rgba(255,255,255,0.5);text-decoration:none;padding:6px 10px;border:1px solid rgba(255,255,255,0.15);border-radius:4px;margin-right:16px;transition:all 0.2s;" onmouseenter="this.style.color=\'#FF6A00\';this.style.borderColor=\'rgba(255,106,0,0.5)\'" onmouseleave="this.style.color=\'rgba(255,255,255,0.5)\';this.style.borderColor=\'rgba(255,255,255,0.15)\'">SL</a>';
+  })();
+
   /* ── Service items ── */
   var COLS = [
     {
@@ -110,6 +117,7 @@
 
     /* Connect With Us */
     '<div class="relative" id="connect-card-wrapper">' +
+      langSwitch +
       '<button id="connect-btn" class="mm-connect-btn">' +
         '<span>Connect With Us</span>' +
         '<svg id="connect-btn-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:6px;transition:transform 0.4s ease;"><polyline points="6 9 12 15 18 9"/></svg>' +
@@ -139,6 +147,10 @@
   var MOBILE_HTML =
     '<div id="mm-mobile-drawer" class="mm-mobile-drawer">' +
       '<div class="mm-mobile-inner">' +
+        '<div style="display:flex;gap:8px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.06);">' +
+          '<span style="padding:8px 16px;font-size:12px;font-weight:700;color:#FF6A00;border:1px solid rgba(255,106,0,0.5);border-radius:4px;">EN</span>' +
+          '<a href="' + (document.documentElement.getAttribute('data-sl-href') || '/sl/') + '" style="padding:8px 16px;font-size:12px;font-weight:700;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.15);border-radius:4px;text-decoration:none;">SL</a>' +
+        '</div>' +
         '<a href="' + prefix + 'index.html" class="mm-mobile-link">Home</a>' +
         '<div class="mm-mobile-group">' +
           '<button class="mm-mobile-link mm-mobile-group-btn" id="mm-mobile-svc-btn">Services <span id="mm-mobile-svc-arrow" style="transition:transform 0.3s;display:inline-block;">▾</span></button>' +

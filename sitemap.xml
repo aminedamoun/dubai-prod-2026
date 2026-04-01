@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <!-- Homepage -->
   <url>
     <loc>https://www.dubaiprod.com/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,81 +15,129 @@
   <!-- Service Pages -->
   <url>
     <loc>https://www.dubaiprod.com/services.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/services.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/storitve.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/services.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/social-media.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/social-media.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/druzbena-omrezja.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/social-media.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/video-production-dubai.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/video-production-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/video-produkcija.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/video-production-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/pr-media.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/pr-media.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/odnosi-z-javnostmi.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/pr-media.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/branding-agency-dubai.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/branding-agency-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blagovna-znamka.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/branding-agency-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/seo.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/seo.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/seo.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/seo.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/ads.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/ads.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/oglasevanje.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/ads.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/web-development.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/web-development.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/spletne-strani.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/web-development.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/ai-marketing-automation-dubai.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/ai-marketing-automation-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/ai-avtomatizacija.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/ai-marketing-automation-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/cgi-3d.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/cgi-3d.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/cgi-3d.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/cgi-3d.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/geo-optimization-dubai.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/geo-optimization-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/geo-optimizacija.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/geo-optimization-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Company Pages -->
   <url>
     <loc>https://www.dubaiprod.com/about-us-dubai.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/about-us-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/o-nas.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/about-us-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/portfolio-dubai.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/portfolio-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/portfolio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/portfolio-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/contact-dubai.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/contact-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/kontakt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/contact-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -815,105 +867,426 @@
   <!-- Blog Pages -->
   <url>
     <loc>https://www.dubaiprod.com/blog-dubai.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/blog-ai-marketing-automation.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-ai-marketing-automation.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-ai-marketing-avtomatizacija.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-ai-marketing-automation.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/blog-b2b-content-strategy.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-b2b-content-strategy.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-b2b-vsebinska-strategija.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-b2b-content-strategy.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/blog-crisis-pr.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-crisis-pr.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-krizni-pr.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-crisis-pr.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/blog-luxury-brand-identity.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-luxury-brand-identity.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-luksuzna-blagovna-znamka.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-luxury-brand-identity.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/blog-seo-ai-age.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-seo-ai-age.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-seo-v-dobi-ai.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-seo-ai-age.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/blog-social-media-campaign.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-social-media-campaign.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-druzbena-omrezja-kampanja.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-social-media-campaign.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/blog-influencer-marketing-dubai.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-influencer-marketing-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-influencer-marketing.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-influencer-marketing-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/blog-restaurant-marketing-dubai.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-restaurant-marketing-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-restavracije-marketing.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-restaurant-marketing-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/blog-startup-marketing-dubai.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-startup-marketing-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-startup-marketing.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-startup-marketing-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/blog-pr-ai-marketing-suite.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-pr-ai-marketing-suite.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-pr-ai-marketing.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-pr-ai-marketing-suite.html" />
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/blog-pr-249-brands.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-pr-249-brands.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-pr-249-znamk.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-pr-249-brands.html" />
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/blog-pr-marketing-report-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-pr-marketing-report-2026.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-pr-marketing-porocilo-2026.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-pr-marketing-report-2026.html" />
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dubaiprod.com/llms.txt</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://www.dubaiprod.com/geo-optimization-dubai.html</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.dubaiprod.com/blog-geo-optimization.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-geo-optimization.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-geo-optimizacija.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-geo-optimization.html" />
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.dubaiprod.com/blog-pr-geo-service.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-pr-geo-service.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-pr-geo-storitev.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-pr-geo-service.html" />
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- LLMs.txt -->
+  <url>
+    <loc>https://www.dubaiprod.com/llms.txt</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- ===================== -->
+  <!-- Slovenian Pages (sl/) -->
+  <!-- ===================== -->
+
+  <!-- Slovenian Core Pages -->
+  <url>
+    <loc>https://www.dubaiprod.com/sl/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/storitve.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/services.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/storitve.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/services.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/o-nas.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/about-us-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/o-nas.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/about-us-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/kontakt.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/contact-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/kontakt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/contact-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/portfolio.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/portfolio-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/portfolio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/portfolio-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Slovenian Service Pages -->
+  <url>
+    <loc>https://www.dubaiprod.com/sl/seo.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/seo.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/seo.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/seo.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/druzbena-omrezja.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/social-media.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/druzbena-omrezja.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/social-media.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/video-produkcija.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/video-production-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/video-produkcija.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/video-production-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/odnosi-z-javnostmi.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/pr-media.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/odnosi-z-javnostmi.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/pr-media.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/spletne-strani.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/web-development.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/spletne-strani.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/web-development.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/blagovna-znamka.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/branding-agency-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blagovna-znamka.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/branding-agency-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/oglasevanje.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/ads.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/oglasevanje.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/ads.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/cgi-3d.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/cgi-3d.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/cgi-3d.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/cgi-3d.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/ai-avtomatizacija.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/ai-marketing-automation-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/ai-avtomatizacija.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/ai-marketing-automation-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/geo-optimizacija.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/geo-optimization-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/geo-optimizacija.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/geo-optimization-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Slovenian Blog Pages -->
+  <url>
+    <loc>https://www.dubaiprod.com/sl/blog.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/blog-druzbena-omrezja-kampanja.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-social-media-campaign.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-druzbena-omrezja-kampanja.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-social-media-campaign.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/blog-krizni-pr.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-crisis-pr.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-krizni-pr.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-crisis-pr.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/blog-ai-marketing-avtomatizacija.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-ai-marketing-automation.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-ai-marketing-avtomatizacija.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-ai-marketing-automation.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/blog-luksuzna-blagovna-znamka.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-luxury-brand-identity.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-luksuzna-blagovna-znamka.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-luxury-brand-identity.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/blog-b2b-vsebinska-strategija.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-b2b-content-strategy.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-b2b-vsebinska-strategija.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-b2b-content-strategy.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/blog-seo-v-dobi-ai.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-seo-ai-age.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-seo-v-dobi-ai.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-seo-ai-age.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/blog-influencer-marketing.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-influencer-marketing-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-influencer-marketing.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-influencer-marketing-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/blog-restavracije-marketing.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-restaurant-marketing-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-restavracije-marketing.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-restaurant-marketing-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/blog-startup-marketing.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-startup-marketing-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-startup-marketing.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-startup-marketing-dubai.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/blog-geo-optimizacija.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-geo-optimization.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-geo-optimizacija.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-geo-optimization.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/blog-pr-ai-marketing.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-pr-ai-marketing-suite.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-pr-ai-marketing.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-pr-ai-marketing-suite.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/blog-pr-249-znamk.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-pr-249-brands.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-pr-249-znamk.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-pr-249-brands.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/blog-pr-marketing-porocilo-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-pr-marketing-report-2026.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-pr-marketing-porocilo-2026.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-pr-marketing-report-2026.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/blog-pr-geo-storitev.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/blog-pr-geo-service.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/blog-pr-geo-storitev.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/blog-pr-geo-service.html" />
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <!-- Legal Pages -->
