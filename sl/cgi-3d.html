@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="sl" data-en-href="/cgi-3d.html">
+<head>
+<meta charset="UTF-8">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CGI & 3D Produkcija | Dubai Prod — Fotorealisticni Renderi</title>
+<meta name="description" content="Dubai Prod ustvarja osupljive CGI in 3D animacije za slovenska podjetja. Fotorealisticni renderi izdelkov, arhitekturna vizualizacija, filmski posnetki in motion grafika.">
+<meta name="keywords" content="CGI produkcija, 3D animacija, 3D vizualizacija, CGI Slovenija, fotorealisticni renderi, arhitekturna vizualizacija, motion grafika, 3D modeliranje">
+<link rel="canonical" href="https://www.dubaiprod.com/sl/cgi-3d.html">
+<link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/cgi-3d.html">
+<link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/cgi-3d.html">
+<link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/cgi-3d.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dubai Prod">
+<meta property="og:title" content="CGI & 3D Produkcija | Dubai Prod — Fotorealisticni Renderi">
+<meta property="og:description" content="Dubai Prod ustvarja osupljive CGI in 3D animacije za slovenska podjetja. Fotorealisticni renderi izdelkov, arhitekturna vizualizacija, filmski posnetki in motion grafika.">
+<meta property="og:url" content="https://www.dubaiprod.com/sl/cgi-3d.html">
+<meta property="og:image" content="https://www.dubaiprod.com/assets/images/dubai_prod_2__1_-1772650048332.webp">
+<meta property="og:locale" content="sl_SI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CGI & 3D Produkcija | Dubai Prod — Fotorealisticni Renderi">
+<meta name="twitter:description" content="Dubai Prod ustvarja osupljive CGI in 3D animacije za slovenska podjetja. Fotorealisticni renderi izdelkov, arhitekturna vizualizacija, filmski posnetki in motion grafika.">
+<meta name="twitter:image" content="https://www.dubaiprod.com/assets/images/dubai_prod_2__1_-1772650048332.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Dubai Prod",
+  "description": "Dubai Prod ustvarja osupljive CGI in 3D animacije za slovenska podjetja. Fotorealisticni renderi izdelkov, arhitekturna vizualizacija in motion grafika.",
+  "url": "https://www.dubaiprod.com/sl/cgi-3d.html",
+  "logo": "https://www.dubaiprod.com/assets/images/dubai_prod_2__1_-1772650048332.webp",
+  "telephone": "+971543333587",
+  "email": "info@dubaiprod.com",
+  "inLanguage": "sl",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "DAMAC Executive Heights, Office 1301",
+    "addressLocality": "Dubai",
+    "addressRegion": "Dubai",
+    "addressCountry": "AE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "25.0957",
+    "longitude": "55.1728"
+  },
+  "areaServed": ["Dubai", "Abu Dhabi", "UAE", "MENA", "Slovenija", "SI"],
+  "priceRange": "$$"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Domov", "item": "https://www.dubaiprod.com/sl/"},
+    {"@type": "ListItem", "position": 2, "name": "Storitve", "item": "https://www.dubaiprod.com/sl/storitve.html"},
+    {"@type": "ListItem", "position": 3, "name": "CGI & 3D", "item": "https://www.dubaiprod.com/sl/cgi-3d.html"}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../js/site.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+<style>
+#hero-spotlight{background:radial-gradient(700px circle at 50% 50%,rgba(255,106,0,0.0),transparent 70%);transition:none;mix-blend-mode:screen;}
+.cgi-marquee-track{display:flex;gap:0;white-space:nowrap;animation:cgiMarquee 30s linear infinite;}
+.cgi-marquee-track:hover{animation-play-state:paused;}
+.cgi-m-item{display:inline-flex;align-items:center;gap:18px;padding:0 36px;font-family:Inter,sans-serif;font-size:11px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.2);}
+.cgi-m-feat{color:rgba(255,106,0,0.55);}
+.cgi-m-dot{width:4px;height:4px;background:#FF6A00;border-radius:50%;flex-shrink:0;}
+@keyframes cgiMarquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+spline-viewer{--spline-viewer-loading-bg:#000;}
+@media(max-width:960px){
+  #why-cgi > div{grid-template-columns:1fr !important;}
+  #why-cgi > div > div:last-child{position:static !important;}
+  #ai-3d-section > div{grid-template-columns:1fr !important;}
+}
+@media(max-width:768px){
+  #cgi-hero{min-height:60vh !important;}
+  #cgi-hero h1{font-size:clamp(28px,8vw,42px) !important;letter-spacing:-1px !important;}
+  #cgi-hero p{font-size:13px !important;}
+  #cgi-hero > div[style*="width:50%"]{width:100% !important;padding:90px 16px 40px !important;}
+}
+</style>
+</head>
+<body>
+
+<div id="preloader" style="position:fixed;inset:0;z-index:99999;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;transition:opacity 0.7s ease;">
+    <img src="../assets/images/dubai_prod_2__1_-1772650048332.webp" alt="Dubai Prod" style="height:80px;width:auto;object-fit:contain;opacity:0;transition:opacity 0.5s ease;" id="preloader-logo">
+    <div style="width:220px;height:2px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;"><div id="preloader-bar" style="height:100%;width:0%;background:linear-gradient(90deg,#FF6A00,#FFB347);border-radius:2px;transition:width 0.3s ease;box-shadow:0 0 12px #FF6A00;"></div></div>
+    <p style="font-family:Inter,sans-serif;font-size:11px;letter-spacing:0.2em;color:rgba(255,255,255,0.3);text-transform:uppercase;">Nalaganje</p>
+</div>
+<script>
+(function(){
+    document.body.classList.add('preloading');
+    var bar=document.getElementById('preloader-bar'),logo=document.getElementById('preloader-logo'),cover=document.getElementById('preloader');
+    setTimeout(function(){if(logo)logo.style.opacity='1';},80);
+    var prog=0,fill=setInterval(function(){prog=Math.min(prog+(Math.random()*6+2),85);if(bar)bar.style.width=prog+'%';},120);
+    function finish(){clearInterval(fill);if(bar)bar.style.width='100%';setTimeout(function(){document.body.classList.remove('preloading');if(cover)cover.classList.add('done');setTimeout(function(){if(cover)cover.style.display='none';},750);},350);}
+    if(document.readyState==='complete'){finish();}else{window.addEventListener('load',finish);setTimeout(finish,5000);}
+})();
+</script>
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="curR"></div>
+
+<nav id="main-nav"></nav>
+<script src="../js/nav-sl.js"></script>
+
+<!-- HERO -->
+<section id="cgi-hero" style="position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:#000;">
+  <spline-viewer url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" style="position:absolute;top:0;right:0;width:58%;height:100%;z-index:0;"></spline-viewer>
+  <div id="hero-spotlight" style="position:absolute;inset:0;pointer-events:none;z-index:1;"></div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:160px;background:linear-gradient(to top,#000,transparent);pointer-events:none;z-index:2;"></div>
+
+  <div style="position:relative;z-index:3;width:50%;padding:160px 40px 120px clamp(60px,8vw,140px);">
+    <div style="max-width:520px;">
+      <div id="cgi-badge" style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,106,0,0.1);border:1px solid rgba(255,106,0,0.35);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:8px 18px;margin-bottom:40px;">
+        <span style="width:5px;height:5px;border-radius:50%;background:#FF6A00;display:inline-block;animation:pulse 2s infinite;flex-shrink:0;"></span>
+        <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">CGI & 3D Produkcija</span>
+      </div>
+
+      <h1 id="cgi-title" style="font-family:Inter,sans-serif;font-size:clamp(56px,7vw,104px);font-weight:900;line-height:0.9;letter-spacing:-4px;color:#fff;margin-bottom:36px;max-width:700px;">
+        KJER<br>DOMISLJIJA<br>POSTANE<br><span style="color:#FF6A00;">RESNICNOST</span>
+      </h1>
+
+      <p id="cgi-sub" style="font-family:Inter,sans-serif;font-size:17px;line-height:1.75;color:rgba(255,255,255,0.6);font-weight:300;max-width:520px;margin-bottom:48px;">
+        Fotorealisticni CGI in 3D animacije, ki vase izdelke, prostore in znamke prikazejo izjemno — se preden obstajajo v resnicnem svetu.
+      </p>
+
+      <div id="cgi-ctas" style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:64px;">
+        <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#000;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">
+          Zacznite 3D projekt
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+        <a href="#why-cgi" style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.06);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.85);font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.6)';this.style.color='#FF6A00'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.18)';this.style.color='rgba(255,255,255,0.85)'">
+          Oglejte si delo
+        </a>
+      </div>
+
+      <div id="cgi-stats" style="display:flex;gap:2px;max-width:480px;">
+        <div style="background:rgba(0,0,0,0.45);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);padding:20px 28px;flex:1;text-align:center;">
+          <div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;letter-spacing:-1.5px;color:#fff;line-height:1;">500<span style="color:#FF6A00;">+</span></div>
+          <div style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:6px;">3D sredstev</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.45);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);padding:20px 28px;flex:1;text-align:center;">
+          <div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;letter-spacing:-1.5px;color:#fff;line-height:1;">8<span style="color:#FF6A00;">K</span></div>
+          <div style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:6px;">Resolucija</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.45);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);padding:20px 28px;flex:1;text-align:center;">
+          <div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;letter-spacing:-1.5px;color:#fff;line-height:1;">48<span style="color:#FF6A00;">ur</span></div>
+          <div style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:6px;">Dostava</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}</style>
+
+<!-- MARQUEE -->
+<div style="overflow:hidden;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);padding:18px 0;background:#000;">
+  <div class="cgi-marquee-track">
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>Cinema 4D</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>Blender</span>
+    <span class="cgi-m-item cgi-m-feat"><span class="cgi-m-dot"></span>Houdini</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>3ds Max</span>
+    <span class="cgi-m-item cgi-m-feat"><span class="cgi-m-dot"></span>Unreal Engine 5</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>Octane Render</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>V-Ray</span>
+    <span class="cgi-m-item cgi-m-feat"><span class="cgi-m-dot"></span>KeyShot</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>ZBrush</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>After Effects</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>Cinema 4D</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>Blender</span>
+    <span class="cgi-m-item cgi-m-feat"><span class="cgi-m-dot"></span>Houdini</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>3ds Max</span>
+    <span class="cgi-m-item cgi-m-feat"><span class="cgi-m-dot"></span>Unreal Engine 5</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>Octane Render</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>V-Ray</span>
+    <span class="cgi-m-item cgi-m-feat"><span class="cgi-m-dot"></span>KeyShot</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>ZBrush</span>
+    <span class="cgi-m-item"><span class="cgi-m-dot"></span>After Effects</span>
+  </div>
+</div>
+
+<!-- ZAKAJ DUBAI PROD -->
+<section id="why-cgi" style="background:#fff;padding:100px 0;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:start;">
+    <div>
+      <h2 style="font-family:Inter,sans-serif;font-size:clamp(28px,3.5vw,40px);font-weight:900;line-height:1.15;letter-spacing:-1px;color:#000;margin-bottom:32px;text-transform:uppercase;">
+        Zakaj je Dubai Prod vodilna <span style="color:#FF6A00;">CGI & 3D agencija</span>
+      </h2>
+      <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:#444;margin-bottom:24px;">
+        Pri Dubai Prod smo si zgradili ugled kot <strong style="color:#000;">vodilna CGI in 3D produkcijska agencija</strong> z leti dostavljanja fotorealisticnih renderjev, filmskih 3D animacij in poglobljenih vizualnih izkusenj za znamke po svetu. Nasa ekspertiza zajema <strong style="color:#000;">vizualizacijo izdelkov, arhitekturni 3D, CGI filme, motion grafiko</strong> in <strong style="color:#000;">VFX kompoziting</strong>.
+      </p>
+      <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:#444;margin-bottom:40px;">
+        Nase delo poteka iz Dubaja, a strezemo podjetjem v Sloveniji in po Evropi. Zdruzujemo tehnicno natancnost s kreativnim pripovedovanjem, z uporabo industrijskih standardov in AI-pospesenih delovnih tokov za produkcijo sredstev, ki so nelocljiva od resnicnosti — pogosto v manj kot 48 urah.
+      </p>
+      <a href="#ai-3d-section" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#fff;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:14px 28px;border-radius:30px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">
+        Razisite storitve
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8l4 4-4 4"/><path d="M8 12h8"/></svg>
+      </a>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:48px;padding-top:32px;border-top:1px solid rgba(0,0,0,0.08);">
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Cinema 4D</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Blender</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Unreal Engine 5</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Houdini</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Octane Render</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">V-Ray</span>
+      </div>
+    </div>
+
+    <!-- OBRAZEC -->
+    <div style="background:#f8f8f8;border-radius:4px;padding:44px 36px;position:sticky;top:120px;">
+      <h3 style="font-family:Inter,sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;letter-spacing:0.5px;color:#000;text-align:center;margin-bottom:32px;line-height:1.3;">
+        Brezplacna <span style="color:#FF6A00;">3D ponudba</span>
+      </h3>
+      <form data-dp-form style="display:flex;flex-direction:column;gap:14px;">
+        <input type="text" name="name" placeholder="Ime in priimek" required style="width:100%;padding:14px 18px;border:1px solid #ddd;border-radius:4px;font-family:Inter,sans-serif;font-size:14px;color:#000;background:#fff;outline:none;transition:border-color 0.3s;" onfocus="this.style.borderColor='#FF6A00'" onblur="this.style.borderColor='#ddd'">
+        <input type="email" name="email" placeholder="E-postni naslov" required style="width:100%;padding:14px 18px;border:1px solid #ddd;border-radius:4px;font-family:Inter,sans-serif;font-size:14px;color:#000;background:#fff;outline:none;transition:border-color 0.3s;" onfocus="this.style.borderColor='#FF6A00'" onblur="this.style.borderColor='#ddd'">
+        <input type="text" name="company" placeholder="Ime podjetja" style="width:100%;padding:14px 18px;border:1px solid #ddd;border-radius:4px;font-family:Inter,sans-serif;font-size:14px;color:#000;background:#fff;outline:none;transition:border-color 0.3s;" onfocus="this.style.borderColor='#FF6A00'" onblur="this.style.borderColor='#ddd'">
+        <select name="service" required style="width:100%;padding:14px 18px;border:1px solid #ddd;border-radius:4px;font-family:Inter,sans-serif;font-size:14px;color:#666;background:#fff;outline:none;transition:border-color 0.3s;appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23999%22 stroke-width=%222%22><polyline points=%226 9 12 15 18 9%22/></svg>');background-repeat:no-repeat;background-position:right 18px center;" onfocus="this.style.borderColor='#FF6A00'" onblur="this.style.borderColor='#ddd'">
+          <option value="" disabled selected>Vrsta projekta</option>
+          <option value="product-cgi">CGI izdelkov</option>
+          <option value="architectural-viz">Arhitekturna vizualizacija</option>
+          <option value="3d-animation">3D animacija</option>
+          <option value="brand-film">CGI film znamke</option>
+        </select>
+        <label style="display:flex;align-items:center;gap:8px;font-family:Inter,sans-serif;font-size:12px;color:#666;margin-top:4px;cursor:pointer;">
+          <input type="checkbox" required style="accent-color:#FF6A00;width:16px;height:16px;">
+          Strinjam se s pogoji politike zasebnosti.
+        </label>
+        <button type="submit" style="width:100%;padding:16px;background:#FF6A00;color:#fff;border:none;border-radius:4px;font-family:Inter,sans-serif;font-size:12px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;margin-top:8px;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">
+          Pridobite brezplacno ponudbo
+        </button>
+      </form>
+      <div data-dp-success style="display:none;text-align:center;padding:36px 0;">
+        <div style="font-size:44px;margin-bottom:14px;color:#FF6A00;">&#10003;</div>
+        <p style="color:#FF6A00;font-size:11px;letter-spacing:0.3em;font-weight:700;text-transform:uppercase;margin-bottom:8px;font-family:Inter,sans-serif;">Zahteva poslana!</p>
+        <p style="color:#666;font-size:13px;font-family:Inter,sans-serif;">Odgovorili vam bomo v 24 urah.</p>
+      </div>
+      <p style="font-family:Inter,sans-serif;font-size:11px;color:#999;text-align:center;margin-top:16px;display:flex;align-items:center;justify-content:center;gap:6px;">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Vasi podatki so 100% varni in zaupni!
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- AI-PODPRTA 3D PRODUKCIJA -->
+<section id="ai-3d-section" style="background:#fff;padding:100px 0;overflow:hidden;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+    <div>
+      <h2 style="font-family:'Inter',sans-serif;font-size:clamp(26px,3.2vw,38px);font-weight:900;line-height:1.15;letter-spacing:-0.5px;color:#FF6A00;text-transform:uppercase;margin-bottom:40px;">
+        AI-podprta 3D produkcija
+      </h2>
+      <h3 style="font-family:Inter,sans-serif;font-size:20px;font-weight:800;color:#000;margin-bottom:16px;">Nevralno renderiranje & AI povisanje locljivosti</h3>
+      <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:#555;margin-bottom:36px;">
+        Nas 3D pipeline integrira najnovejso AI na vsaki stopnji. Uporabljamo nevronske pogone za renderiranje za hitrejsi fotorealizem, AI povisanje za dostavo 8K sredstev in strojno ucenje za zmanjsanje suma, ki skrajsa case renderiranja do 80%. Rezultat: studijska kakovost CGI, dostavljena v dneh, ne tednih.
+      </p>
+      <h3 style="font-family:Inter,sans-serif;font-size:20px;font-weight:800;color:#000;margin-bottom:16px;">Proceduralna generacija & pametni delovni tokovi</h3>
+      <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:#555;margin-bottom:40px;">
+        Od AI-podprtega generiranja tekstur in proceduralnega gradnje okolij v Houdini do avtomatizirane optimizacije poti kamere — nasa ekipa izkurisca orodja kot Stable Diffusion za konceptno ideacijo, Runway za hitro predvizualizacijo in skripte po meri, ki avtomatizirajo ponavljajoce naloge.
+      </p>
+      <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#fff;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:14px 28px;border-radius:30px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">
+        Stopite v stik
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8l4 4-4 4"/><path d="M8 12h8"/></svg>
+      </a>
+    </div>
+    <div style="display:flex;gap:14px;justify-content:center;">
+      <div style="width:220px;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.15);border:1px solid rgba(0,0,0,0.08);"><video autoplay muted loop playsinline style="width:100%;height:400px;object-fit:cover;display:block;"><source src="../assets/video/cgi-3.mp4" type="video/mp4"></video></div>
+      <div style="width:220px;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.15);border:1px solid rgba(0,0,0,0.08);margin-top:40px;"><video autoplay muted loop playsinline style="width:100%;height:400px;object-fit:cover;display:block;"><source src="../assets/video/cgi-4.mp4" type="video/mp4"></video></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" style="background:#000;padding:clamp(80px,12vw,140px) 0;text-align:center;border-top:1px solid rgba(255,255,255,0.04);">
+  <div style="max-width:800px;margin:0 auto;padding:0 clamp(24px,5vw,72px);">
+    <h2 class="cta-title" style="font-family:Inter,sans-serif;font-size:clamp(32px,5vw,64px);font-weight:900;letter-spacing:-2.5px;line-height:1.0;color:#fff;margin-bottom:24px;">
+      Pripravljen na <span style="color:#FF6A00;">3D revolucijo?</span>
+    </h2>
+    <p style="font-family:Inter,sans-serif;font-size:16px;color:rgba(255,255,255,0.45);line-height:1.75;font-weight:300;max-width:500px;margin:0 auto 40px;">
+      Pogovorimo se o vasem projektu. Brezplacen posvet, brez obveznosti.
+    </p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;">
+      <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#000;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">
+        Zacznite zdaj
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  if(typeof gsap==='undefined'||typeof ScrollTrigger==='undefined') return;
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from('#cgi-badge',{y:30,opacity:0,duration:1,ease:'power3.out',delay:0.2});
+  gsap.from('#cgi-title',{y:50,opacity:0,duration:1.1,ease:'power3.out',delay:0.38});
+  gsap.from('#cgi-sub',{y:30,opacity:0,duration:0.9,ease:'power3.out',delay:0.58});
+  gsap.from('.cta-title',{scrollTrigger:{trigger:'.cta-section',start:'top 92%'},y:40,opacity:0,duration:0.9,ease:'power3.out',immediateRender:false});
+  ScrollTrigger.create({start:'top -80',onUpdate:function(self){var nav=document.getElementById('main-nav');if(self.progress>0){nav.style.padding='16px 48px';nav.style.borderBottom='1px solid rgba(255,255,255,0.06)';}else{nav.style.padding='';nav.style.borderBottom='';}}});
+  window.addEventListener('load',function(){ScrollTrigger.refresh();});
+});
+</script>
+</body>
+</html>
