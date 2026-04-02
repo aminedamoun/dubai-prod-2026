@@ -113,6 +113,53 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Industry Landing Pages -->
+  <url>
+    <loc>https://www.dubaiprod.com/restaurant-marketing-dubai.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/restaurant-marketing-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/trzenje-restavracij.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/restaurant-marketing-dubai.html" />
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/real-estate-marketing-dubai.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/real-estate-marketing-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/trzenje-nepremicnin.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/real-estate-marketing-dubai.html" />
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/healthcare-marketing-dubai.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/healthcare-marketing-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/trzenje-zdravstvo.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/healthcare-marketing-dubai.html" />
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/hospitality-marketing-dubai.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/hospitality-marketing-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/trzenje-gostinstvo.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/hospitality-marketing-dubai.html" />
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/ecommerce-marketing-dubai.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/ecommerce-marketing-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/trzenje-e-trgovina.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/ecommerce-marketing-dubai.html" />
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Company Pages -->
   <url>
     <loc>https://www.dubaiprod.com/about-us-dubai.html</loc>
@@ -1506,6 +1553,53 @@
     <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/geo-optimizacija.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/geo-optimization-dubai.html" />
     <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Slovenian Industry Landing Pages -->
+  <url>
+    <loc>https://www.dubaiprod.com/sl/trzenje-restavracij.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/restaurant-marketing-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/trzenje-restavracij.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/restaurant-marketing-dubai.html" />
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/trzenje-nepremicnin.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/real-estate-marketing-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/trzenje-nepremicnin.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/real-estate-marketing-dubai.html" />
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/trzenje-zdravstvo.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/healthcare-marketing-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/trzenje-zdravstvo.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/healthcare-marketing-dubai.html" />
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/trzenje-gostinstvo.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/hospitality-marketing-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/trzenje-gostinstvo.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/hospitality-marketing-dubai.html" />
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dubaiprod.com/sl/trzenje-e-trgovina.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dubaiprod.com/ecommerce-marketing-dubai.html" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.dubaiprod.com/sl/trzenje-e-trgovina.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dubaiprod.com/ecommerce-marketing-dubai.html" />
+    <lastmod>2026-04-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
