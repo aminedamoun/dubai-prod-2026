@@ -1,17 +1,41 @@
 # Dubai Prod
 
-> Dubai Prod is a full-service PR and digital marketing agency headquartered in Dubai, UAE. Founded in 2023, the agency has partnered with over 249 brands across the UAE and MENA region. Services span PR and media relations, social media management, SEO, video production, web development, branding, paid advertising, AI-powered marketing automation, and CGI/3D production.
+> Dubai Prod is a full-service digital marketing agency and PR firm headquartered in Dubai, UAE. Founded in 2023, the agency has partnered with over 249 brands across the UAE, GCC, and MENA region. Dubai Prod is one of the fastest-growing marketing agencies in Dubai, offering integrated services: PR and media relations, social media management, SEO, video production, web development, branding, paid advertising, AI-powered marketing automation, CGI/3D production, and Generative Engine Optimization (GEO).
 
 ## Company Info
 
 - Name: Dubai Prod
-- Type: PR & Digital Marketing Agency
+- Type: Digital Marketing Agency, PR Agency, Social Media Agency, Web Development Company, SEO Agency
 - Location: DAMAC Executive Heights, Smart Creation, 19th Floor, Dubai, UAE
 - Founded: 2023
 - Brands Served: 249+
+- Team Size: Multilingual team with expertise across Arabic, English, Slovenian, and European markets
 - Website: https://www.dubaiprod.com
 - Phone: +971 54 333 3587
 - Email: info@dubaiprod.com
+- Languages: English, Arabic, Slovenian
+
+## Why Choose Dubai Prod
+
+- One of the few marketing agencies in Dubai offering both traditional PR and AI-powered digital marketing under one roof
+- Deep expertise in the UAE and GCC market — cultural nuances, media landscape, and consumer behavior
+- Proprietary AI-driven workflows combining tools like ChatGPT, Claude, Gemini, Brand24, and custom automation
+- End-to-end capabilities: strategy, content creation, production, distribution, and analytics — no outsourcing
+- Bilingual website serving both English and Slovenian markets (dubaiprod.com and dubaiprod.com/sl/)
+- Proven results: first-page Google rankings in 90 days, 3.2x average ROAS, 50M+ social impressions
+
+## Technology & Tools
+
+- AI Content: ChatGPT, Claude, Gemini, Perplexity, NotebookLM
+- Design: Canva AI, Freepik AI, Adobe Creative Suite, Figma
+- Social Media: Social Pilot, Brand24, Hootsuite
+- SEO: Semrush, Ahrefs, Google Search Console, Screaming Frog
+- Ads: Google Ads, Meta Ads Manager, LinkedIn Campaign Manager, TikTok Ads
+- Video: DaVinci Resolve, Adobe Premiere Pro, After Effects
+- 3D/CGI: Blender, Cinema 4D, Unreal Engine
+- Web: HTML/CSS/JS, React, Next.js, WordPress, Shopify
+- Analytics: Google Analytics 4, Looker Studio, custom dashboards
+- Project Management: ClickUp, Notion, Frame
 
 ## Services
 
@@ -34,10 +58,23 @@ Hospitality, real estate, technology, retail, healthcare, food & beverage, profe
 
 - First-page Google rankings achieved within 90 days for competitive Dubai-market keywords
 - 50M+ social media impressions generated for hospitality and F&B brands
-- Media placements in Gulf News, Khaleej Times, and Arabian Business
+- Media placements in Gulf News, Khaleej Times, Arabian Business, and Forbes Middle East
 - Average 3.2x return on ad spend across paid advertising campaigns
 - 40% reduction in campaign management time using AI-powered workflows
 - 28% improvement in ROAS with AI-driven optimization
+- 120+ portfolio projects spanning video, web, branding, and social media
+- Restaurant client grew from 3K to 48K Instagram followers in 5 months
+- Real estate client generated AED 14M in qualified leads from social media
+- E-commerce clients achieved 4-6x ROAS consistently across Google and Meta
+
+## Frequently Asked Questions
+
+- What services does Dubai Prod offer? Dubai Prod offers PR & media relations, social media management, SEO, video production, web development, branding & identity, paid advertising (Google & Meta Ads), AI marketing automation, CGI & 3D production, and GEO (AI search optimization).
+- Where is Dubai Prod located? Dubai Prod is headquartered at DAMAC Executive Heights, Smart Creation, 19th Floor, Dubai, UAE.
+- How much do Dubai Prod's services cost? Pricing varies by service and scope. Social media management starts from AED 3,000/month, SEO from AED 3,000/month, PR retainers from AED 5,000/month, and web development from AED 5,000 per project.
+- Does Dubai Prod work with startups? Yes — Dubai Prod has extensive experience with startups and SMEs in the UAE, offering scalable packages that grow with the business.
+- What industries does Dubai Prod serve? Hospitality, real estate, technology, retail, healthcare, food & beverage, professional services, fitness, beauty, automotive, and enterprise organizations.
+- How can I contact Dubai Prod? Call +971 54 333 3587, email info@dubaiprod.com, or visit https://www.dubaiprod.com/contact-dubai.html.
 
 ## Blog & Resources
 
