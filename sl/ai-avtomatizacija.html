@@ -108,7 +108,7 @@
   "itemListElement": [
     {"@type": "ListItem", "position": 1, "name": "Domov", "item": "https://www.dubaiprod.com/sl/"},
     {"@type": "ListItem", "position": 2, "name": "Storitve", "item": "https://www.dubaiprod.com/sl/storitve.html"},
-    {"@type": "ListItem", "position": 3, "name": "AI Avtomatizacija", "item": "https://www.dubaiprod.com/sl/ai-avtomatizacija.html"}
+    {"@type": "ListItem", "position": 3, "name": "AI Marketing Avtomatizacija", "item": "https://www.dubaiprod.com/sl/ai-avtomatizacija.html"}
   ]
 }
 </script>
@@ -121,32 +121,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
 <style>
-.ai-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
-@media(max-width:960px){.ai-hero-grid{grid-template-columns:1fr !important;} .ai-brain-wrap{display:none !important;}}
-.ai-tool-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;font-family:Inter,sans-serif;font-size:11px;font-weight:600;color:rgba(255,255,255,0.6);transition:all 0.3s;}
-.ai-tool-badge:hover{border-color:rgba(255,106,0,0.4);color:#FF6A00;background:rgba(255,106,0,0.06);}
-.ai-marquee-track{display:flex;gap:0;white-space:nowrap;animation:aiMarquee 30s linear infinite;}
-.ai-marquee-track:hover{animation-play-state:paused;}
-.ai-m-item{display:inline-flex;align-items:center;gap:18px;padding:0 36px;font-family:Inter,sans-serif;font-size:11px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.2);}
-.ai-m-feat{color:rgba(255,106,0,0.55);}
-.ai-m-dot{width:4px;height:4px;background:#FF6A00;border-radius:50%;flex-shrink:0;}
-@keyframes aiMarquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.ai-svc-h2{font-family:Inter,sans-serif;font-size:clamp(28px,3.5vw,44px);font-weight:900;letter-spacing:-1.5px;line-height:1.05;color:#fff;margin-bottom:24px;}
-.ai-svc-text{font-family:Inter,sans-serif;font-size:15px;color:rgba(255,255,255,0.55);line-height:1.85;margin-bottom:28px;}
-.ai-svc-feat{display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;}
-.ai-svc-feat svg{width:14px;height:14px;stroke:#FF6A00;fill:none;stroke-width:2;flex-shrink:0;}
-.ai-svc-feat span{font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#fff;}
-@media(max-width:960px){
-  #why-ai > div{grid-template-columns:1fr !important;}
-  #why-ai > div > div:last-child{position:static !important;}
-  .ai-svc-row > div{grid-template-columns:1fr !important;}
-}
-@media(max-width:768px){
-  div[style*="grid-template-columns:repeat(4,1fr);gap:16px"]{grid-template-columns:1fr 1fr !important;}
-  #ai-hero{min-height:60vh !important;}
-  #ai-hero h1{font-size:clamp(28px,8vw,42px) !important;letter-spacing:-1px !important;}
-  #ai-hero p{font-size:13px !important;}
-  #ai-hero > div{padding:90px 16px 40px !important;width:100% !important;}
+@media (max-width: 768px) {
+  div[style*="grid-template-columns:repeat(4,1fr);gap:16px"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  #ai-hero { min-height: 60vh !important; }
+  #ai-hero h1 { font-size: clamp(28px, 8vw, 42px) !important; letter-spacing: -1px !important; }
+  #ai-hero p { font-size: 13px !important; }
+  #ai-hero > div { padding: 90px 16px 40px !important; width: 100% !important; }
 }
 </style>
 </head>
@@ -174,12 +156,23 @@
 <script src="../js/nav-sl.js"></script>
 
 <!-- HERO -->
-<section id="ai-hero" style="position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:#000;">
+<style>
+#ai-hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:#000;}
+.ai-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+@media(max-width:960px){.ai-hero-grid{grid-template-columns:1fr !important;} .ai-brain-wrap{display:none !important;}}
+.ai-tool-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;font-family:Inter,sans-serif;font-size:11px;font-weight:600;color:rgba(255,255,255,0.6);transition:all 0.3s;}
+.ai-tool-badge:hover{border-color:rgba(255,106,0,0.4);color:#FF6A00;background:rgba(255,106,0,0.06);}
+.ai-tool-badge img{width:20px;height:20px;border-radius:4px;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
+</style>
+<section id="ai-hero">
   <div style="position:absolute;inset:0;background:#000;"></div>
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(255,106,0,0.06) 0%,transparent 60%);"></div>
   <div style="position:absolute;top:-10%;left:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(255,106,0,0.12) 0%,transparent 70%);pointer-events:none;"></div>
 
   <div class="ai-hero-grid" style="position:relative;z-index:2;width:100%;max-width:1340px;margin:0 auto;padding:160px clamp(24px,5vw,48px) 80px;">
+
+    <!-- LEVO -->
     <div>
       <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,106,0,0.08);border:1px solid rgba(255,106,0,0.3);backdrop-filter:blur(12px);padding:8px 18px;margin-bottom:36px;">
         <span style="width:5px;height:5px;border-radius:50%;background:#FF6A00;display:inline-block;animation:pulse 2s infinite;"></span>
@@ -187,111 +180,152 @@
       </div>
 
       <h1 style="font-family:Inter,sans-serif;font-size:clamp(48px,6.5vw,88px);font-weight:900;line-height:0.95;letter-spacing:-3px;color:#fff;margin-bottom:32px;">
-        MARKETING<br>Z <span style="color:#FF6A00;">AI HITROSTJO</span>
+        MARKETING<br>S HITROSTJO <span style="color:#FF6A00;">AI</span>
       </h1>
 
       <p style="font-family:Inter,sans-serif;font-size:16px;line-height:1.75;color:rgba(255,255,255,0.5);font-weight:300;max-width:460px;margin-bottom:40px;">
-        Izkoristite najsodobnejsa AI orodja za avtomatizacijo delovnih tokov, ustvarjanje vsebin v velikem obsegu in odkrivanje vpogledov, ki preoblikujejo vase poslovanje.
+        Izkoristite najnovejsa AI orodja za avtomatizacijo delovnih tokov, ustvarjanje vsebin v velikem obsegu in odkrivanje vpogledov, ki preoblikujejo vase poslovanje.
       </p>
 
       <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:52px;">
         <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#000;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">
-          Brezplacen AI posvet
+          Pridobite AI Posvetovanje
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
         </a>
         <a href="#ai-tools" style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.06);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.6)';this.style.color='#FF6A00'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.15)';this.style.color='rgba(255,255,255,0.85)'">
-          Nasa AI orodja
+          Nas AI Nabor
         </a>
       </div>
 
       <div style="display:flex;gap:48px;flex-wrap:wrap;">
-        <div><div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;color:#fff;letter-spacing:-1px;">10x</div><div style="font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:4px;">Hitrejse vsebine</div></div>
-        <div><div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;color:#FF6A00;letter-spacing:-1px;">60%</div><div style="font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:4px;">Zmanjsanje stroskov</div></div>
+        <div><div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;color:#fff;letter-spacing:-1px;">10x</div><div style="font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:4px;">Hitrejse Vsebine</div></div>
+        <div><div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;color:#FF6A00;letter-spacing:-1px;">60%</div><div style="font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:4px;">Zmanjsanje Stroskov</div></div>
         <div><div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;color:#fff;letter-spacing:-1px;">24/7</div><div style="font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:4px;">Avtomatizacija</div></div>
       </div>
     </div>
 
+    <!-- DESNO: AI Brain Video -->
     <div class="ai-brain-wrap" style="display:flex;align-items:center;justify-content:center;position:relative;">
       <video autoplay muted loop playsinline style="width:100%;max-width:640px;">
         <source src="../assets/video/ai-integration-dubai.webm" type="video/webm">
       </video>
       <div style="position:absolute;inset:0;box-shadow:inset 0 0 80px 40px #000;pointer-events:none;"></div>
     </div>
+
   </div>
 </section>
-<style>@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}</style>
 
-<!-- AI ORODJA -->
+<!-- AI ORODJA & ZNANJA -->
 <section id="ai-tools" style="background:#050505;padding:80px 0;border-top:1px solid rgba(255,255,255,0.04);">
   <div style="max-width:1200px;margin:0 auto;padding:0 clamp(24px,5vw,48px);">
     <div style="text-align:center;margin-bottom:48px;">
-      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;"><div style="width:5px;height:5px;border-radius:50%;background:#FF6A00;"></div><span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">Nas AI nabor</span></div>
-      <h2 style="font-family:Inter,sans-serif;font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-2px;color:#fff;">Orodja & tehnologije, <span style="color:#FF6A00;">ki jih obvladamo</span></h2>
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;"><div style="width:5px;height:5px;border-radius:50%;background:#FF6A00;"></div><span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">Nas AI Nabor</span></div>
+      <h2 style="font-family:Inter,sans-serif;font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-2px;color:#fff;">Orodja & Tehnologije, <span style="color:#FF6A00;">Ki Jih Obvladamo</span></h2>
     </div>
+
+    <!-- AI Orodja Mreza -->
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;">
       <div class="ai-tool-badge"><div style="width:20px;height:20px;border-radius:4px;background:linear-gradient(135deg,#D97706,#F59E0B);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#000;">C</div>Claude AI</div>
+      <div class="ai-tool-badge"><div style="width:20px;height:20px;border-radius:4px;background:#000;border:1px solid #444;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#fff;">&#8984;</div>Claude Code</div>
       <div class="ai-tool-badge"><div style="width:20px;height:20px;border-radius:4px;background:#10A37F;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#fff;">G</div>ChatGPT</div>
       <div class="ai-tool-badge"><div style="width:20px;height:20px;border-radius:4px;background:#4285F4;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#fff;">G</div>Gemini</div>
       <div class="ai-tool-badge"><div style="width:20px;height:20px;border-radius:4px;background:linear-gradient(135deg,#7C3AED,#EC4899);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#fff;">M</div>Midjourney</div>
       <div class="ai-tool-badge"><div style="width:20px;height:20px;border-radius:4px;background:#000;border:1px solid #555;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#fff;">R</div>Runway</div>
+      <div class="ai-tool-badge"><div style="width:20px;height:20px;border-radius:4px;background:#1E1E2E;border:1px solid #555;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#0EA5E9;">S</div>Stable Diffusion</div>
+      <div class="ai-tool-badge"><div style="width:20px;height:20px;border-radius:4px;background:#000;border:1px solid #555;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#22D3EE;">E</div>ElevenLabs</div>
       <div class="ai-tool-badge"><div style="width:20px;height:20px;border-radius:4px;background:#6366F1;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#fff;">n</div>n8n</div>
       <div class="ai-tool-badge"><div style="width:20px;height:20px;border-radius:4px;background:#4353FF;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#fff;">M</div>Make.com</div>
       <div class="ai-tool-badge"><div style="width:20px;height:20px;border-radius:4px;background:#FF4A00;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#fff;">Z</div>Zapier</div>
       <div class="ai-tool-badge"><div style="width:20px;height:20px;border-radius:4px;background:#FF6A00;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#fff;">H</div>HubSpot AI</div>
+      <div class="ai-tool-badge"><div style="width:20px;height:20px;border-radius:4px;background:#00A1E0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#fff;">S</div>Salesforce</div>
       <div class="ai-tool-badge"><div style="width:20px;height:20px;border-radius:4px;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#fff;">W</div>WhatsApp API</div>
+      <div class="ai-tool-badge"><div style="width:20px;height:20px;border-radius:4px;background:#0866FF;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#fff;">M</div>Meta Advantage+</div>
+      <div class="ai-tool-badge"><div style="width:20px;height:20px;border-radius:4px;background:#4285F4;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#fff;">P</div>Performance Max</div>
     </div>
+
+    <!-- Kategorije znanj -->
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px;">
       <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:24px;text-align:center;">
         <div style="width:44px;height:44px;background:rgba(255,106,0,0.1);border:1px solid rgba(255,106,0,0.25);border-radius:10px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 014 4v2a4 4 0 01-8 0V6a4 4 0 014-4z"/><path d="M16 14H8a4 4 0 00-4 4v2h16v-2a4 4 0 00-4-4z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 014 4v2a4 4 0 01-8 0V6a4 4 0 014-4z"/><path d="M16 14H8a4 4 0 00-4 4v2h16v-2a4 4 0 00-4-4z"/><circle cx="9" cy="6" r="0.5" fill="#FF6A00"/><circle cx="15" cy="6" r="0.5" fill="#FF6A00"/></svg>
         </div>
-        <h3 style="font-family:Inter,sans-serif;font-size:14px;font-weight:800;color:#fff;margin-bottom:6px;">AI agenti</h3>
-        <p style="font-family:Inter,sans-serif;font-size:11px;color:rgba(255,255,255,0.4);line-height:1.6;">Claude & GPT agenti po meri za vase poslovne procese</p>
+        <h3 style="font-family:Inter,sans-serif;font-size:14px;font-weight:800;color:#fff;margin-bottom:6px;">AI Agenti</h3>
+        <p style="font-family:Inter,sans-serif;font-size:11px;color:rgba(255,255,255,0.4);line-height:1.6;">Prilagojeni Claude & GPT agenti za vase poslovne procese</p>
       </div>
       <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:24px;text-align:center;">
         <div style="width:44px;height:44px;background:rgba(255,106,0,0.1);border:1px solid rgba(255,106,0,0.25);border-radius:10px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
         </div>
         <h3 style="font-family:Inter,sans-serif;font-size:14px;font-weight:800;color:#fff;margin-bottom:6px;">Avtomatizacija</h3>
-        <p style="font-family:Inter,sans-serif;font-size:11px;color:rgba(255,255,255,0.4);line-height:1.6;">n8n, Make & Zapier delovni tokovi, ki delajo 24/7</p>
+        <p style="font-family:Inter,sans-serif;font-size:11px;color:rgba(255,255,255,0.4);line-height:1.6;">n8n, Make & Zapier delovni tokovi, ki delujejo 24/7</p>
       </div>
       <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:24px;text-align:center;">
         <div style="width:44px;height:44px;background:rgba(255,106,0,0.1);border:1px solid rgba(255,106,0,0.25);border-radius:10px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/><path d="M9 12l2 2 4-4"/></svg>
         </div>
-        <h3 style="font-family:Inter,sans-serif;font-size:14px;font-weight:800;color:#fff;margin-bottom:6px;">CRM & podatki</h3>
-        <p style="font-family:Inter,sans-serif;font-size:11px;color:rgba(255,255,255,0.4);line-height:1.6;">AI-podprt CRM, ocenjevanje kontaktov & prediktivna analitika</p>
+        <h3 style="font-family:Inter,sans-serif;font-size:14px;font-weight:800;color:#fff;margin-bottom:6px;">CRM & Podatki</h3>
+        <p style="font-family:Inter,sans-serif;font-size:11px;color:rgba(255,255,255,0.4);line-height:1.6;">AI-podprt CRM, ocenjevanje leadov & prediktivna analitika</p>
       </div>
       <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:24px;text-align:center;">
         <div style="width:44px;height:44px;background:rgba(255,106,0,0.1);border:1px solid rgba(255,106,0,0.25);border-radius:10px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
         </div>
-        <h3 style="font-family:Inter,sans-serif;font-size:14px;font-weight:800;color:#fff;margin-bottom:6px;">AI vsebine</h3>
-        <p style="font-family:Inter,sans-serif;font-size:11px;color:rgba(255,255,255,0.4);line-height:1.6;">AI slike, video, glas & besedila v velikem obsegu</p>
+        <h3 style="font-family:Inter,sans-serif;font-size:14px;font-weight:800;color:#fff;margin-bottom:6px;">AI Vsebine</h3>
+        <p style="font-family:Inter,sans-serif;font-size:11px;color:rgba(255,255,255,0.4);line-height:1.6;">AI-generirane slike, video, glas & besedila v velikem obsegu</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MARQUEE -->
+<style>
+.ai-marquee-track { display:flex; gap:0; white-space:nowrap; animation:aiMarquee 30s linear infinite; }
+.ai-marquee-track:hover { animation-play-state:paused; }
+.ai-m-item { display:inline-flex; align-items:center; gap:18px; padding:0 36px; font-family:Inter,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:rgba(255,255,255,0.2); }
+.ai-m-feat { color:rgba(255,106,0,0.55); }
+.ai-m-dot { width:4px; height:4px; background:#FF6A00; border-radius:50%; flex-shrink:0; }
+@keyframes aiMarquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+.ai-svc-tag { display:inline-flex; align-items:center; gap:10px; margin-bottom:28px; }
+.ai-svc-tag .dot { width:5px; height:5px; border-radius:50%; background:#FF6A00; flex-shrink:0; }
+.ai-svc-tag span { font-size:9px; font-weight:800; letter-spacing:0.35em; text-transform:uppercase; color:#FF6A00; }
+.ai-svc-h2 { font-family:Inter,sans-serif; font-size:clamp(28px,3.5vw,44px); font-weight:900; letter-spacing:-1.5px; line-height:1.05; color:#fff; margin-bottom:24px; }
+.ai-svc-text { font-family:Inter,sans-serif; font-size:15px; color:rgba(255,255,255,0.55); line-height:1.85; margin-bottom:28px; }
+.ai-svc-feat { display:flex; align-items:center; gap:12px; padding:12px 16px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-left:3px solid #FF6A00; }
+.ai-svc-feat svg { width:14px; height:14px; stroke:#FF6A00; fill:none; stroke-width:2; flex-shrink:0; }
+.ai-svc-feat span { font-family:Inter,sans-serif; font-size:13px; font-weight:700; color:#fff; }
+@media(max-width:960px){
+  #why-ai > div { grid-template-columns:1fr !important; }
+  #why-ai > div > div:last-child { position:static !important; }
+  .ai-svc-row > div { grid-template-columns:1fr !important; }
+}
+</style>
+
+<!-- TECH MARQUEE -->
 <div style="overflow:hidden;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);padding:18px 0;background:#000;">
   <div class="ai-marquee-track">
     <span class="ai-m-item"><span class="ai-m-dot"></span>ChatGPT</span>
     <span class="ai-m-item ai-m-feat"><span class="ai-m-dot"></span>Claude</span>
     <span class="ai-m-item"><span class="ai-m-dot"></span>Midjourney</span>
+    <span class="ai-m-item"><span class="ai-m-dot"></span>Stable Diffusion</span>
     <span class="ai-m-item ai-m-feat"><span class="ai-m-dot"></span>HubSpot AI</span>
+    <span class="ai-m-item"><span class="ai-m-dot"></span>Jasper</span>
+    <span class="ai-m-item ai-m-feat"><span class="ai-m-dot"></span>Runway</span>
+    <span class="ai-m-item"><span class="ai-m-dot"></span>ElevenLabs</span>
     <span class="ai-m-item"><span class="ai-m-dot"></span>Make.com</span>
     <span class="ai-m-item ai-m-feat"><span class="ai-m-dot"></span>Zapier</span>
     <span class="ai-m-item"><span class="ai-m-dot"></span>n8n</span>
-    <span class="ai-m-item"><span class="ai-m-dot"></span>Runway</span>
+    <span class="ai-m-item"><span class="ai-m-dot"></span>Custom AI</span>
     <span class="ai-m-item"><span class="ai-m-dot"></span>ChatGPT</span>
     <span class="ai-m-item ai-m-feat"><span class="ai-m-dot"></span>Claude</span>
     <span class="ai-m-item"><span class="ai-m-dot"></span>Midjourney</span>
+    <span class="ai-m-item"><span class="ai-m-dot"></span>Stable Diffusion</span>
     <span class="ai-m-item ai-m-feat"><span class="ai-m-dot"></span>HubSpot AI</span>
+    <span class="ai-m-item"><span class="ai-m-dot"></span>Jasper</span>
+    <span class="ai-m-item ai-m-feat"><span class="ai-m-dot"></span>Runway</span>
+    <span class="ai-m-item"><span class="ai-m-dot"></span>ElevenLabs</span>
     <span class="ai-m-item"><span class="ai-m-dot"></span>Make.com</span>
     <span class="ai-m-item ai-m-feat"><span class="ai-m-dot"></span>Zapier</span>
     <span class="ai-m-item"><span class="ai-m-dot"></span>n8n</span>
-    <span class="ai-m-item"><span class="ai-m-dot"></span>Runway</span>
+    <span class="ai-m-item"><span class="ai-m-dot"></span>Custom AI</span>
   </div>
 </div>
 
@@ -300,32 +334,33 @@
   <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:start;">
     <div>
       <h2 style="font-family:Inter,sans-serif;font-size:clamp(28px,3.5vw,40px);font-weight:900;line-height:1.15;letter-spacing:-1px;color:#000;margin-bottom:32px;text-transform:uppercase;">
-        Zakaj je Dubai Prod vodilna <span style="color:#FF6A00;">AI marketing agencija</span>
+        Zakaj Je Dubai Prod Vodilna <span style="color:#FF6A00;">AI Marketing Agencija</span>
       </h2>
       <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:#444;margin-bottom:24px;">
-        Pri Dubai Prod zdruzujemo moc <strong style="color:#000;">umetne inteligence s clovesko kreativnostjo</strong> za gradnjo marketinskih kampanj, ki presegajo, presirijo in prehitevajo konkurenco. Od <strong style="color:#000;">AI-podprtega ustvarjanja vsebin in prediktivne analitike</strong> do <strong style="color:#000;">klepetalnih robotov in celostne avtomatizacije</strong> — slovenskim podjetjem pomagamo izkoristiti najsodobnejsa AI orodja za merljive rezultate.
+        Pri Dubai Prod zdruzujemo moc <strong style="color:#000;">umetne inteligence s clovesko kreativnostjo</strong> za gradnjo marketinskih kampanj, ki premagujejo, presegajo in prehitevajo konkurenco. Od <strong style="color:#000;">AI-podprtega ustvarjanja vsebin in prediktivne analitike</strong> do <strong style="color:#000;">uvedbe klepetalnih robotov in celostne avtomatizacije</strong> pomagamo slovenskim podjetjem izkoristiti najsodobnejsa AI orodja za doseganje merljivih rezultatov.
       </p>
       <p style="font-family:Inter,sans-serif;font-size:15px;line-height:1.85;color:#444;margin-bottom:40px;">
-        Nas pristop ne zamenjuje vase ekipe — jo nadgradi. AI integriramo v vase obstojecse procese, izobrazimo vase ljudi in neprestano optimiziramo vsak sistem. Rezultat: hitrejse izvajanje, nizji stroski in marketinska ucinkovitost, ki raste s casom.
+        Nas pristop ne temelji na nadomestitvi vase ekipe — temvec na njeni okrepitvi. AI integriramo v vase obstojecje delovne procese, vaso ekipo usposobimo za uporabo orodij in neprestano optimiziramo vsak sistem, ki ga uvedemo. Rezultat: hitrejse izvajanje, nizji stroski in marketinska ucinkovitost, ki narasca s casom.
       </p>
       <a href="#ai-services" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#fff;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:14px 28px;border-radius:30px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">
-        Razisite AI storitve
+        Razisite AI Storitve
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8l4 4-4 4"/><path d="M8 12h8"/></svg>
       </a>
       <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:48px;padding-top:32px;border-top:1px solid rgba(0,0,0,0.08);">
-        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">AI strategija</span>
-        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Klepetalni roboti</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">AI Strategija</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Klepetalni Roboti</span>
         <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Avtomatizacija</span>
-        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Prediktivna analitika</span>
-        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">AI vsebine</span>
-        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">CRM integracija</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Prediktivna Analitika</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">AI Vsebine</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">CRM Integracija</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Ocenjevanje Leadov</span>
+        <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Glasovni AI</span>
       </div>
     </div>
-
-    <!-- OBRAZEC -->
+    <!-- DESNO: Obrazec za posvetovanje -->
     <div style="background:#f8f8f8;border-radius:4px;padding:44px 36px;position:sticky;top:120px;">
       <h3 style="font-family:Inter,sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;letter-spacing:0.5px;color:#000;text-align:center;margin-bottom:32px;line-height:1.3;">
-        Brezplacen <span style="color:#FF6A00;">AI posvet</span>
+        Pridobite Brezplacno <span style="color:#FF6A00;">AI Posvetovanje</span>
       </h3>
       <form data-dp-form style="display:flex;flex-direction:column;gap:14px;">
         <input type="text" name="name" placeholder="Ime in priimek" required style="width:100%;padding:14px 18px;border:1px solid #ddd;border-radius:4px;font-family:Inter,sans-serif;font-size:14px;color:#000;background:#fff;outline:none;transition:border-color 0.3s;" onfocus="this.style.borderColor='#FF6A00'" onblur="this.style.borderColor='#ddd'">
@@ -333,23 +368,23 @@
         <input type="text" name="company" placeholder="Ime podjetja" style="width:100%;padding:14px 18px;border:1px solid #ddd;border-radius:4px;font-family:Inter,sans-serif;font-size:14px;color:#000;background:#fff;outline:none;transition:border-color 0.3s;" onfocus="this.style.borderColor='#FF6A00'" onblur="this.style.borderColor='#ddd'">
         <select name="service" required style="width:100%;padding:14px 18px;border:1px solid #ddd;border-radius:4px;font-family:Inter,sans-serif;font-size:14px;color:#666;background:#fff;outline:none;transition:border-color 0.3s;appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23999%22 stroke-width=%222%22><polyline points=%226 9 12 15 18 9%22/></svg>');background-repeat:no-repeat;background-position:right 18px center;" onfocus="this.style.borderColor='#FF6A00'" onblur="this.style.borderColor='#ddd'">
           <option value="" disabled selected>Kaj potrebujete?</option>
-          <option value="ai-strategy">AI strategija</option>
-          <option value="chatbot">Klepetalni robot</option>
-          <option value="marketing-automation">Marketing avtomatizacija</option>
-          <option value="content-ai">AI vsebine</option>
-          <option value="custom-ai">Resitev po meri</option>
+          <option value="ai-strategy">AI Strategija</option>
+          <option value="chatbot">Razvoj Klepetalnega Robota</option>
+          <option value="marketing-automation">Marketing Avtomatizacija</option>
+          <option value="content-ai">AI Vsebine</option>
+          <option value="custom-ai">Prilagojena AI Resitev</option>
         </select>
         <label style="display:flex;align-items:center;gap:8px;font-family:Inter,sans-serif;font-size:12px;color:#666;margin-top:4px;cursor:pointer;">
           <input type="checkbox" required style="accent-color:#FF6A00;width:16px;height:16px;">
-          Strinjam se s pogoji politike zasebnosti.
+          Strinjam se s pogoji Politike zasebnosti.
         </label>
         <button type="submit" style="width:100%;padding:16px;background:#FF6A00;color:#fff;border:none;border-radius:4px;font-family:Inter,sans-serif;font-size:12px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;margin-top:8px;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">
-          Pridobite brezplacen posvet
+          Pridobite Brezplacno AI Posvetovanje
         </button>
       </form>
       <div data-dp-success style="display:none;text-align:center;padding:36px 0;">
         <div style="font-size:44px;margin-bottom:14px;color:#FF6A00;">&#10003;</div>
-        <p style="color:#FF6A00;font-size:11px;letter-spacing:0.3em;font-weight:700;text-transform:uppercase;margin-bottom:8px;font-family:Inter,sans-serif;">Zahteva poslana!</p>
+        <p style="color:#FF6A00;font-size:11px;letter-spacing:0.3em;font-weight:700;text-transform:uppercase;margin-bottom:8px;font-family:Inter,sans-serif;">Zahteva Poslana!</p>
         <p style="color:#666;font-size:13px;font-family:Inter,sans-serif;">Odgovorili vam bomo v 24 urah.</p>
       </div>
       <p style="font-family:Inter,sans-serif;font-size:11px;color:#999;text-align:center;margin-top:16px;display:flex;align-items:center;justify-content:center;gap:6px;">
@@ -360,54 +395,273 @@
   </div>
 </section>
 
-<!-- STORITEV 1 — AI vsebine -->
+<!-- STORITEV 1 — AI-Podprto Ustvarjanje Vsebin -->
 <section id="ai-services" class="ai-svc-row" style="background:#000;padding:120px 0;border-top:1px solid rgba(255,255,255,0.04);">
   <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
     <div>
       <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;"><span style="width:5px;height:5px;border-radius:50%;background:#FF6A00;"></span><span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">Storitev 01</span></div>
-      <h2 class="ai-svc-h2">AI-podprto<br><span style="color:#FF6A00;">ustvarjanje vsebin</span></h2>
-      <p class="ai-svc-text">Generirajte kakovostne marketinske vsebine v velikem obsegu z najnovejsimi AI orodji. Od blogov in oglasnih besedil do vizualij in video skript — nasa AI-podprta kreativna ekipa ustvari 10x vec vsebin brez kompromisov pri kakovosti.</p>
+      <h2 class="ai-svc-h2">AI-Podprto<br><span style="color:#FF6A00;">Ustvarjanje Vsebin</span></h2>
+      <p class="ai-svc-text">Ustvarjajte visokokakovostne marketinske vsebine v velikem obsegu z najnovejsimi AI orodji. Od blogov in oglasnih besedil do vizualov za druzabna omrezja in video scenarijev — nasa AI-okrepljena kreativna ekipa producira 10x vec vsebin brez kompromisov pri kakovosti ali glasu znamke.</p>
       <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
-        <div class="ai-svc-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>AI pisanje besedil & generiranje blogov</span></div>
-        <div class="ai-svc-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>AI generiranje slik (Midjourney, DALL-E)</span></div>
-        <div class="ai-svc-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Video AI & avtomatizirano urejanje (Runway)</span></div>
-        <div class="ai-svc-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Glasovni AI & sinteticna naracija (ElevenLabs)</span></div>
+        <div class="ai-svc-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>AI Pisanje Besedil & Generiranje Blogov</span></div>
+        <div class="ai-svc-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>AI Generiranje Slik (Midjourney, DALL-E, SD)</span></div>
+        <div class="ai-svc-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Video AI & Avtomatizirano Urejanje (Runway)</span></div>
+        <div class="ai-svc-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Glasovni AI & Sinteticna Naracija (ElevenLabs)</span></div>
       </div>
-      <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#000;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">Pridobite ponudbo <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+      <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#000;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">Pridobite Ponudbo <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
     </div>
     <div style="display:flex;align-items:center;justify-content:center;">
       <div style="width:100%;max-width:420px;aspect-ratio:1/1;background:radial-gradient(circle at 30% 40%,rgba(255,106,0,0.12) 0%,#0a0a0a 70%);border:1px solid rgba(255,255,255,0.06);border-radius:20px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
         <div style="font-family:Inter,sans-serif;font-size:clamp(100px,14vw,180px);font-weight:900;color:rgba(255,255,255,0.03);letter-spacing:-6px;line-height:1;pointer-events:none;user-select:none;">AI</div>
+        <div style="position:absolute;bottom:24px;left:24px;right:24px;display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:6px 12px;border-radius:4px;">ChatGPT</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:6px 12px;border-radius:4px;">Midjourney</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:6px 12px;border-radius:4px;">Runway</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:6px 12px;border-radius:4px;">ElevenLabs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORITEV 2 — Marketing Avtomatizacija -->
+<section class="ai-svc-row" style="background:#050505;padding:120px 0;border-top:1px solid rgba(255,255,255,0.04);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+    <div style="display:flex;align-items:center;justify-content:center;">
+      <div style="width:100%;max-width:420px;aspect-ratio:1/1;background:radial-gradient(circle at 70% 60%,rgba(255,106,0,0.12) 0%,#0a0a0a 70%);border:1px solid rgba(255,255,255,0.06);border-radius:20px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+        <div style="font-family:Inter,sans-serif;font-size:clamp(80px,12vw,140px);font-weight:900;color:rgba(255,255,255,0.03);letter-spacing:-4px;line-height:1;pointer-events:none;user-select:none;">AUTO</div>
+        <div style="position:absolute;bottom:24px;left:24px;right:24px;display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:6px 12px;border-radius:4px;">HubSpot</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:6px 12px;border-radius:4px;">Make.com</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:6px 12px;border-radius:4px;">Zapier</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:6px 12px;border-radius:4px;">n8n</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;"><span style="width:5px;height:5px;border-radius:50%;background:#FF6A00;"></span><span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">Storitev 02</span></div>
+      <h2 class="ai-svc-h2">Marketing<br><span style="color:#FF6A00;">Avtomatizacija</span></h2>
+      <p class="ai-svc-text">Celostna avtomatizacija, ki vase marketinske aktivnosti spremeni v prihodkovno napravo. Oblikujemo, gradimo in optimiziramo avtomatizirane delovne tokove, ki negujejo potencialne stranke, ponovno vkljucujejo obstojecje kupce in poganjajo konverzije 24 ur na dan — brez rocnega posredovanja.</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
+        <div class="ai-svc-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>E-postne Kapalne Kampanje & Sekvence</span></div>
+        <div class="ai-svc-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>AI Ocenjevanje Leadov & Segmentacija</span></div>
+        <div class="ai-svc-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Veckanalska Avtomatizacija Delovnih Tokov</span></div>
+        <div class="ai-svc-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>CRM Integracija (HubSpot, Salesforce)</span></div>
+      </div>
+      <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#000;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">Avtomatizirajte Zdaj <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- STORITEV 3 — AI Klepetalni Roboti -->
+<section class="ai-svc-row" style="background:#000;padding:120px 0;border-top:1px solid rgba(255,255,255,0.04);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;"><span style="width:5px;height:5px;border-radius:50%;background:#FF6A00;"></span><span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">Storitev 03</span></div>
+      <h2 class="ai-svc-h2">AI Klepetalni Roboti &<br><span style="color:#FF6A00;">Pogovorna AI</span></h2>
+      <p class="ai-svc-text">Uvedite inteligentne klepetalne robote, ki obvladujejo pogovore s strankami, kvalificirajo potencialne stranke in poganjajo prodajo 24/7 prek WhatsApp, vase spletne strani in druzabnih kanalov. Nasi roboti so usposobljeni na podatkih vase znamke in govorijo jezik vasih strank — vkljucno s slovenscino, anglescino in drugimi jeziki.</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
+        <div class="ai-svc-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>WhatsApp Poslovni Roboti</span></div>
+        <div class="ai-svc-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Spletni Klepetalni Robot & AI Klepet v Zivo</span></div>
+        <div class="ai-svc-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Vecjezicni AI (Slovenscina, Anglescina)</span></div>
+        <div class="ai-svc-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Avtomatizirana Kvalifikacija Leadov & Rezervacije</span></div>
+      </div>
+      <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#000;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">Zgradite Svojega Robota <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;">
+      <div style="width:100%;max-width:420px;aspect-ratio:1/1;background:radial-gradient(circle at 50% 50%,rgba(255,106,0,0.12) 0%,#0a0a0a 70%);border:1px solid rgba(255,255,255,0.06);border-radius:20px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+        <div style="font-family:Inter,sans-serif;font-size:clamp(80px,12vw,140px);font-weight:900;color:rgba(255,255,255,0.03);letter-spacing:-4px;line-height:1;pointer-events:none;user-select:none;">BOT</div>
+        <div style="position:absolute;bottom:24px;left:24px;right:24px;display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:6px 12px;border-radius:4px;">WhatsApp</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:6px 12px;border-radius:4px;">Claude</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:6px 12px;border-radius:4px;">GPT-4</span>
+          <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:6px 12px;border-radius:4px;">Vecjezicni</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NAS PROCES — 4-Koracna Casovnica -->
+<section id="ai-timeline" style="background:#050505;padding:120px 0;border-top:1px solid rgba(255,255,255,0.04);">
+  <div style="max-width:1100px;margin:0 auto;padding:0 clamp(24px,5vw,72px);">
+    <div style="text-align:center;margin-bottom:72px;">
+      <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:24px;"><div style="width:5px;height:5px;border-radius:50%;background:#FF6A00;"></div><span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">Kako Delamo</span></div>
+      <h2 style="font-family:Inter,sans-serif;font-size:clamp(32px,4.5vw,56px);font-weight:900;letter-spacing:-2px;line-height:1.05;color:#fff;margin-bottom:20px;">Nas <span style="color:#FF6A00;">Proces</span></h2>
+      <p style="font-family:Inter,sans-serif;font-size:15px;color:rgba(255,255,255,0.4);font-weight:300;max-width:560px;line-height:1.75;margin:0 auto;">Od AI revizije do celostne uvedbe — preizkusen 4-koracni okvir.</p>
+    </div>
+    <div style="position:relative;">
+      <div style="position:absolute;top:0;bottom:0;left:28px;width:2px;background:rgba(255,255,255,0.06);"></div>
+      <div id="ai-timeline-progress" style="position:absolute;top:0;left:28px;width:2px;height:100%;background:#FF6A00;transform-origin:top center;transform:scaleY(0);"></div>
+
+      <!-- Korak 1 -->
+      <div class="ai-tl-step" style="display:flex;gap:40px;margin-bottom:56px;position:relative;">
+        <div class="ai-tl-circle" style="width:58px;height:58px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;transition:border-color 0.5s,box-shadow 0.5s;">
+          <span style="font-family:Inter,sans-serif;font-size:18px;font-weight:900;color:rgba(255,255,255,0.2);transition:color 0.5s;">01</span>
+        </div>
+        <div style="flex:1;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;padding:32px;transition:background 0.3s;" onmouseenter="this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.background='rgba(255,255,255,0.03)'">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.3px;">Odkrivanje & AI Revizija</div>
+            <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#FF6A00;background:rgba(255,106,0,0.1);padding:5px 14px;border-radius:20px;">Teden 1</span>
+          </div>
+          <div style="font-family:Inter,sans-serif;font-size:14px;color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:16px;">Revidiramo vas trenutni marketinski nabor, delovne tokove, produkcijo vsebin in podatkovno infrastrukturo, da natancno ugotovimo, kje lahko AI prinese najvecji ucinak in najhitrejsi ROI.</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Tehnicna Revizija</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Zemljevid Procesov</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">ROI Analiza</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Porocilo o Vrzelih</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Korak 2 -->
+      <div class="ai-tl-step" style="display:flex;gap:40px;margin-bottom:56px;position:relative;">
+        <div class="ai-tl-circle" style="width:58px;height:58px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;transition:border-color 0.5s,box-shadow 0.5s;">
+          <span style="font-family:Inter,sans-serif;font-size:18px;font-weight:900;color:rgba(255,255,255,0.2);transition:color 0.5s;">02</span>
+        </div>
+        <div style="flex:1;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;padding:32px;transition:background 0.3s;" onmouseenter="this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.background='rgba(255,255,255,0.03)'">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.3px;">Strategija & Izbira Orodij</div>
+            <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#FF6A00;background:rgba(255,106,0,0.1);padding:5px 14px;border-radius:20px;">Teden 2</span>
+          </div>
+          <div style="font-family:Inter,sans-serif;font-size:14px;color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:16px;">Oblikujemo prilagojeno AI strategijo in izberemo prava orodja za vase potrebe — od ChatGPT in Claude za vsebine do HubSpot in Make.com za avtomatizacijo, pri cemer zagotovimo brezhibno integracijo vsakega orodja.</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">AI Nacrt</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Nabor Orodij</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Integracijski Nacrt</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Proracun</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Korak 3 -->
+      <div class="ai-tl-step" style="display:flex;gap:40px;margin-bottom:56px;position:relative;">
+        <div class="ai-tl-circle" style="width:58px;height:58px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;transition:border-color 0.5s,box-shadow 0.5s;">
+          <span style="font-family:Inter,sans-serif;font-size:18px;font-weight:900;color:rgba(255,255,255,0.2);transition:color 0.5s;">03</span>
+        </div>
+        <div style="flex:1;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-left:3px solid #FF6A00;padding:32px;transition:background 0.3s;" onmouseenter="this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.background='rgba(255,255,255,0.03)'">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.3px;">Implementacija & Integracija</div>
+            <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#FF6A00;background:rgba(255,106,0,0.1);padding:5px 14px;border-radius:20px;">Teden 3-4</span>
+          </div>
+          <div style="font-family:Inter,sans-serif;font-size:14px;color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:16px;">Zgradimo, konfiguriramo in uvedemo vase AI sisteme — klepetalne robote, avtomatizacijske tokove, vsebinske cevovode in analiticne nadzorne plosce. Vasa ekipa prejme celotno usposabljanje za zagotovitev sprejetja od prvega dne.</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Gradnja</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Uvedba</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Usposabljanje</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">QA Testiranje</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Korak 4 -->
+      <div class="ai-tl-step" style="display:flex;gap:40px;position:relative;">
+        <div class="ai-tl-circle ai-tl-circle-final" style="width:58px;height:58px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;transition:border-color 0.5s,background 0.5s,box-shadow 0.5s;">
+          <span style="font-family:Inter,sans-serif;font-size:18px;font-weight:900;color:rgba(255,255,255,0.2);transition:color 0.5s;">04</span>
+        </div>
+        <div style="flex:1;background:rgba(255,106,0,0.05);border:1px solid rgba(255,106,0,0.15);border-left:3px solid #FF6A00;padding:32px;transition:background 0.3s;" onmouseenter="this.style.background='rgba(255,106,0,0.08)'" onmouseleave="this.style.background='rgba(255,106,0,0.05)'">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            <div style="font-family:Inter,sans-serif;font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.3px;">Optimizacija & Skaliranje</div>
+            <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#FF6A00;background:rgba(255,106,0,0.1);padding:5px 14px;border-radius:20px;">Stalno</span>
+          </div>
+          <div style="font-family:Inter,sans-serif;font-size:14px;color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:16px;">Stalno spremljanje, A/B testiranje, optimizacija pozivov in izpopolnjevanje delovnih tokov. Skaliramo, kar deluje, odpravimo, kar ne deluje, in vas AI nabor ohranjamo v koraku z novimi orodji in modeli.</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">A/B Testiranje</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Porocila</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Skaliranje</span>
+            <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Novi AI Modeli</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="cta-section" style="background:#000;padding:clamp(80px,12vw,140px) 0;text-align:center;border-top:1px solid rgba(255,255,255,0.04);">
-  <div style="max-width:800px;margin:0 auto;padding:0 clamp(24px,5vw,72px);">
-    <h2 class="cta-title" style="font-family:Inter,sans-serif;font-size:clamp(32px,5vw,64px);font-weight:900;letter-spacing:-2.5px;line-height:1.0;color:#fff;margin-bottom:24px;">
-      Pripravljen na <span style="color:#FF6A00;">AI preobrazbo?</span>
-    </h2>
-    <p style="font-family:Inter,sans-serif;font-size:16px;color:rgba(255,255,255,0.45);line-height:1.75;font-weight:300;max-width:500px;margin:0 auto 40px;">
-      Brezplacen AI posvet. Odkrijmo, kje AI lahko prinese najvecji ucinak za vase podjetje.
-    </p>
-    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;">
-      <a href="https://wa.me/971543333587" style="display:inline-flex;align-items:center;gap:10px;background:#FF6A00;color:#000;font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:all 0.3s;" onmouseenter="this.style.background='#ff8c2f'" onmouseleave="this.style.background='#FF6A00'">
-        Zacznite zdaj
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-      </a>
-    </div>
+<section class="cta-section">
+  <div class="cta-badge"><span>Pripravljeni na rast?</span></div>
+  <h2 class="cta-title">ZGRADIMO<br><span class="hollow">NEKAJ</span><br>MOCNEGA</h2>
+  <p class="cta-desc">Povejte nam svoje cilje. Mi bomo zgradili strategijo, izvedli vizijo in dostavili rezultate, ki so pomembni.</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/971543333587" class="btn-p">WhatsApp</a>
+    <a href="mailto:info@dubaiprod.com" class="btn-s">Posljite E-pismo</a>
   </div>
 </section>
 
+<!-- NOGA -->
+<footer style="background:#000;border-top:1px solid rgba(255,255,255,0.06);padding:80px 32px 40px;font-family:'Inter',sans-serif;">
+    <div style="max-width:1280px;margin:0 auto;">
+        <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:64px;margin-bottom:72px;">
+            <div>
+                <img src="../assets/images/dubai_prod_2__1_-1772650048332.webp" alt="Dubai Prod" style="height:64px;width:auto;margin-bottom:24px;display:block;" loading="lazy">
+                <p style="font-size:13px;color:rgba(255,255,255,0.38);line-height:1.8;max-width:280px;margin-bottom:28px;">Vodilna PR & digitalna marketinska agencija. Ustvarjamo vsebine, ki premikajo ljudi, in kampanje, ki premikajo trge.</p>
+                <div style="display:flex;gap:16px;">
+                    <a href="https://www.instagram.com/dubai_prods/" target="_blank" style="width:38px;height:38px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);" onmouseenter="this.style.borderColor='#FF6A00';this.style.color='#FF6A00'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.4)'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+                    <a href="https://www.facebook.com/dubai_prods/" target="_blank" style="width:38px;height:38px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);" onmouseenter="this.style.borderColor='#FF6A00';this.style.color='#FF6A00'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.4)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    <a href="https://www.linkedin.com/company/dubai-prod" target="_blank" style="width:38px;height:38px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);" onmouseenter="this.style.borderColor='#FF6A00';this.style.color='#FF6A00'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.4)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+                    <a href="https://www.youtube.com/@dubaiprod" target="_blank" style="width:38px;height:38px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);" onmouseenter="this.style.borderColor='#FF6A00';this.style.color='#FF6A00'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.4)'"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.94 1.96C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
+                </div>
+            </div>
+            <div>
+                <h4 style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:24px;">Storitve</h4>
+                <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
+                    <li><a href="../social-media.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Druzabna Omrezja</a></li>
+                    <li><a href="../video-production-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Video Produkcija</a></li>
+                    <li><a href="../pr-media.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">PR & Mediji</a></li>
+                    <li><a href="../seo.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">SEO</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:24px;">Podjetje</h4>
+                <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
+                    <li><a href="../about-us-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">O Nas</a></li>
+                    <li><a href="../portfolio-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Nase Delo</a></li>
+                    <li><a href="../blog-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Blog</a></li>
+                    <li><a href="../contact-dubai.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.5)'">Kontakt</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="font-size:9px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:24px;">Kontakt</h4>
+                <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:16px;">
+                    <li style="display:flex;gap:12px;align-items:flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span style="font-size:12px;color:rgba(255,255,255,0.4);line-height:1.6;">Dubai, Zdruzeni Arabski Emirati</span></li>
+                    <li style="display:flex;gap:12px;align-items:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@dubaiprod.com" style="font-size:12px;color:rgba(255,255,255,0.4);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.4)'">info@dubaiprod.com</a></li>
+                    <li style="display:flex;gap:12px;align-items:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.22 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+38640797340" style="font-size:12px;color:rgba(255,255,255,0.4);text-decoration:none;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.4)'">+386 40 797 340</a></li>
+                    <li style="display:flex;gap:12px;align-items:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.22 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+971543333587" style="font-size:12px;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.4)'">+971 54 333 3587</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="height:1px;background:rgba(255,255,255,0.06);margin-bottom:32px;"></div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;">
+            <p style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin:0;">&copy; 2026 Dubai Prod. Vse Pravice Pridrzane.</p>
+            <div style="display:flex;gap:24px;"><a href="../privacy-policy.html" style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.2);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.2)'">Politika Zasebnosti</a><a href="../cookies-policy.html" style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.2);text-decoration:none;transition:color 0.2s;" onmouseenter="this.style.color='#FF6A00'" onmouseleave="this.style.color='rgba(255,255,255,0.2)'">Politika Piskotkov</a></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;border-radius:50%;background:#FF6A00;display:inline-block;animation:pulse 2s infinite;"></span><span style="font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.2);">Dubai, ZAE</span></div>
+        </div>
+    </div>
+</footer>
+
 <script>
-document.addEventListener('DOMContentLoaded', function(){
-  if(typeof gsap==='undefined'||typeof ScrollTrigger==='undefined') return;
+document.addEventListener('DOMContentLoaded', function() {
   gsap.registerPlugin(ScrollTrigger);
-  gsap.from('.cta-title',{scrollTrigger:{trigger:'.cta-section',start:'top 92%'},y:40,opacity:0,duration:0.9,ease:'power3.out',immediateRender:false});
-  ScrollTrigger.create({start:'top -80',onUpdate:function(self){var nav=document.getElementById('main-nav');if(self.progress>0){nav.style.padding='16px 48px';nav.style.borderBottom='1px solid rgba(255,255,255,0.06)';}else{nav.style.padding='';nav.style.borderBottom='';}}});
-  window.addEventListener('load',function(){ScrollTrigger.refresh();});
+  gsap.from('#hero-label', { y:30, opacity:0, duration:1, ease:'power3.out', delay:0.2 });
+  gsap.from('#hero-title', { y:50, opacity:0, duration:1.1, ease:'power3.out', delay:0.38 });
+  gsap.from('#hero-foot', { y:30, opacity:0, duration:0.9, ease:'power3.out', delay:0.58 });
+  gsap.from('#why-ai', { scrollTrigger:{ trigger:'#why-ai', start:'top 85%' }, y:40, opacity:0, duration:0.9, ease:'power2.out', immediateRender:false });
+  document.querySelectorAll('.ai-svc-row').forEach(function(row) {
+    gsap.from(row.querySelectorAll('.ai-svc-feat'), { scrollTrigger:{ trigger:row, start:'top 85%' }, y:20, opacity:0, duration:0.5, stagger:0.08, ease:'power2.out', immediateRender:false });
+    gsap.from(row.querySelector('.ai-svc-h2'), { scrollTrigger:{ trigger:row, start:'top 88%' }, y:30, opacity:0, duration:0.8, ease:'power2.out', immediateRender:false });
+  });
+  var aiTimeline = document.getElementById('ai-timeline');
+  var aiProgress = document.getElementById('ai-timeline-progress');
+  var aiSteps = document.querySelectorAll('.ai-tl-step');
+  var aiCircles = document.querySelectorAll('.ai-tl-circle');
+  if(aiTimeline && aiProgress && aiSteps.length) {
+    gsap.to(aiProgress, { scaleY:1, ease:'none', scrollTrigger:{ trigger: aiTimeline, start:'top 60%', end:'bottom 70%', scrub:0.5 } });
+    aiSteps.forEach(function(step, i) { gsap.from(step, { scrollTrigger:{ trigger:step, start:'top 85%' }, y:30, opacity:0, duration:0.7, ease:'power2.out', immediateRender:false }); });
+    aiCircles.forEach(function(circle) { ScrollTrigger.create({ trigger: circle, start:'top 70%', onEnter: function() { circle.style.borderColor = '#FF6A00'; circle.style.boxShadow = '0 0 20px rgba(255,106,0,0.3)'; circle.querySelector('span').style.color = '#FF6A00'; } }); });
+  }
+  gsap.from('.cta-title', { scrollTrigger:{ trigger:'.cta-section', start:'top 92%' }, y:40, opacity:0, duration:0.9, ease:'power3.out', immediateRender:false });
+  ScrollTrigger.create({ start:'top -80', onUpdate:function(self){ var nav=document.getElementById('main-nav'); if(self.progress>0){nav.style.padding='16px 48px';nav.style.borderBottom='1px solid rgba(255,255,255,0.06)';}else{nav.style.padding='';nav.style.borderBottom='';} } });
+  window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
 });
 </script>
 </body>
