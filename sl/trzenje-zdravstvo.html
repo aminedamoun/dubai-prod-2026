@@ -161,6 +161,8 @@
 
 <!-- HERO -->
 <section id="hc-hero" style="position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:#000;">
+  <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1920&q=80');background-size:cover;background-position:center;" loading="lazy"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.6) 50%,rgba(0,0,0,0.4) 100%);"></div>
   <!-- Ambient glow blobs -->
   <div style="position:absolute;top:-10%;left:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(255,106,0,0.18) 0%,transparent 70%);pointer-events:none;"></div>
   <div style="position:absolute;bottom:-10%;right:-5%;width:500px;height:500px;background:radial-gradient(circle,rgba(255,106,0,0.10) 0%,transparent 70%);pointer-events:none;"></div>
@@ -267,6 +269,7 @@
         Raziščite Storitve
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8l4 4-4 4"/><path d="M8 12h8"/></svg>
       </a>
+      <img src="https://images.unsplash.com/photo-1551190822-a9ce113ac100?w=800&q=80" alt="Marketing za zdravstvo v Dubaju" loading="lazy" style="width:100%;border-radius:8px;margin:32px 0;aspect-ratio:16/9;object-fit:cover;">
       <!-- Značke storitev -->
       <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:48px;padding-top:32px;border-top:1px solid rgba(0,0,0,0.08);">
         <span style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#999;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 14px;border-radius:4px;">Bolnišnice</span>
@@ -330,8 +333,9 @@
     <div class="hc-svc-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;">
 
       <!-- Storitev 1: Pridobivanje Pacientov -->
-      <div class="hc-svc-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);padding:40px 32px;transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.3)';this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.06)';this.style.background='rgba(255,255,255,0.03)'">
-        <div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;color:rgba(255,106,0,0.15);letter-spacing:-2px;margin-bottom:20px;line-height:1;">01</div>
+      <div class="hc-svc-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);padding:0 0 32px;transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.3)';this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.06)';this.style.background='rgba(255,255,255,0.03)'">
+        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" alt="Digitalno pridobivanje pacientov" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:4px 4px 0 0;margin-bottom:20px;">
+        <div style="padding:0 32px;"><div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;color:rgba(255,106,0,0.15);letter-spacing:-2px;margin-bottom:20px;line-height:1;">01</div>
         <h3 style="font-family:Inter,sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:14px;">Pridobivanje Pacientov</h3>
         <p style="font-family:Inter,sans-serif;font-size:14px;color:rgba(255,255,255,0.45);line-height:1.8;margin-bottom:20px;">Ciljane Google Ads kampanje za klinike z optimizacijo naročanja terminov. Privabljamo paciente z visokim namenom, ki iščejo specifična zdravljenja, specialnosti in ponudnike na vašem območju.</p>
         <div style="display:flex;flex-wrap:wrap;gap:6px;">
@@ -339,10 +343,13 @@
           <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Lijaki za Naročanje</span>
           <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Sledenje Vodilom</span>
         </div>
+        </div>
       </div>
 
       <!-- Storitev 2: Znamčenje Zdravnikov -->
-      <div class="hc-svc-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);padding:40px 32px;transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.3)';this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.06)';this.style.background='rgba(255,255,255,0.03)'">
+      <div class="hc-svc-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);padding:0 0 32px;transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.3)';this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.06)';this.style.background='rgba(255,255,255,0.03)'">
+        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="Osebna blagovna znamka zdravnika" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:4px 4px 0 0;margin-bottom:20px;">
+        <div style="padding:0 32px;">
         <div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;color:rgba(255,106,0,0.15);letter-spacing:-2px;margin-bottom:20px;line-height:1;">02</div>
         <h3 style="font-family:Inter,sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:14px;">Znamčenje Zdravnikov</h3>
         <p style="font-family:Inter,sans-serif;font-size:14px;color:rgba(255,255,255,0.45);line-height:1.8;margin-bottom:20px;">Gradnja miselnega vodstva in osebne blagovne znamke za zdravnike. Prisotnost na LinkedInu, medijski nastopi, govorniški angažmaji in vsebine, ki vaše zdravnike pozicionirajo kot zaupanja vredne strokovnjake na njihovem področju.</p>
@@ -351,10 +358,13 @@
           <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Miselno Vodstvo</span>
           <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">PR & Mediji</span>
         </div>
+        </div>
       </div>
 
       <!-- Storitev 3: SEO za Klinike -->
-      <div class="hc-svc-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);padding:40px 32px;transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.3)';this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.06)';this.style.background='rgba(255,255,255,0.03)'">
+      <div class="hc-svc-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);padding:0 0 32px;transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.3)';this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.06)';this.style.background='rgba(255,255,255,0.03)'">
+        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80" alt="SEO optimizacija za klinike" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:4px 4px 0 0;margin-bottom:20px;">
+        <div style="padding:0 32px;">
         <div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;color:rgba(255,106,0,0.15);letter-spacing:-2px;margin-bottom:20px;line-height:1;">03</div>
         <h3 style="font-family:Inter,sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:14px;">SEO za Klinike</h3>
         <p style="font-family:Inter,sans-serif;font-size:14px;color:rgba(255,255,255,0.45);line-height:1.8;margin-bottom:20px;">Prevladajte v lokalnih rezultatih iskanja za "zobozdravnik v bližini," "najboljši dermatolog Dubai" in stotine ključnih besed, specifičnih za zdravljenja. Optimizacija Google Business Profila, lokalne navedbe in strategija medicinskih vsebin.</p>
@@ -363,10 +373,13 @@
           <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Optimizacija GBP</span>
           <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Medicinske Vsebine</span>
         </div>
+        </div>
       </div>
 
       <!-- Storitev 4: Družbena Omrežja -->
-      <div class="hc-svc-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);padding:40px 32px;transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.3)';this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.06)';this.style.background='rgba(255,255,255,0.03)'">
+      <div class="hc-svc-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);padding:0 0 32px;transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.3)';this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.06)';this.style.background='rgba(255,255,255,0.03)'">
+        <img src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=600&q=80" alt="Družbena omrežja v zdravstvu" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:4px 4px 0 0;margin-bottom:20px;">
+        <div style="padding:0 32px;">
         <div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;color:rgba(255,106,0,0.15);letter-spacing:-2px;margin-bottom:20px;line-height:1;">04</div>
         <h3 style="font-family:Inter,sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:14px;">Družbena Omrežja</h3>
         <p style="font-family:Inter,sans-serif;font-size:14px;color:rgba(255,255,255,0.45);line-height:1.8;margin-bottom:20px;">Izobraževalne vsebine, zgodbe o uspehu pacientov in skladne kampanje pred-in-po na Instagramu, Facebooku in TikToku. Gradimo zaupanje skupnosti in spodbujamo naročanje terminov prek družbenega dokaza.</p>
@@ -375,10 +388,13 @@
           <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Zgodbe Pacientov</span>
           <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Pred & Po</span>
         </div>
+        </div>
       </div>
 
       <!-- Storitev 5: Upravljanje Ugleda -->
-      <div class="hc-svc-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);padding:40px 32px;transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.3)';this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.06)';this.style.background='rgba(255,255,255,0.03)'">
+      <div class="hc-svc-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);padding:0 0 32px;transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.3)';this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.06)';this.style.background='rgba(255,255,255,0.03)'">
+        <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&q=80" alt="Ugled v zdravstvu" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:4px 4px 0 0;margin-bottom:20px;">
+        <div style="padding:0 32px;">
         <div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;color:rgba(255,106,0,0.15);letter-spacing:-2px;margin-bottom:20px;line-height:1;">05</div>
         <h3 style="font-family:Inter,sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:14px;">Upravljanje Ugleda</h3>
         <p style="font-family:Inter,sans-serif;font-size:14px;color:rgba(255,255,255,0.45);line-height:1.8;margin-bottom:20px;">Sistematično povečujte Google ocene, upravljajte povratne informacije pacientov in gradite ugled z oceno 4,5+ zvezdic. Avtomatizirane zahteve za ocene, upravljanje odgovorov in spremljanje razpoloženja na vseh platformah.</p>
@@ -387,10 +403,13 @@
           <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Povratne Informacije</span>
           <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Spremljanje</span>
         </div>
+        </div>
       </div>
 
       <!-- Storitev 6: Spletni Razvoj -->
-      <div class="hc-svc-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);padding:40px 32px;transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.3)';this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.06)';this.style.background='rgba(255,255,255,0.03)'">
+      <div class="hc-svc-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);padding:0 0 32px;transition:all 0.3s;" onmouseenter="this.style.borderColor='rgba(255,106,0,0.3)';this.style.background='rgba(255,255,255,0.05)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.06)';this.style.background='rgba(255,255,255,0.03)'">
+        <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&q=80" alt="Zdravstvena spletna stran" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:4px 4px 0 0;margin-bottom:20px;">
+        <div style="padding:0 32px;">
         <div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;color:rgba(255,106,0,0.15);letter-spacing:-2px;margin-bottom:20px;line-height:1;">06</div>
         <h3 style="font-family:Inter,sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:14px;">Spletni Razvoj</h3>
         <p style="font-family:Inter,sans-serif;font-size:14px;color:rgba(255,255,255,0.45);line-height:1.8;margin-bottom:20px;">Spletna mesta, skladna s HIPAA, s hitrim nalaganjem, integracijo spletnega naročanja, portali za paciente, stranmi za zdravljenja in profili zdravnikov. Zasnovana za konverzije in optimizirana za iskalnike od prvega dne.</p>
@@ -399,6 +418,7 @@
           <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Portali za Paciente</span>
           <span style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:5px 12px;border-radius:4px;">Hitro & Varno</span>
         </div>
+        </div>
       </div>
 
     </div>
@@ -406,8 +426,9 @@
 </section>
 
 <!-- REZULTATI / METRIKE -->
-<section id="hc-results" style="background:#050505;padding:120px 0;border-top:1px solid rgba(255,255,255,0.04);">
-  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);">
+<section id="hc-results" style="position:relative;overflow:hidden;background:#050505;padding:120px 0;border-top:1px solid rgba(255,255,255,0.04);">
+  <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1504439468489-c8920d796a29?w=1920&q=80');background-size:cover;background-position:center;opacity:0.06;" loading="lazy"></div>
+  <div style="position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,72px);">
     <div style="text-align:center;margin-bottom:72px;">
       <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:24px;"><div style="width:5px;height:5px;border-radius:50%;background:#FF6A00;"></div><span style="font-family:Inter,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:#FF6A00;">Dokazani Rezultati</span></div>
       <h2 style="font-family:Inter,sans-serif;font-size:clamp(32px,4.5vw,56px);font-weight:900;letter-spacing:-2px;line-height:1.05;color:#fff;margin-bottom:20px;">Rezultati, ki <span style="color:#FF6A00;">Štejejo</span></h2>
